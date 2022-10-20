@@ -138,7 +138,7 @@ const HomePage: NextPage = () => {
         </div>
 
         <div className="max-w-5xl mx-auto px-6 space-y-16">
-          <div className="max-w-xl mx-auto space-y-4 text-center">
+          <div className="mx-auto space-y-4 text-center">
             <h2 className="text-3xl font-dmserif text-white">Your Slate</h2>
             <p>
               Your super ticket collection. Support all our movies to multiply

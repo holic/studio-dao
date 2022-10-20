@@ -14,6 +14,7 @@ export type JB721DelegateToken = {
 };
 
 type Project = {
+  metadataUri: string;
   jb721DelegateTokens: JB721DelegateToken[];
 };
 
@@ -32,7 +33,7 @@ const useNftRewards = () => {
 const useAccountTotalNftBalance = () => {
   const nftRewards = useNftRewards();
   const { address } = useAccount();
-  console.log(nftRewards);
+
   const contractsToRead =
     nftRewards?.map((nft) => {
       return {
@@ -59,17 +60,18 @@ const useAccountTotalNftBalance = () => {
 };
 
 export function UserNftList() {
-  const balances = useAccountTotalNftBalance();
-  // TODO fetch tokenUri for each nft, to get the image and other stuff.
+  const balances = useAccountTotalNftBalance() ?? [];
 
   return (
     <div>
       <h4 className="text-lg text-left mb-6">NFT Rewards</h4>
 
-      <div className="flex">
-        {balances?.map((nft) => (
-          <UserNftCard key={nft.id} JB721DelegateToken={nft} />
-        ))}
+      <div className="flex flex-wrap gap-8">
+        {[...balances, ...balances, ...balances, ...balances]?.map(
+          (nft, idx) => (
+            <UserNftCard key={idx} JB721DelegateToken={nft} />
+          )
+        )}
       </div>
     </div>
   );
