@@ -1,7 +1,10 @@
+import { ApolloProvider } from "@apollo/client";
 import { ConnectKitButton } from "connectkit";
 import type { NextPage } from "next";
 
 import { Button } from "../Button";
+import apolloClient from "../graphql/apollo";
+import { UserNftList } from "../UserNftList";
 
 const HomePage: NextPage = () => {
   return (
@@ -131,6 +134,15 @@ const HomePage: NextPage = () => {
           </div>
           <div className="p-16 border rounded-xl border-zinc-600 flex items-center justify-center">
             TODO
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-6 space-y-16">
+          <div className="max-w-xl mx-auto space-y-4 text-center">
+            <h2 className="text-3xl font-dmserif text-white">NFTs</h2>
+            <ApolloProvider client={apolloClient}>
+              <UserNftList />
+            </ApolloProvider>
           </div>
         </div>
 
