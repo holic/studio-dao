@@ -3,14 +3,16 @@ import nftRewardsJson from "@jbx-protocol/juice-nft-rewards/out/ERC721.sol/ERC72
 import { useAccount, useContractReads } from "wagmi";
 
 import { GET_NFT_REWARDS } from "./graphql/queries/nftRewards";
+import { UserNftCard } from "./UserNftCard";
 
 const STUDIODAO_JUICEBOX_PROJECT_IDS = [38, 47];
 
-type JB721DelegateToken = {
+export type JB721DelegateToken = {
   id: string;
   tokenUri: string;
   name: string;
 };
+
 type Project = {
   jb721DelegateTokens: JB721DelegateToken[];
 };
@@ -62,9 +64,13 @@ export function UserNftList() {
 
   return (
     <div>
-      {balances?.map((nft) => (
-        <div key={nft.id}>{nft.name} </div>
-      ))}
+      <h4 className="text-lg text-left mb-6">NFT Rewards</h4>
+
+      <div className="flex">
+        {balances?.map((nft) => (
+          <UserNftCard key={nft.id} JB721DelegateToken={nft} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -139,7 +139,17 @@ const HomePage: NextPage = () => {
 
         <div className="max-w-5xl mx-auto px-6 space-y-16">
           <div className="max-w-xl mx-auto space-y-4 text-center">
-            <h2 className="text-3xl font-dmserif text-white">NFTs</h2>
+            <h2 className="text-3xl font-dmserif text-white">Your Slate</h2>
+            <p>
+              Your super ticket collection. Support all our movies to multiply
+              your green-light power.
+            </p>
+            <a
+              href="#TODO"
+              className="text-emerald-500 hover:underline hover:underline-offset-2"
+            >
+              Learn more
+            </a>
             <ApolloProvider client={apolloClient}>
               <UserNftList />
             </ApolloProvider>
