@@ -67,11 +67,9 @@ export function UserNftList() {
       <h4 className="text-lg text-left mb-6">NFT Rewards</h4>
 
       <div className="flex flex-wrap gap-8">
-        {[...balances, ...balances, ...balances, ...balances]?.map(
-          (nft, idx) => (
-            <UserNftCard key={idx} JB721DelegateToken={nft} />
-          )
-        )}
+        {balances?.map((nft, idx) => (
+          <UserNftCard key={idx} JB721DelegateToken={nft} />
+        ))}
       </div>
     </div>
   );
