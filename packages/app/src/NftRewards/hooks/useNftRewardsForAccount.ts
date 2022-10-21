@@ -1,44 +1,75 @@
-import ERC721Json from "@jbx-protocol/juice-nft-rewards/out/ERC721.sol/ERC721.json";
+import JBTiered721DelegateStore from "@jbx-protocol/juice-nft-rewards/out/JBTiered721DelegateStore.sol/JBTiered721DelegateStore.json";
+import { BigNumber } from "ethers";
 import { useAccount, useContractReads, useNetwork } from "wagmi";
 
-import { NFTReward, useNftRewards } from "./useNftRewards";
+import { NFTRewardTier, useNftRewards } from "./useNftRewards";
+
+const MAX_NFT_REWARD_TIERS = 3;
 
 /**
  * Return the NFT Rewards that the connected wallet owns.
  */
 export const useNftRewardsForAccount = (): {
-  data: NFTReward[];
+  data: NFTRewardTier[];
   isLoading: boolean;
 } => {
-  const { address, isConnected } = useAccount();
+  const { address } = useAccount();
   const { chain } = useNetwork();
   const { data: nftRewards, isLoading: nftRewardsLoading } = useNftRewards();
 
-  const contractsToRead =
+  // Get tiers
+  const tiersRead =
     nftRewards?.map((nft) => {
       return {
-        contractInterface: ERC721Json.abi,
-        addressOrName: nft.address,
-        functionName: "balanceOf",
-        args: [address],
+        contractInterface: JBTiered721DelegateStore.abi,
+        addressOrName: "0x236d9f67587782420151225ff867044b9ccd30e3", // TODO source from npm package
+        functionName: "tiers",
+        args: [nft.address, 0, MAX_NFT_REWARD_TIERS],
         chainId: chain?.id,
       };
     }) ?? [];
+  const { data: tiers, isLoading: tiersLoading } = useContractReads({
+    contracts: tiersRead,
+  });
+  const allTiers =
+    tiers
+      ?.map((tierCollection, idx) => {
+        return tierCollection?.map((tier) => {
+          return {
+            ...tier,
+            token: nftRewards?.[idx],
+          };
+        });
+      })
+      .flatMap((tierCollection) => tierCollection) ?? [];
 
-  const { data: accountNftBalances, isLoading: contractsLoading } =
+  // get user balance for each tier
+  const tierBalanceOfRead =
+    allTiers?.map((tier) => {
+      return {
+        contractInterface: JBTiered721DelegateStore.abi,
+        addressOrName: "0x236d9f67587782420151225ff867044b9ccd30e3",
+        functionName: "tierBalanceOf",
+        args: [tier.token.address, address, tier.id],
+      };
+    }) ?? [];
+
+  const { data: tierBalances, isLoading: tierBalancesLoading } =
     useContractReads({
-      contracts: contractsToRead,
-      enabled: isConnected,
+      contracts: tierBalanceOfRead,
     });
 
-  const data = nftRewards
-    ?.map((nft, idx) => {
+  const data = allTiers
+    ?.map((tier, idx) => {
       return {
-        ...nft,
-        balance: accountNftBalances?.[idx],
+        ...tier,
+        balance: tierBalances?.[idx],
       };
     })
     .filter((nft) => nft.balance?.gt(0));
 
-  return { data, isLoading: contractsLoading || nftRewardsLoading };
+  return {
+    data,
+    isLoading: tierBalancesLoading || tiersLoading || nftRewardsLoading,
+  };
 };

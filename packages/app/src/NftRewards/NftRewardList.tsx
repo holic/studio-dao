@@ -2,7 +2,7 @@ import { useAccount } from "wagmi";
 
 import { ConnectWalletButton } from "../ConnectWalletButton";
 import { useNftRewardsForAccount } from "./hooks/useNftRewardsForAccount";
-import { NftRewardCard } from "./NftRewardCard";
+import { NftRewardTierCard } from "./NftRewardTierCard";
 
 export function NftRewardList() {
   const { isConnected } = useAccount();
@@ -29,8 +29,8 @@ export function NftRewardList() {
       <h4 className="text-lg text-left mb-6">NFT Rewards</h4>
 
       <div className="flex flex-wrap gap-8">
-        {balances?.map((nft) => (
-          <NftRewardCard key={nft.address} nftReward={nft} />
+        {balances?.map((tier) => (
+          <NftRewardTierCard key={tier.id} nftRewardTier={tier} />
         ))}
       </div>
     </div>

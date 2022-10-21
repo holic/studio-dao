@@ -1,4 +1,5 @@
 import { useQuery } from "@apollo/client";
+import { BigNumber } from "ethers";
 
 import { JUICEBOX_PROJECT_IDS_GOERLI } from "../../constants/studioDao";
 import { GET_NFT_REWARDS } from "../../graphql/queries/nftRewards";
@@ -14,16 +15,30 @@ type JB721DelegateToken = {
   name: string;
 };
 
-export type NFTReward = JB721DelegateToken & { project: Project };
+export type NFTReward = JB721DelegateToken & {
+  project: Project;
+};
+
+export type NFTRewardTier = {
+  id: string;
+  encodedIPFSUri: string;
+
+  token: NFTReward;
+  balance: BigNumber;
+};
+
+interface NftRewardsResponse {
+  projects: Project[];
+}
 
 /**
- * Return all the NFTs that are eligible for rewards across all StudioDAO Juicebox projects.
+ * Return all NFTs eligible for rewards across StudioDAO's Juicebox projects.
  */
 export const useNftRewards = (): {
-  data: NFTReward[];
+  data: NFTReward[] | undefined;
   isLoading: boolean;
 } => {
-  const { data, loading } = useQuery(GET_NFT_REWARDS, {
+  const { data, loading } = useQuery<NftRewardsResponse>(GET_NFT_REWARDS, {
     variables: { projectIds: JUICEBOX_PROJECT_IDS_GOERLI },
   });
 
