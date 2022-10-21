@@ -11,7 +11,7 @@ import { NFTRewardTier, useNftRewardTokens } from "./useNftRewardTokens";
  * Return a list of tiers for all NFT reward tokens.
  */
 export function useNftRewardTiers(): {
-  data: NFTRewardTier[];
+  data: NFTRewardTier[] | undefined;
   isLoading: boolean;
 } {
   const { data: nftRewardTokens, isLoading: nftRewardsLoading } =
@@ -32,17 +32,15 @@ export function useNftRewardTiers(): {
   const { data: tiers, isLoading: tiersLoading } = useContractReads({
     contracts: tiersRead,
   });
-  const allTiers =
-    tiers
-      ?.map((tierCollection, idx) => {
-        return tierCollection?.map((tier) => {
-          return {
-            ...tier,
-            token: nftRewardTokens?.[idx],
-          };
-        });
-      })
-      .flatMap((tierCollection) => tierCollection) ?? [];
+
+  const allTiers = tiers?.flatMap((tierCollection, idx) => {
+    return tierCollection?.map((tier: NFTRewardTier) => {
+      return {
+        ...tier,
+        token: nftRewardTokens?.[idx],
+      } as NFTRewardTier;
+    });
+  });
 
   return { data: allTiers, isLoading: tiersLoading || nftRewardsLoading };
 }
