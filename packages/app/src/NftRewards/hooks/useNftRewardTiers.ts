@@ -1,5 +1,5 @@
 import JBTiered721DelegateStore from "@jbx-protocol/juice-nft-rewards/out/JBTiered721DelegateStore.sol/JBTiered721DelegateStore.json";
-import { useContractReads, useNetwork } from "wagmi";
+import { chain, useContractReads, useNetwork } from "wagmi";
 
 import {
   JBTiered721DelegateStoreAddressGoerli,
@@ -16,19 +16,19 @@ export function useNftRewardTiers(): {
 } {
   const { data: nftRewardTokens, isLoading: nftRewardsLoading } =
     useNftRewardTokens();
-  const { chain } = useNetwork();
 
   // Get tiers
   const tiersRead =
     nftRewardTokens?.map((nft) => {
       return {
         contractInterface: JBTiered721DelegateStore.abi,
+        chainId: chain.goerli.id,
         addressOrName: JBTiered721DelegateStoreAddressGoerli,
         functionName: "tiers",
         args: [nft.address, 0, MAX_NFT_REWARD_TIERS],
-        chainId: chain?.id,
       };
     }) ?? [];
+
   const { data: tiers, isLoading: tiersLoading } = useContractReads({
     contracts: tiersRead,
   });

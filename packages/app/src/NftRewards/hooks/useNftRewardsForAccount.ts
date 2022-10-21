@@ -1,6 +1,6 @@
 import JBTiered721DelegateStore from "@jbx-protocol/juice-nft-rewards/out/JBTiered721DelegateStore.sol/JBTiered721DelegateStore.json";
 import { BigNumber } from "ethers";
-import { useAccount, useContractReads } from "wagmi";
+import { chain, useAccount, useContractReads } from "wagmi";
 
 import { JBTiered721DelegateStoreAddressGoerli } from "../../constants/juicebox";
 import { useNftRewardTiers } from "./useNftRewardTiers";
@@ -21,6 +21,7 @@ export const useNftRewardsForAccount = (): {
     tiers?.map((tier) => {
       return {
         contractInterface: JBTiered721DelegateStore.abi,
+        chainId: chain.goerli.id,
         addressOrName: JBTiered721DelegateStoreAddressGoerli,
         functionName: "tierBalanceOf",
         args: [tier.token.address, address, tier.id],

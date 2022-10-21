@@ -1,33 +1,39 @@
-import { ConnectKitButton } from "connectkit";
+import { useAccount, useConnect, useDisconnect } from "wagmi";
 
 import { Button } from "./Button";
+import { useIsMounted } from "./useIsMounted";
 
-export function ConnectWalletButton({
-  connectText = "Connect",
-}: {
-  connectText?: string;
-}) {
+type Props = {
+  label?: string;
+};
+
+export const ConnectWalletButton = ({ label = "Connect" }: Props) => {
+  const { address } = useAccount();
+  const { connect, connectors } = useConnect();
+  const { disconnect } = useDisconnect();
+  const isMounted = useIsMounted();
+
+  // Avoid flash of unconnected wallet
+  if (!isMounted) return null;
+
   return (
-    <ConnectKitButton.Custom>
-      {({ isConnected, isConnecting, show, address, ensName }) => (
-        <Button
-          size="sm"
-          variant={isConnected ? "secondary" : "primary"}
-          className="self-start sm:self-auto"
-          onClick={show}
-          pending={isConnecting}
-        >
-          <span className="flex-grow min-w-0 ">
-            {isConnected ? (
-              <span className="max-w-[10rem] overflow-hidden text-ellipsis block">
-                {ensName || address}
-              </span>
-            ) : (
-              connectText
-            )}
+    <Button
+      size="sm"
+      variant={address ? "secondary" : "primary"}
+      className="self-start sm:self-auto"
+      onClick={() => {
+        address ? disconnect() : connect({ connector: connectors[0] });
+      }}
+    >
+      <span className="flex-grow min-w-0 ">
+        {address ? (
+          <span className="max-w-[10rem] overflow-hidden text-ellipsis block">
+            {address}
           </span>
-        </Button>
-      )}
-    </ConnectKitButton.Custom>
+        ) : (
+          label
+        )}
+      </span>
+    </Button>
   );
-}
+};
