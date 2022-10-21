@@ -28,8 +28,8 @@ export function NftRewardList() {
       <h4 className="text-lg text-left mb-6">NFT Rewards</h4>
 
       <div className="flex flex-wrap gap-8">
-        {balances?.map((nft, idx) => (
-          <NftRewardCard key={idx} nftReward={nft} />
+        {balances?.map((nft) => (
+          <NftRewardCard key={nft.address} nftReward={nft} />
         ))}
       </div>
     </div>

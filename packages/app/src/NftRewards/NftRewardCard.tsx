@@ -24,7 +24,7 @@ export function NftRewardCard({ nftReward }: { nftReward: NFTReward }) {
       )}
 
       <span className="font-dmserif text-xl block mb-6 mt-4">
-        {nftReward.name}
+        {nftMetadata?.name}
       </span>
 
       <a

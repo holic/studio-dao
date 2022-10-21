@@ -7,8 +7,8 @@ export const GET_NFT_REWARDS = gql`
       projectId
       jb721DelegateTokens {
         name
-        id
         tokenUri
+        address
       }
     }
   }

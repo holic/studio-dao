@@ -18,7 +18,7 @@ export const useNftRewardsForAccount = (): {
     nftRewards?.map((nft) => {
       return {
         contractInterface: ERC721Json.abi,
-        addressOrName: nft.id,
+        addressOrName: nft.address,
         functionName: "balanceOf",
         args: [address],
         chainId: chain?.id,

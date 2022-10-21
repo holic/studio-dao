@@ -9,7 +9,7 @@ type Project = {
   jb721DelegateTokens: JB721DelegateToken[];
 };
 type JB721DelegateToken = {
-  id: string;
+  address: string;
   tokenUri: string;
   name: string;
 };
