@@ -1,8 +1,19 @@
+import { useAccount } from "wagmi";
+
+import { ConnectWalletButton } from "../ConnectWalletButton";
 import { useNftRewardsForAccount } from "./hooks/useNftRewardsForAccount";
 import { NftRewardCard } from "./NftRewardCard";
 
 export function NftRewardList() {
   const balances = useNftRewardsForAccount() ?? [];
+  const { isConnected } = useAccount();
+  if (!isConnected) {
+    return (
+      <div className="flex justify-center">
+        <ConnectWalletButton connectText="Connect wallet" />
+      </div>
+    );
+  }
 
   return (
     <div>

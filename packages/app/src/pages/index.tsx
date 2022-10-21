@@ -1,8 +1,8 @@
 import { ApolloProvider } from "@apollo/client";
-import { ConnectKitButton } from "connectkit";
 import type { NextPage } from "next";
 
 import { Button } from "../Button";
+import { ConnectWalletButton } from "../ConnectWalletButton";
 import apolloClient from "../graphql/apollo";
 import { NftRewardList } from "../NftRewards/NftRewardList";
 
@@ -52,21 +52,8 @@ const HomePage: NextPage = () => {
               </ul>
             </nav>
           </div>
-          <ConnectKitButton.Custom>
-            {({ isConnected, isConnecting, show, address, ensName }) => (
-              <Button
-                size="sm"
-                variant={isConnected ? "secondary" : "primary"}
-                className="self-start sm:self-auto max-w-[9rem]"
-                onClick={show}
-                pending={isConnecting}
-              >
-                <span className="flex-grow min-w-0 overflow-hidden text-ellipsis">
-                  {isConnected ? ensName || address : "Connect"}
-                </span>
-              </Button>
-            )}
-          </ConnectKitButton.Custom>
+
+          <ConnectWalletButton />
         </div>
       </div>
 
