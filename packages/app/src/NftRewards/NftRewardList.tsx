@@ -29,7 +29,7 @@ export function NftRewardList() {
 
       <div className="flex flex-wrap gap-8">
         {balances?.map((nft, idx) => (
-          <NftRewardCard key={idx} JB721DelegateToken={nft} />
+          <NftRewardCard key={idx} nftReward={nft} />
         ))}
       </div>
     </div>

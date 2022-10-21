@@ -1,13 +1,13 @@
 import ERC721Json from "@jbx-protocol/juice-nft-rewards/out/ERC721.sol/ERC721.json";
 import { useAccount, useContractReads, useNetwork } from "wagmi";
 
-import { JB721DelegateToken, useNftRewards } from "./useStudiodaoNftRewards";
+import { NFTReward, useNftRewards } from "./useNftRewards";
 
 /**
  * Return the NFT Rewards that the connected wallet owns.
  */
 export const useNftRewardsForAccount = (): {
-  data: JB721DelegateToken[];
+  data: NFTReward[];
   isLoading: boolean;
 } => {
   const { data: nftRewards, isLoading: nftRewardsLoading } = useNftRewards();
