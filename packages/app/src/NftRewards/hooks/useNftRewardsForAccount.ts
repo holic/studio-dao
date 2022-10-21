@@ -6,8 +6,11 @@ import { JB721DelegateToken, useNftRewards } from "./useStudiodaoNftRewards";
 /**
  * Return the NFT Rewards that the connected wallet owns.
  */
-export const useNftRewardsForAccount = (): JB721DelegateToken[] => {
-  const nftRewards = useNftRewards();
+export const useNftRewardsForAccount = (): {
+  data: JB721DelegateToken[];
+  isLoading: boolean;
+} => {
+  const { data: nftRewards, isLoading: nftRewardsLoading } = useNftRewards();
   const { address } = useAccount();
   const { chain } = useNetwork();
 
@@ -22,16 +25,19 @@ export const useNftRewardsForAccount = (): JB721DelegateToken[] => {
       };
     }) ?? [];
 
-  const accountNftBalances = useContractReads({
-    contracts: contractsToRead,
-  });
+  const { data: accountNftBalances, isLoading: contractsLoading } =
+    useContractReads({
+      contracts: contractsToRead,
+    });
 
-  return nftRewards
+  const data = nftRewards
     ?.map((nft, idx) => {
       return {
         ...nft,
-        balance: accountNftBalances.data?.[idx],
+        balance: accountNftBalances?.[idx],
       };
     })
     .filter((nft) => nft.balance?.gt(0));
+
+  return { data, isLoading: contractsLoading || nftRewardsLoading };
 };

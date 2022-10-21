@@ -13,8 +13,11 @@ export type JB721DelegateToken = {
   name: string;
 };
 
-export const useNftRewards = (): JB721DelegateToken[] => {
-  const { data } = useQuery(GET_NFT_REWARDS, {
+export const useNftRewards = (): {
+  data: JB721DelegateToken[];
+  isLoading: boolean;
+} => {
+  const { data, loading } = useQuery(GET_NFT_REWARDS, {
     variables: { projectIds: JUICEBOX_PROJECT_IDS_GOERLI },
   });
 
@@ -22,5 +25,5 @@ export const useNftRewards = (): JB721DelegateToken[] => {
     (project: Project) =>
       project.jb721DelegateTokens.flatMap((token: JB721DelegateToken) => token)
   );
-  return nftRewards;
+  return { data: nftRewards, isLoading: loading };
 };
