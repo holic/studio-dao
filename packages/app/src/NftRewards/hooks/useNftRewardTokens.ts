@@ -4,28 +4,27 @@ import { BigNumber } from "ethers";
 import { JUICEBOX_PROJECT_IDS_GOERLI } from "../../constants/studioDao";
 import { GET_NFT_REWARDS } from "../../graphql/queries/nftRewards";
 
-type Project = {
+interface Project {
   projectId: string;
   metadataUri: string;
   jb721DelegateTokens: JB721DelegateToken[];
-};
-type JB721DelegateToken = {
+}
+interface JB721DelegateToken {
   address: string;
   tokenUri: string;
   name: string;
-};
+}
 
-export type NFTReward = JB721DelegateToken & {
+export type NFTRewardToken = JB721DelegateToken & {
   project: Project;
 };
-
-export type NFTRewardTier = {
+export interface NFTRewardTier {
   id: string;
   encodedIPFSUri: string;
 
-  token: NFTReward;
-  balance: BigNumber;
-};
+  token: NFTRewardToken;
+  balance?: BigNumber;
+}
 
 interface NftRewardsResponse {
   projects: Project[];
@@ -34,8 +33,8 @@ interface NftRewardsResponse {
 /**
  * Return all NFTs eligible for rewards across StudioDAO's Juicebox projects.
  */
-export const useNftRewards = (): {
-  data: NFTReward[] | undefined;
+export const useNftRewardTokens = (): {
+  data: NFTRewardToken[] | undefined;
   isLoading: boolean;
 } => {
   const { data, loading } = useQuery<NftRewardsResponse>(GET_NFT_REWARDS, {

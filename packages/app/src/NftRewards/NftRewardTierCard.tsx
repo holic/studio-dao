@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { JUICEBOX_PINATA_GATEWAY_BASE_URL } from "../constants/juicebox";
 import { useGet } from "../useGet";
-import { NFTRewardTier } from "./hooks/useNftRewards";
+import { NFTRewardTier } from "./hooks/useNftRewardTokens";
 
 export function decodeEncodedIPFSUri(hex: string) {
   // Add default ipfs values for first 2 bytes:
