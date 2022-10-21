@@ -1,12 +1,12 @@
-import { ApolloProvider } from "@apollo/client";
 import type { NextPage } from "next";
+import { useAccount } from "wagmi";
 
 import { Button } from "../Button";
 import { ConnectWalletButton } from "../ConnectWalletButton";
-import apolloClient from "../graphql/apollo";
 import { NftRewardList } from "../NftRewards/NftRewardList";
 
 const HomePage: NextPage = () => {
+  const { address } = useAccount();
   return (
     <div className="min-h-screen">
       <div className="max-w-5xl mx-auto px-6 flex flex-col relative py-8">
@@ -124,24 +124,24 @@ const HomePage: NextPage = () => {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 space-y-16">
-          <div className="mx-auto space-y-4 text-center">
-            <h2 className="text-3xl font-dmserif text-white">Your Slate</h2>
-            <p>
-              Your super ticket collection. Support all our movies to multiply
-              your green-light power.
-            </p>
-            <a
-              href="#TODO"
-              className="text-emerald-500 hover:underline hover:underline-offset-2"
-            >
-              Learn more
-            </a>
-            <ApolloProvider client={apolloClient}>
+        {address ? (
+          <div className="max-w-5xl mx-auto px-6 space-y-16">
+            <div className="mx-auto space-y-4 text-center">
+              <h2 className="text-3xl font-dmserif text-white">Your Slate</h2>
+              <p>
+                Your super ticket collection. Support all our movies to multiply
+                your green-light power.
+              </p>
+              <a
+                href="#TODO"
+                className="text-emerald-500 hover:underline hover:underline-offset-2"
+              >
+                Learn more
+              </a>
               <NftRewardList />
-            </ApolloProvider>
+            </div>
           </div>
-        </div>
+        ) : null}
 
         <div className="max-w-5xl mx-auto px-6 space-y-16">
           <div className="max-w-xl mx-auto space-y-4 text-center">
