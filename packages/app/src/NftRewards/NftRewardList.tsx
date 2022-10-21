@@ -5,8 +5,9 @@ import { useNftRewardsForAccount } from "./hooks/useNftRewardsForAccount";
 import { NftRewardCard } from "./NftRewardCard";
 
 export function NftRewardList() {
-  const { data: balances, isLoading } = useNftRewardsForAccount() ?? [];
   const { isConnected } = useAccount();
+  const { data: balances, isLoading } = useNftRewardsForAccount();
+
   if (!isConnected) {
     return (
       <div className="flex justify-center">
@@ -16,10 +17,10 @@ export function NftRewardList() {
   }
 
   if (isLoading) {
-    return "...";
+    return <span>...</span>;
   }
 
-  if (balances.length === 0) {
+  if (!balances || balances.length === 0) {
     return <p>You haven&apos;t collected any NFT Rewards yet.</p>;
   }
 

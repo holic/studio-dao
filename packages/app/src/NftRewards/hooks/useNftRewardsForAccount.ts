@@ -10,9 +10,9 @@ export const useNftRewardsForAccount = (): {
   data: NFTReward[];
   isLoading: boolean;
 } => {
-  const { data: nftRewards, isLoading: nftRewardsLoading } = useNftRewards();
-  const { address } = useAccount();
+  const { address, isConnected } = useAccount();
   const { chain } = useNetwork();
+  const { data: nftRewards, isLoading: nftRewardsLoading } = useNftRewards();
 
   const contractsToRead =
     nftRewards?.map((nft) => {
@@ -28,6 +28,7 @@ export const useNftRewardsForAccount = (): {
   const { data: accountNftBalances, isLoading: contractsLoading } =
     useContractReads({
       contracts: contractsToRead,
+      enabled: isConnected,
     });
 
   const data = nftRewards
