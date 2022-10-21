@@ -1,6 +1,7 @@
 import { useAccount } from "wagmi";
 
 import { ConnectWalletButton } from "../ConnectWalletButton";
+import { PendingIcon } from "../PendingIcon";
 import { useNftRewardsForAccount } from "./hooks/useNftRewardsForAccount";
 import { NftRewardTierCard } from "./NftRewardTierCard";
 
@@ -17,7 +18,7 @@ export function NftRewardList() {
   }
 
   if (isLoading) {
-    return <span>...</span>;
+    return <PendingIcon />;
   }
 
   if (!balances || balances.length === 0) {

@@ -2,6 +2,7 @@ import { base58 } from "ethers/lib/utils";
 import Image from "next/image";
 
 import { JUICEBOX_PINATA_GATEWAY_BASE_URL } from "../constants/juicebox";
+import { PendingIcon } from "../PendingIcon";
 import { useGet } from "../useGet";
 import { NFTRewardTier } from "./hooks/useNftRewardTokens";
 
@@ -29,7 +30,10 @@ export function NftRewardTierCard({
   const juiceboxProjectMetadata = useGet(
     `${JUICEBOX_PINATA_GATEWAY_BASE_URL}/${nftRewardTier.token.project.metadataUri}`
   );
-  // TODO fetch JB project info, to display the project name
+
+  if (!nftMetadata || !juiceboxProjectMetadata) {
+    return <PendingIcon />;
+  }
 
   return (
     <div className="border rounded border-slate-500 overflow-hidden text-left p-6">
