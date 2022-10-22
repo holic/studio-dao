@@ -13,8 +13,6 @@ type SnapshotSpace = {
   members: string[];
 };
 
-type SnapshotProposalState = "open" | "closed";
-
 export type SnapshotProposal = {
   id: string;
   title: string;
@@ -25,8 +23,9 @@ export type SnapshotProposal = {
   start: number;
   end: number;
   snapshot: string;
-  state: SnapshotProposalState;
+  state: string;
   author: string;
+  link: string;
   space: Partial<SnapshotSpace>;
 };
 
@@ -86,6 +85,7 @@ const proposalsQuery = `query Proposals {
       snapshot
       state
       author
+      link
       space {
         id
         name

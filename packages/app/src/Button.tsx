@@ -1,5 +1,10 @@
 import classNames from "classnames";
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import Link from "next/link";
+import {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+} from "react";
 
 import { PendingIcon } from "./PendingIcon";
 
@@ -25,7 +30,6 @@ const buttonClasses = (size: ButtonSize, variant: ButtonVariant) => {
 };
 
 type Props = {
-  children: React.ReactNode;
   pending?: boolean;
   size?: ButtonSize;
   variant?: ButtonVariant;
@@ -34,9 +38,17 @@ type Props = {
 type ButtonProps = Props &
   DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
+type ButtonLinkProps = Props & {
+  href: string;
+  disabled?: boolean;
+} & DetailedHTMLProps<
+    AnchorHTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  >;
+
 export const Button = ({
   pending,
-  type,
+  type = "button",
   className,
   children,
   disabled,
@@ -46,7 +58,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      type={type || "button"}
+      type={type}
       className={classNames(buttonClasses(size, variant), className)}
       disabled={disabled || pending}
       {...props}
@@ -60,3 +72,34 @@ export const Button = ({
     </button>
   );
 };
+
+export const ButtonLink = ({
+  href,
+  pending,
+  className,
+  children,
+  disabled,
+  size = "md",
+  variant = "primary",
+  target,
+  rel = target === "_blank" ? "noopener noreferrer" : undefined,
+  ...props
+}: ButtonLinkProps) => (
+  <Link href={href} passHref>
+    <a
+      target={target}
+      rel={rel}
+      aria-disabled={disabled}
+      aria-busy={pending}
+      className={classNames(buttonClasses(size, variant), className)}
+      {...props}
+    >
+      {children}
+      {pending ? (
+        <span className="self-center ml-2 -mr-1">
+          <PendingIcon />
+        </span>
+      ) : null}
+    </a>
+  </Link>
+);
