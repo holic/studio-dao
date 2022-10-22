@@ -110,27 +110,6 @@ const HomePage: NextPage = () => {
 
         <SnapshotSection />
 
-        {/* <div className="max-w-5xl mx-auto px-6 space-y-16">
-          <div className="max-w-xl mx-auto space-y-4 text-center">
-            <h2 className="text-3xl font-dmserif text-white">
-              Today’s Green-light vote
-            </h2>
-            <p className="max-w-prose mx-auto">
-              Current active proposals. Your Green-light power allows you to
-              vote daily to allocate funds to a film.{" "}
-              <a
-                href="#"
-                className="text-emerald-500 hover:underline hover:underline-offset-2"
-              >
-                Learn more &rarr;
-              </a>
-            </p>
-          </div>
-          <div className="p-16 border rounded-xl border-zinc-600 flex items-center justify-center">
-            TODO
-          </div>
-        </div> */}
-
         {/* {nftRewards?.length ? (
           <div className="max-w-5xl mx-auto px-6 space-y-16">
             <div className="mx-auto space-y-4 text-center">
