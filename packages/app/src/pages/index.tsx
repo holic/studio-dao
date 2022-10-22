@@ -5,10 +5,15 @@ import { Button } from "../Button";
 import { ConnectWalletButton } from "../ConnectWalletButton";
 import { useNftRewardsForAccount } from "../NftRewards/hooks/useNftRewardsForAccount";
 import { NftRewardList } from "../NftRewards/NftRewardList";
+import { useSnapshotProposalsQuery } from "../snapshot/useSnapshotProposalsQuery";
 
 const HomePage: NextPage = () => {
   const { address } = useAccount();
-  const { data: nftRewards } = useNftRewardsForAccount();
+  // const { data: nftRewards } = useNftRewardsForAccount();
+  const result = useSnapshotProposalsQuery();
+  const currentProposal = result.data?.proposals?.[0];
+
+  console.log("snapshot query", result);
   return (
     <div className="min-h-screen">
       <div className="max-w-5xl mx-auto px-6 flex flex-col relative py-8">
@@ -105,7 +110,54 @@ const HomePage: NextPage = () => {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 space-y-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex flex-col sm:flex-row bg-black/20 rounded-3xl divide-x divide-zinc-800 py-4 md:py-8 -my-8">
+            <div className="sm:w-6/12 px-8 md:px-12 py-4 flex flex-col items-center justify-center text-center gap-4">
+              <h2 className="text-3xl font-dmserif text-white">
+                Today’s Green-light vote
+              </h2>
+              <p className="max-w-prose mx-auto">
+                Current active proposals. Your Green-light power allows you to
+                vote daily to allocate funds to a film.{" "}
+                <a
+                  href="#"
+                  className="text-emerald-500 hover:underline hover:underline-offset-2"
+                >
+                  Learn more &rarr;
+                </a>
+              </p>
+            </div>
+            <div className="sm:w-6/12 px-8 md:px-12 py-4 flex flex-col gap-4">
+              <p className="text-center text-zinc-500">Vote ends in ...</p>
+              <div className="flex flex-col gap-2">
+                {currentProposal?.choices.map((choice, i) => {
+                  const percentage = Math.round(
+                    (currentProposal.scores[i] / currentProposal.scores_total) *
+                      100
+                  );
+                  return (
+                    <a
+                      key={choice}
+                      href="#"
+                      className="px-4 py-3 border-2 border-zinc-700 hover:border-zinc-500 group transition rounded-xl relative overflow-clip"
+                    >
+                      <span
+                        className="absolute inset-y-0 left-0 bg-emerald-900/20 group-hover:bg-emerald-700/20 transition"
+                        style={{ right: `${100 - percentage}%` }}
+                      ></span>
+                      <span className="relative">{choice}</span>
+                    </a>
+                  );
+                })}
+              </div>
+              <Button size="sm" className="self-center">
+                Vote on Snapshot.org &rarr;
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="max-w-5xl mx-auto px-6 space-y-16">
           <div className="max-w-xl mx-auto space-y-4 text-center">
             <h2 className="text-3xl font-dmserif text-white">
               Today’s Green-light vote
@@ -124,9 +176,9 @@ const HomePage: NextPage = () => {
           <div className="p-16 border rounded-xl border-zinc-600 flex items-center justify-center">
             TODO
           </div>
-        </div>
+        </div> */}
 
-        {nftRewards?.length ? (
+        {/* {nftRewards?.length ? (
           <div className="max-w-5xl mx-auto px-6 space-y-16">
             <div className="mx-auto space-y-4 text-center">
               <h2 className="text-3xl font-dmserif text-white">Your Slate</h2>
@@ -143,7 +195,7 @@ const HomePage: NextPage = () => {
               <NftRewardList />
             </div>
           </div>
-        ) : null}
+        ) : null} */}
 
         <div className="max-w-5xl mx-auto px-6 space-y-16">
           <div className="max-w-xl mx-auto space-y-4 text-center">
@@ -169,7 +221,7 @@ const HomePage: NextPage = () => {
               />
               <div className="flex-grow flex flex-col justify-between p-8 md:p-12 gap-8">
                 <div className="space-y-4">
-                  <h5 className="font-dmserif text-3xl">
+                  <h5 className="font-dmserif text-3xl text-white">
                     Unlikely Love Stories: Tender Vittles
                   </h5>
                   <p className="text-zinc-500">By Rosa Tran & Derek Smith</p>
@@ -197,7 +249,7 @@ const HomePage: NextPage = () => {
               />
               <div className="flex-grow flex flex-col justify-between p-8 md:p-12 gap-8">
                 <div className="space-y-4">
-                  <h5 className="font-dmserif text-3xl">
+                  <h5 className="font-dmserif text-3xl text-white">
                     Unlikely Love Stories: Tender Vittles
                   </h5>
                   <p className="text-zinc-500">By Rosa Tran & Derek Smith</p>
@@ -225,7 +277,7 @@ const HomePage: NextPage = () => {
               />
               <div className="flex-grow flex flex-col justify-between p-8 md:p-12 gap-8">
                 <div className="space-y-4">
-                  <h5 className="font-dmserif text-3xl">
+                  <h5 className="font-dmserif text-3xl text-white">
                     Unlikely Love Stories: Tender Vittles
                   </h5>
                   <p className="text-zinc-500">By Rosa Tran & Derek Smith</p>
