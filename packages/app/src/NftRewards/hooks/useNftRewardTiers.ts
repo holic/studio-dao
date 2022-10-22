@@ -1,6 +1,6 @@
-import JBTiered721DelegateStore from "@jbx-protocol/juice-nft-rewards/out/JBTiered721DelegateStore.sol/JBTiered721DelegateStore.json";
-import { chain, useContractReads, useNetwork } from "wagmi";
+import { chain, useContractReads } from "wagmi";
 
+import JBTiered721DelegateStore from "../../abis/JBTiered721DelegateStore.json";
 import {
   JBTiered721DelegateStoreAddressGoerli,
   MAX_NFT_REWARD_TIERS,

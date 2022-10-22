@@ -9,6 +9,7 @@ interface Project {
   metadataUri: string;
   jb721DelegateTokens: JB721DelegateToken[];
 }
+
 interface JB721DelegateToken {
   address: string;
   tokenUri: string;
@@ -18,6 +19,7 @@ interface JB721DelegateToken {
 export type NFTRewardToken = JB721DelegateToken & {
   project: Project;
 };
+
 export interface NFTRewardTier {
   id: string;
   encodedIPFSUri: string;

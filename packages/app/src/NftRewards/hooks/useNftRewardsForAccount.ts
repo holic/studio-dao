@@ -1,7 +1,7 @@
-import JBTiered721DelegateStore from "@jbx-protocol/juice-nft-rewards/out/JBTiered721DelegateStore.sol/JBTiered721DelegateStore.json";
 import { BigNumber } from "ethers";
 import { chain, useAccount, useContractReads } from "wagmi";
 
+import JBTiered721DelegateStore from "../../abis/JBTiered721DelegateStore.json";
 import { JBTiered721DelegateStoreAddressGoerli } from "../../constants/juicebox";
 import { useNftRewardTiers } from "./useNftRewardTiers";
 import { NFTRewardTier } from "./useNftRewardTokens";
