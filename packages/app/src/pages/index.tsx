@@ -3,10 +3,12 @@ import { useAccount } from "wagmi";
 
 import { Button } from "../Button";
 import { ConnectWalletButton } from "../ConnectWalletButton";
+import { useNftRewardsForAccount } from "../NftRewards/hooks/useNftRewardsForAccount";
 import { NftRewardList } from "../NftRewards/NftRewardList";
 
 const HomePage: NextPage = () => {
   const { address } = useAccount();
+  const { data: nftRewards } = useNftRewardsForAccount();
   return (
     <div className="min-h-screen">
       <div className="max-w-5xl mx-auto px-6 flex flex-col relative py-8">
@@ -124,7 +126,7 @@ const HomePage: NextPage = () => {
           </div>
         </div>
 
-        {address ? (
+        {nftRewards?.length ? (
           <div className="max-w-5xl mx-auto px-6 space-y-16">
             <div className="mx-auto space-y-4 text-center">
               <h2 className="text-3xl font-dmserif text-white">Your Slate</h2>
