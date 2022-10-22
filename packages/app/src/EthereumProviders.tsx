@@ -1,5 +1,11 @@
-import { ConnectKitProvider, getDefaultClient } from "connectkit";
-import { createClient, defaultChains, WagmiConfig } from "wagmi";
+import {
+  configureChains,
+  createClient,
+  defaultChains,
+  WagmiConfig,
+} from "wagmi";
+import { alchemyProvider } from "wagmi/providers/alchemy";
+import { publicProvider } from "wagmi/providers/public";
 
 // Will default to goerli if nothing set in the ENV
 export const targetChainId =
@@ -11,16 +17,17 @@ const targetChains = defaultChains.filter(
   (chain) => chain.id === 1 || chain.id === targetChainId
 );
 
-export const wagmiClient = createClient(
-  getDefaultClient({
-    appName: "StudioDAO",
-    alchemyId: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
-    chains: targetChains,
-  })
-);
+const { provider, webSocketProvider } = configureChains(targetChains, [
+  alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY }),
+  publicProvider(),
+]);
+
+export const wagmiClient = createClient({
+  autoConnect: true,
+  provider,
+  webSocketProvider,
+});
 
 export const EthereumProviders: React.FC = ({ children }) => (
-  <WagmiConfig client={wagmiClient}>
-    <ConnectKitProvider theme="midnight">{children}</ConnectKitProvider>
-  </WagmiConfig>
+  <WagmiConfig client={wagmiClient}>{children}</WagmiConfig>
 );
