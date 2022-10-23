@@ -1,0 +1,11 @@
+schema: https://api.studio.thegraph.com/query/31944/nft-rewards-goerli/0.0.24
+documents: "src/**/*.{ts,tsx,graphql}"
+generates:
+  ./codegen/subgraph.ts:
+    plugins:
+      - "@graphql-codegen/typescript"
+      - "@graphql-codegen/typescript-operations"
+      - "@graphql-codegen/typescript-urql"
+    config:
+      gqlImport: urql#gql
+      immutableTypes: true
