@@ -24,20 +24,20 @@ const HomePage: NextPage = () => {
             </Link>
             <nav className="flex-grow hidden md:flex items-center justify-center -m-4">
               <a
-                href="#box-office"
                 className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+                href="#box-office"
               >
                 Box Office
               </a>
               <a
-                href="#faq"
                 className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+                href="#faq"
               >
                 FAQ
               </a>
               <a
-                href="https://twitter.com/studiodao"
                 className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+                href="https://twitter.com/studiodao"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="Twitter"
@@ -46,8 +46,8 @@ const HomePage: NextPage = () => {
                 <TwitterIcon />
               </a>
               <a
-                href="https://discord.com/invite/YxPGn9pcdr"
                 className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+                href="https://discord.com/invite/YxPGn9pcdr"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="Discord"
@@ -289,26 +289,30 @@ const HomePage: NextPage = () => {
           </a>
           <nav className="flex">
             <a
-              href="#"
               className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+              href="#box-office"
             >
-              Projects
+              Box Office
             </a>
             <a
-              href="#"
               className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+              href="#faq"
             >
               FAQ
             </a>
             <a
-              href="#"
               className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+              href="https://twitter.com/studiodao"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               Twitter
             </a>
             <a
-              href="#"
               className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+              href="https://discord.com/invite/YxPGn9pcdr"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               Discord
             </a>
