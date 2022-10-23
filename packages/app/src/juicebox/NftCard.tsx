@@ -38,29 +38,26 @@ export const NftCard = ({ nft }: Props) => {
   // console.log("got projectMetadata", projectMetadata.data);
 
   return (
-    <div className="border rounded border-slate-500 overflow-hidden text-left p-6">
+    <a
+      className="group flex flex-col bg-black/20 rounded-lg overflow-hidden transition hover:scale-105"
+      href={`https://goerli.juicebox.money/v2/p/${nft.project.projectId}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {tokenMetadata.data.image ? (
-        <div className="w-full aspect-square relative">
+        <div className="w-full aspect-square relative opacity-80 transition group-hover:opacity-100">
           <Image
             src={tokenMetadata.data.image}
             alt="NFT image"
-            className="rounded block"
             layout="fill"
             objectFit="cover"
           />
         </div>
       ) : null}
-
-      <span className="font-dmserif text-xl block mb-6 mt-4">{nft.name}</span>
-
-      <a
-        className="block text-slate-500 text-sm hover:text-emerald-500 hover:underline hover:underline-offset-2"
-        href={`https://goerli.juicebox.money/v2/p/${nft.project.projectId}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {projectMetadata.data.name}
-      </a>
-    </div>
+      <div className="p-6 space-y-2">
+        <p className="text-xl font-medium">{nft.name}</p>
+        <p className="text-zinc-500">{projectMetadata.data.name}</p>
+      </div>
+    </a>
   );
 };

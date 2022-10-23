@@ -8,7 +8,7 @@ const Document = () => (
         rel="stylesheet"
       />
     </Head>
-    <body className="bg-zinc-900 text-zinc-300 font-dmsans leading-relaxed">
+    <body className="bg-zinc-900 text-zinc-300 font-dmsans leading-normal">
       <Main />
       <NextScript />
     </body>
