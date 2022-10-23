@@ -12,14 +12,14 @@ const HomePage: NextPage = () => {
   return (
     <div className="min-h-screen">
       <div className="max-w-5xl mx-auto px-6 flex flex-col relative py-8">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+        <div className="flex flex-row items-center gap-6">
           <div className="flex-grow flex flex-col md:flex-row md:items-center gap-2">
             <Link href="/">
               <a className="flex-shrink-0 p-4 -m-4">
                 <img src="/logo.svg" className="w-48" alt="StudioDAO logo" />
               </a>
             </Link>
-            <nav className="flex-grow md:flex md:items-center md:justify-center">
+            <nav className="flex-grow hidden md:flex md:items-center md:justify-center">
               <ul className="flex -m-3">
                 <li>
                   <a
