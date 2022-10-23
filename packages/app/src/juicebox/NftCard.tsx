@@ -29,9 +29,12 @@ export const NftCard = ({ nft }: Props) => {
       : null
   );
 
-  // TOOD: better loading state
   if (!tokenMetadata.data || !projectMetadata.data) {
-    return <PendingIcon />;
+    return (
+      <div className="flex flex-col items-center justify-center bg-black/20 rounded-lg text-xl p-6 h-80">
+        <PendingIcon />
+      </div>
+    );
   }
 
   // console.log("got tokenMetadata", tokenMetadata.data);
