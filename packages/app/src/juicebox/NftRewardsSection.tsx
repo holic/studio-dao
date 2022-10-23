@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { gql } from "urql";
 import { useAccount } from "wagmi";
 
-import { useNftRewardsSectionQuery } from "../../codegen/subgraph";
+import { useNftRewardsSectionQuery } from "../../codegen/juicebox";
 import { NftCard, NftCardFragment } from "./NftCard";
 
 gql`
@@ -18,21 +18,14 @@ gql`
 export const NftRewardsSection = () => {
   const { address } = useAccount();
 
-  const queryOptions = useMemo(
-    () => ({
-      pause: !address,
-      variables: {
-        address: "0x0028c35095d34c9c8a3bc84cb8542cb182fcfa8e",
-        projectIds: [38, 47],
-      },
-      context: {
-        url: "https://api.studio.thegraph.com/query/31944/jb-v3-goerli/0.0.79",
-      },
-    }),
-    [address]
-  );
-
-  const [queryResult] = useNftRewardsSectionQuery(queryOptions);
+  const [queryResult] = useNftRewardsSectionQuery({
+    pause: !address,
+    variables: {
+      // address,
+      address: "0x0028c35095d34c9c8a3bc84cb8542cb182fcfa8e",
+      projectIds: [38, 47],
+    },
+  });
   const tokens = queryResult.data?.tokens;
   if (!tokens?.length) return null;
 

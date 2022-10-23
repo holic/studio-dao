@@ -1,11 +1,49 @@
 import { DateTime } from "luxon";
+import { useMemo } from "react";
+import { gql } from "urql";
 
+import { useSnapshotSectionQuery } from "../../codegen/snapshot";
 import { ButtonLink } from "../Button";
-import { useSnapshotProposalsQuery } from "../snapshot/useSnapshotProposalsQuery";
+import { useIsMounted } from "../useIsMounted";
+
+// TODO: convince snapshot to give us better field types (too many nullables)
+gql`
+  query SnapshotSection {
+    proposals(
+      where: { space_in: ["studiodao.eth"] }
+      orderBy: "created"
+      orderDirection: desc
+      first: 1
+    ) {
+      id
+      title
+      body
+      choices
+      scores
+      scores_total
+      votes
+      start
+      end
+      snapshot
+      state
+      author
+      link
+      space {
+        id
+        name
+      }
+    }
+  }
+`;
 
 export const SnapshotSection = () => {
-  const result = useSnapshotProposalsQuery();
-  const currentProposal = result.data?.proposals?.[0];
+  const isMounted = useIsMounted();
+
+  const [queryResult] = useSnapshotSectionQuery();
+  const currentProposal = queryResult.data?.proposals?.[0];
+
+  // hydration breaks in this component, so skip SSR for now
+  if (!isMounted) return null;
 
   if (!currentProposal) {
     return null;
@@ -48,13 +86,15 @@ export const SnapshotSection = () => {
           <div className="flex flex-col gap-1">
             {currentProposal.choices.map((choice, i) => {
               const percentage = Math.round(
-                (currentProposal.scores[i] / currentProposal.scores_total) * 100
+                ((currentProposal.scores?.[i] ?? 0) /
+                  (currentProposal.scores_total ?? 1)) *
+                  100
               );
               return (
                 <a
                   key={choice}
                   className="px-4 py-3 group hover:ring hover:ring-emerald-700/40 rounded transition relative overflow-clip"
-                  href={currentProposal.link}
+                  href={currentProposal.link ?? "#"}
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -68,7 +108,7 @@ export const SnapshotSection = () => {
             })}
           </div>
           <ButtonLink
-            href={currentProposal.link}
+            href={currentProposal.link ?? "#"}
             target="_blank"
             size="sm"
             className="self-center"

@@ -3,7 +3,9 @@ import Link from "next/link";
 
 import { Button } from "../Button";
 import { ConnectWalletButton } from "../ConnectWalletButton";
+import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
 import { NftRewardsSection } from "../juicebox/NftRewardsSection";
+import { SnapshotGraphProvider } from "../snapshot/SnapshotGraphProvider";
 import { SnapshotSection } from "../snapshot/SnapshotSection";
 
 const HomePage: NextPage = () => {
@@ -105,8 +107,13 @@ const HomePage: NextPage = () => {
           </div>
         </div>
 
-        <SnapshotSection />
-        <NftRewardsSection />
+        <SnapshotGraphProvider>
+          <SnapshotSection />
+        </SnapshotGraphProvider>
+
+        <JuiceboxGraphProvider>
+          <NftRewardsSection />
+        </JuiceboxGraphProvider>
 
         <div className="max-w-5xl mx-auto px-6 space-y-16">
           <div className="max-w-xl mx-auto space-y-4 text-center">
