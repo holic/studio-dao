@@ -8,6 +8,7 @@ import { DiscordIcon } from "../icons/DiscordIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
 import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
 import { NftRewardsSection } from "../juicebox/NftRewardsSection";
+import { SectionHeading } from "../SectionHeading";
 import { SnapshotGraphProvider } from "../snapshot/SnapshotGraphProvider";
 import { SnapshotSection } from "../snapshot/SnapshotSection";
 
@@ -126,21 +127,21 @@ const HomePage: NextPage = () => {
         </JuiceboxGraphProvider>
 
         <Container id="box-office" className="space-y-16">
-          <div className="max-w-xl mx-auto space-y-4 text-center">
-            <h2 className="text-3xl font-dmserif text-white">
-              StudioDAO Box Office
-            </h2>
-            <p className="max-w-prose mx-auto">
-              You buy a ticket for a movie that’s already been made. You buy a
-              Super Ticket to see a movie get made.{" "}
-              <a
-                href="#"
-                className="text-emerald-500 hover:underline hover:underline-offset-2"
-              >
-                Learn more &rarr;
-              </a>
-            </p>
-          </div>
+          <SectionHeading
+            title="StudioDAO Box Office"
+            description={
+              <p>
+                You buy a ticket for a movie that’s already been made. You buy a
+                Super Ticket to see a movie get made.{" "}
+                <a
+                  href="#"
+                  className="text-emerald-500 hover:underline hover:underline-offset-2"
+                >
+                  Learn more &rarr;
+                </a>
+              </p>
+            }
+          />
           <div className="space-y-8 sm:space-y-12">
             <div className="flex flex-col md:flex-row bg-black/20 rounded-lg overflow-hidden">
               <img
@@ -233,11 +234,7 @@ const HomePage: NextPage = () => {
         </Container>
 
         <Container id="faq" className="space-y-12">
-          <div className="max-w-xl mx-auto space-y-4 text-center">
-            <h2 className="text-3xl font-dmserif text-white">
-              Frequently Asked Questions
-            </h2>
-          </div>
+          <SectionHeading title="Frequently Asked Questions" />
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-2">
               <h4 className="text-xl font-medium text-white">

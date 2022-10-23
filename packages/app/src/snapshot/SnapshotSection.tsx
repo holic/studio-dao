@@ -4,6 +4,7 @@ import { gql } from "urql";
 import { useSnapshotSectionQuery } from "../../codegen/snapshot";
 import { ButtonLink } from "../Button";
 import { Container } from "../Container";
+import { SectionHeading } from "../SectionHeading";
 import { useIsMounted } from "../useIsMounted";
 
 // TODO: convince snapshot to give us better field types (too many nullables)
@@ -56,27 +57,29 @@ export const SnapshotSection = () => {
 
   return (
     <Container>
-      <div className="flex flex-col sm:flex-row bg-black/20 rounded-3xl divide-x divide-zinc-800 py-4 md:py-8 -my-8">
-        <div className="sm:w-6/12 px-8 md:px-12 py-4 flex flex-col items-center justify-center text-center gap-4">
-          <h2 className="text-3xl font-dmserif text-white">
-            Today’s Green-light vote
-          </h2>
-          <p className="max-w-prose mx-auto">
-            Current active proposals. Your Green-light power allows you to vote
-            daily to allocate funds to a film.{" "}
-            <a
-              href="#"
-              className="text-emerald-500 hover:underline hover:underline-offset-2"
-            >
-              Learn more &rarr;
-            </a>
-          </p>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center bg-black/20 rounded-3xl divide-x divide-zinc-800 py-4 md:py-8 -my-8">
+        <div className="sm:w-6/12 px-8 md:px-12 py-4">
+          <SectionHeading
+            title="Today’s Green-light vote"
+            description={
+              <p>
+                Current active proposals. Your Green-light power allows you to
+                vote daily to allocate funds to a film.{" "}
+                <a
+                  href="#"
+                  className="text-emerald-500 hover:underline hover:underline-offset-2"
+                >
+                  Learn more &rarr;
+                </a>
+              </p>
+            }
+          />
         </div>
         <div className="sm:w-6/12 px-8 md:px-12 py-4 flex flex-col gap-4">
           <p className="text-center text-zinc-500">
             {canVote ? (
               <>
-                Voting ends in{" "}
+                Voting ends{" "}
                 {DateTime.fromSeconds(currentProposal.end).toRelative()}.
               </>
             ) : (
