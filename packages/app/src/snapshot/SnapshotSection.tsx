@@ -80,7 +80,7 @@ export const SnapshotSection = () => {
                 {DateTime.fromSeconds(currentProposal.end).toRelative()}.
               </>
             ) : (
-              <>Stay tuned for the next one!</>
+              <>Stay tuned for the next vote!</>
             )}
           </p>
           <div className="flex flex-col gap-1">

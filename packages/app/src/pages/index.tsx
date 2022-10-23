@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { Button } from "../Button";
 import { ConnectWalletButton } from "../ConnectWalletButton";
+import { DiscordIcon } from "../icons/DiscordIcon";
+import { TwitterIcon } from "../icons/TwitterIcon";
 import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
 import { NftRewardsSection } from "../juicebox/NftRewardsSection";
 import { SnapshotGraphProvider } from "../snapshot/SnapshotGraphProvider";
@@ -19,41 +21,39 @@ const HomePage: NextPage = () => {
                 <img src="/logo.svg" className="w-48" alt="StudioDAO logo" />
               </a>
             </Link>
-            <nav className="flex-grow hidden md:flex md:items-center md:justify-center">
-              <ul className="flex -m-3">
-                <li>
-                  <a
-                    href="#"
-                    className="inline-flex px-3 py-2 hover:underline hover:underline-offset-2"
-                  >
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="inline-flex px-3 py-2 hover:underline hover:underline-offset-2"
-                  >
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="inline-flex px-3 py-2 hover:underline hover:underline-offset-2"
-                  >
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="inline-flex px-3 py-2 hover:underline hover:underline-offset-2"
-                  >
-                    Discord
-                  </a>
-                </li>
-              </ul>
+            <nav className="flex-grow hidden md:flex items-center justify-center -m-4">
+              <a
+                href="#box-office"
+                className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+              >
+                Box Office
+              </a>
+              <a
+                href="#faq"
+                className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+              >
+                FAQ
+              </a>
+              <a
+                href="https://twitter.com/studiodao"
+                className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Twitter"
+                title="Twitter"
+              >
+                <TwitterIcon />
+              </a>
+              <a
+                href="https://discord.com/invite/YxPGn9pcdr"
+                className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Discord"
+                title="Discord"
+              >
+                <DiscordIcon />
+              </a>
             </nav>
           </div>
 
@@ -115,7 +115,7 @@ const HomePage: NextPage = () => {
           <NftRewardsSection />
         </JuiceboxGraphProvider>
 
-        <div className="max-w-5xl mx-auto px-6 space-y-16">
+        <div id="box-office" className="max-w-5xl mx-auto px-6 space-y-16">
           <div className="max-w-xl mx-auto space-y-4 text-center">
             <h2 className="text-3xl font-dmserif text-white">
               StudioDAO Box Office
@@ -222,7 +222,7 @@ const HomePage: NextPage = () => {
           </Button>
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 space-y-12">
+        <div id="faq" className="max-w-5xl mx-auto px-6 space-y-12">
           <div className="max-w-xl mx-auto space-y-4 text-center">
             <h2 className="text-3xl font-dmserif text-white">
               Frequently Asked Questions
@@ -277,41 +277,31 @@ const HomePage: NextPage = () => {
           <a href="#">
             <img src="/logo.svg" className="w-36" alt="StudioDAO logo" />
           </a>
-          <nav>
-            <ul className="flex">
-              <li>
-                <a
-                  href="#"
-                  className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
-                >
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
-                >
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
-                >
-                  Discord
-                </a>
-              </li>
-            </ul>
+          <nav className="flex">
+            <a
+              href="#"
+              className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+            >
+              Projects
+            </a>
+            <a
+              href="#"
+              className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+            >
+              FAQ
+            </a>
+            <a
+              href="#"
+              className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+            >
+              Twitter
+            </a>
+            <a
+              href="#"
+              className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+            >
+              Discord
+            </a>
           </nav>
         </div>
       </div>

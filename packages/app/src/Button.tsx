@@ -6,7 +6,7 @@ import {
   DetailedHTMLProps,
 } from "react";
 
-import { PendingIcon } from "./PendingIcon";
+import { PendingIcon } from "./icons/PendingIcon";
 
 type ButtonSize = "sm" | "md";
 type ButtonVariant = "primary" | "secondary";

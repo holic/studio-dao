@@ -1,11 +1,14 @@
 import classNames from "classnames";
+import { DetailedHTMLProps, SVGAttributes } from "react";
 
-export const PendingIcon = ({ className }: { className?: string }) => (
+type Props = DetailedHTMLProps<SVGAttributes<SVGSVGElement>, SVGSVGElement>;
+
+export const PendingIcon = ({ className, ...props }: Props) => (
   <svg
-    className={classNames("animate-spin w-[1em] h-[1em]", className)}
     xmlns="http://www.w3.org/2000/svg"
-    fill="none"
     viewBox="0 0 24 24"
+    className={classNames("animate-spin w-[1em] h-[1em]", className)}
+    {...props}
   >
     <circle
       className="opacity-25"

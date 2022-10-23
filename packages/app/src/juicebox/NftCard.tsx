@@ -2,7 +2,7 @@ import Image from "next/image";
 import { gql } from "urql";
 
 import { NftCardFragment as NFT } from "../../codegen/juicebox";
-import { PendingIcon } from "../PendingIcon";
+import { PendingIcon } from "../icons/PendingIcon";
 import { useFetchJson } from "./useFetchJson";
 
 export const NftCardFragment = gql`
