@@ -193,9 +193,6 @@ const HomePage: NextPage = () => {
               learnMoreUrl="#"
             />
           </div>
-          <Button className="mx-auto" variant="secondary">
-            View all projects
-          </Button>
         </Container>
 
         <Container id="faq" className="space-y-12">
