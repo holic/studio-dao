@@ -37,8 +37,9 @@ export const NftCard = ({ nft }: Props) => {
     );
   }
 
-  // console.log("got tokenMetadata", tokenMetadata.data);
-  // console.log("got projectMetadata", projectMetadata.data);
+  console.log("got nft", nft);
+  console.log("got tokenMetadata", tokenMetadata.data);
+  console.log("got projectMetadata", projectMetadata.data);
 
   return (
     <a
@@ -58,7 +59,7 @@ export const NftCard = ({ nft }: Props) => {
         </div>
       ) : null}
       <div className="p-6 space-y-2">
-        <p className="text-xl font-medium">{nft.name}</p>
+        <p className="text-xl font-medium">{tokenMetadata.data.name}</p>
         <p className="text-zinc-500">{projectMetadata.data.name}</p>
       </div>
     </a>
