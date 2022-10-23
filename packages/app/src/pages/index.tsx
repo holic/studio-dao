@@ -8,6 +8,7 @@ import { DiscordIcon } from "../icons/DiscordIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
 import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
 import { NftRewardsSection } from "../juicebox/NftRewardsSection";
+import { ProjectCard } from "../ProjectCard";
 import { SectionHeading } from "../SectionHeading";
 import { SnapshotGraphProvider } from "../snapshot/SnapshotGraphProvider";
 import { SnapshotSection } from "../snapshot/SnapshotSection";
@@ -143,90 +144,54 @@ const HomePage: NextPage = () => {
             }
           />
           <div className="space-y-8 sm:space-y-12">
-            <div className="flex flex-col md:flex-row bg-black/20 rounded-lg overflow-hidden">
-              <img
-                src="/hero.png"
-                className="flex-shrink-0 md:w-72 lg:w-96 h-56 md:h-auto aspect-square object-cover"
-              />
-              <div className="flex-grow flex flex-col justify-between p-8 md:p-12 gap-8">
-                <div className="space-y-4">
-                  <h5 className="font-dmserif text-3xl text-white">
-                    Unlikely Love Stories: Tender Vittles
-                  </h5>
-                  <p className="text-zinc-500">By Rosa Tran & Derek Smith</p>
-                  <p>
-                    From the artists and minds behind Robot Chicken, Anomalisa
-                    and Final Space comes a slightly fucked-up, adorably twisted
-                    take on love. Unlikely Love Stories is a darkly-comedic
-                    animated anthology that explores the highest highs – and
-                    very low lows – of unexpected love in the most unexpected
-                    places.
-                  </p>
-                </div>
-                <div className="flex justify-between">
-                  <Button size="sm">Contribute</Button>
-                  <Button size="sm" variant="secondary">
-                    Learn more
-                  </Button>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row bg-black/20 rounded-lg overflow-hidden">
-              <img
-                src="/hero.png"
-                className="flex-shrink-0 md:w-72 lg:w-96 h-56 md:h-auto aspect-square object-cover"
-              />
-              <div className="flex-grow flex flex-col justify-between p-8 md:p-12 gap-8">
-                <div className="space-y-4">
-                  <h5 className="font-dmserif text-3xl text-white">
-                    Unlikely Love Stories: Tender Vittles
-                  </h5>
-                  <p className="text-zinc-500">By Rosa Tran & Derek Smith</p>
-                  <p>
-                    From the artists and minds behind Robot Chicken, Anomalisa
-                    and Final Space comes a slightly fucked-up, adorably twisted
-                    take on love. Unlikely Love Stories is a darkly-comedic
-                    animated anthology that explores the highest highs – and
-                    very low lows – of unexpected love in the most unexpected
-                    places.
-                  </p>
-                </div>
-                <div className="flex justify-between">
-                  <Button size="sm">Contribute</Button>
-                  <Button size="sm" variant="secondary">
-                    Learn more
-                  </Button>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row bg-black/20 rounded-lg overflow-hidden">
-              <img
-                src="/hero.png"
-                className="flex-shrink-0 md:w-72 lg:w-96 h-56 md:h-auto aspect-square object-cover"
-              />
-              <div className="flex-grow flex flex-col justify-between p-8 md:p-12 gap-8">
-                <div className="space-y-4">
-                  <h5 className="font-dmserif text-3xl text-white">
-                    Unlikely Love Stories: Tender Vittles
-                  </h5>
-                  <p className="text-zinc-500">By Rosa Tran & Derek Smith</p>
-                  <p>
-                    From the artists and minds behind Robot Chicken, Anomalisa
-                    and Final Space comes a slightly fucked-up, adorably twisted
-                    take on love. Unlikely Love Stories is a darkly-comedic
-                    animated anthology that explores the highest highs – and
-                    very low lows – of unexpected love in the most unexpected
-                    places.
-                  </p>
-                </div>
-                <div className="flex justify-between">
-                  <Button size="sm">Contribute</Button>
-                  <Button size="sm" variant="secondary">
-                    Learn more
-                  </Button>
-                </div>
-              </div>
-            </div>
+            <ProjectCard
+              title="Unlikely Love Stories: Tender Vittles"
+              byline="By Rosa Tran & Derek Smith"
+              description={
+                <p>
+                  From the artists and minds behind Robot Chicken, Anomalisa and
+                  Final Space comes a slightly fucked-up, adorably twisted take
+                  on love. Unlikely Love Stories is a darkly-comedic animated
+                  anthology that explores the highest highs – and very low lows
+                  – of unexpected love in the most unexpected places.
+                </p>
+              }
+              imageUrl="/hero.png"
+              contributeUrl="#"
+              learnMoreUrl="#"
+            />
+            <ProjectCard
+              title="Unlikely Love Stories: Tender Vittles"
+              byline="By Rosa Tran & Derek Smith"
+              description={
+                <p>
+                  From the artists and minds behind Robot Chicken, Anomalisa and
+                  Final Space comes a slightly fucked-up, adorably twisted take
+                  on love. Unlikely Love Stories is a darkly-comedic animated
+                  anthology that explores the highest highs – and very low lows
+                  – of unexpected love in the most unexpected places.
+                </p>
+              }
+              imageUrl="/hero.png"
+              contributeUrl="#"
+              learnMoreUrl="#"
+            />
+            <ProjectCard
+              title="Unlikely Love Stories: Tender Vittles"
+              byline="By Rosa Tran & Derek Smith"
+              description={
+                <p>
+                  From the artists and minds behind Robot Chicken, Anomalisa and
+                  Final Space comes a slightly fucked-up, adorably twisted take
+                  on love. Unlikely Love Stories is a darkly-comedic animated
+                  anthology that explores the highest highs – and very low lows
+                  – of unexpected love in the most unexpected places.
+                </p>
+              }
+              imageUrl="/hero.png"
+              contributeUrl="#"
+              learnMoreUrl="#"
+            />
           </div>
           <Button className="mx-auto" variant="secondary">
             View all projects
