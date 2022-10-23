@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Button } from "../Button";
 import { ConnectWalletButton } from "../ConnectWalletButton";
+import { Container } from "../Container";
 import { DiscordIcon } from "../icons/DiscordIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
 import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
@@ -13,7 +14,7 @@ import { SnapshotSection } from "../snapshot/SnapshotSection";
 const HomePage: NextPage = () => {
   return (
     <div className="min-h-screen">
-      <div className="max-w-5xl mx-auto px-6 flex flex-col relative py-8">
+      <Container className="flex flex-col relative py-8">
         <div className="flex flex-row items-center gap-6">
           <div className="flex-grow flex flex-col md:flex-row md:items-center gap-2">
             <Link href="/">
@@ -59,7 +60,7 @@ const HomePage: NextPage = () => {
 
           <ConnectWalletButton />
         </div>
-      </div>
+      </Container>
 
       <div className="space-y-32 sm:space-y-48">
         <div
@@ -67,43 +68,48 @@ const HomePage: NextPage = () => {
           style={{ backgroundImage: "url('/hero.png')" }}
         >
           <div className="bg-zinc-800/90">
-            <div className="max-w-5xl mx-auto px-6 flex justify-between py-4">
-              <div>Current treasury cycle</div>
-              <div className="hidden sm:block">Earn Green-light Power</div>
-            </div>
+            <Container>
+              <div className="flex justify-between py-4">
+                <div>Current treasury cycle</div>
+                <div className="hidden sm:block">Earn Green-light Power</div>
+              </div>
+            </Container>
           </div>
           <div className="flex-grow flex flex-col justify-end items-center relative">
             <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/70 to-zinc-900 md:from-transparent md:to-zinc-900" />
-            <div className="relative max-w-5xl px-6 flex flex-col md:flex-row md:justify-center md:items-end gap-12 md:gap-24 py-12 -mb-16">
-              <div className="space-y-4">
-                <h1 className="text-6xl font-dmserif text-white">
-                  Owned by <span className="text-emerald-500">filmmakers</span>.
-                </h1>
-                <p>
-                  Welcome to StudioDAO – a movie studio owned by filmmakers and
-                  fans. Your Green-light power is your voting power. Use it to
-                  choose which films get made. Grow it by supporting more films
-                  & staying active in our community:
-                </p>
-              </div>
-              <div className="space-y-6">
-                <ul>
-                  <li className="flex gap-2">
-                    <span>❇️</span> Green-light films
-                  </li>
-                  <li className="flex gap-2">
-                    <span>🎥</span> Make movies
-                  </li>
-                  <li className="flex gap-2">
-                    <span>🍿</span> Watch movies
-                  </li>
-                </ul>
-                <div className="flex gap-2 w-max">
-                  <Button>Join StudioDAO</Button>
-                  <Button variant="secondary">Learn more</Button>
+            <Container>
+              <div className="relative flex flex-col md:flex-row md:justify-center md:items-end gap-12 md:gap-24 py-12 -mb-16">
+                <div className="space-y-4">
+                  <h1 className="text-6xl font-dmserif text-white">
+                    Owned by{" "}
+                    <span className="text-emerald-500">filmmakers</span>.
+                  </h1>
+                  <p>
+                    Welcome to StudioDAO – a movie studio owned by filmmakers
+                    and fans. Your Green-light power is your voting power. Use
+                    it to choose which films get made. Grow it by supporting
+                    more films & staying active in our community:
+                  </p>
+                </div>
+                <div className="space-y-6">
+                  <ul>
+                    <li className="flex gap-2">
+                      <span>❇️</span> Green-light films
+                    </li>
+                    <li className="flex gap-2">
+                      <span>🎥</span> Make movies
+                    </li>
+                    <li className="flex gap-2">
+                      <span>🍿</span> Watch movies
+                    </li>
+                  </ul>
+                  <div className="flex gap-2 w-max">
+                    <Button>Join StudioDAO</Button>
+                    <Button variant="secondary">Learn more</Button>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Container>
           </div>
         </div>
 
@@ -115,7 +121,7 @@ const HomePage: NextPage = () => {
           <NftRewardsSection />
         </JuiceboxGraphProvider>
 
-        <div id="box-office" className="max-w-5xl mx-auto px-6 space-y-16">
+        <Container id="box-office" className="space-y-16">
           <div className="max-w-xl mx-auto space-y-4 text-center">
             <h2 className="text-3xl font-dmserif text-white">
               StudioDAO Box Office
@@ -220,9 +226,9 @@ const HomePage: NextPage = () => {
           <Button className="mx-auto" variant="secondary">
             View all projects
           </Button>
-        </div>
+        </Container>
 
-        <div id="faq" className="max-w-5xl mx-auto px-6 space-y-12">
+        <Container id="faq" className="space-y-12">
           <div className="max-w-xl mx-auto space-y-4 text-center">
             <h2 className="text-3xl font-dmserif text-white">
               Frequently Asked Questions
@@ -271,7 +277,7 @@ const HomePage: NextPage = () => {
             </div>
           </div>
           <Button className="mx-auto">Learn more</Button>
-        </div>
+        </Container>
 
         <div className="flex flex-col gap-6 items-center justify-center divide-y divide-zinc-700">
           <a href="#">

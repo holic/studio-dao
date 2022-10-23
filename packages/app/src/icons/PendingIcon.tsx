@@ -1,5 +1,5 @@
-import classNames from "classnames";
 import { DetailedHTMLProps, SVGAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
 type Props = DetailedHTMLProps<SVGAttributes<SVGSVGElement>, SVGSVGElement>;
 
@@ -7,7 +7,7 @@ export const PendingIcon = ({ className, ...props }: Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
-    className={classNames("animate-spin w-[1em] h-[1em]", className)}
+    className={twMerge("animate-spin w-[1em] h-[1em]", className)}
     {...props}
   >
     <circle

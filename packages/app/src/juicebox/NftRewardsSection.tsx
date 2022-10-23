@@ -3,6 +3,7 @@ import { gql } from "urql";
 import { useAccount } from "wagmi";
 
 import { useNftRewardsSectionQuery } from "../../codegen/juicebox";
+import { Container } from "../Container";
 import { NftCard, NftCardFragment } from "./NftCard";
 
 gql`
@@ -30,7 +31,7 @@ export const NftRewardsSection = () => {
   if (!tokens?.length) return null;
 
   return (
-    <div className="max-w-5xl mx-auto px-6 space-y-16">
+    <Container className="space-y-16">
       <div className="max-w-xl mx-auto space-y-4 text-center">
         <h2 className="text-3xl font-dmserif text-white">Your Slate</h2>
         <p className="max-w-prose mx-auto">
@@ -49,6 +50,6 @@ export const NftRewardsSection = () => {
           <NftCard key={nft.id} nft={nft} />
         ))}
       </div>
-    </div>
+    </Container>
   );
 };

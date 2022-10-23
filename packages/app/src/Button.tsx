@@ -1,10 +1,10 @@
-import classNames from "classnames";
 import Link from "next/link";
 import {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
   DetailedHTMLProps,
 } from "react";
+import { twMerge } from "tailwind-merge";
 
 import { PendingIcon } from "./icons/PendingIcon";
 
@@ -22,7 +22,7 @@ const buttonClasses = (size: ButtonSize, variant: ButtonVariant) => {
     secondary:
       "text-zinc-300 hover:text-zinc-100 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800 border border-zinc-700 hover:border-zinc-500 disabled:opacity-50 disabled:pointer-events-none",
   };
-  return classNames(
+  return twMerge(
     "transition rounded flex",
     sizeClassNames[size],
     variantClassNames[variant]
@@ -59,7 +59,7 @@ export const Button = ({
   return (
     <button
       type={type}
-      className={classNames(buttonClasses(size, variant), className)}
+      className={twMerge(buttonClasses(size, variant), className)}
       disabled={disabled || pending}
       {...props}
     >
@@ -91,7 +91,7 @@ export const ButtonLink = ({
       rel={rel}
       aria-disabled={disabled}
       aria-busy={pending}
-      className={classNames(buttonClasses(size, variant), className)}
+      className={twMerge(buttonClasses(size, variant), className)}
       {...props}
     >
       {children}

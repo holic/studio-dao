@@ -1,9 +1,9 @@
 import { DateTime } from "luxon";
-import { useMemo } from "react";
 import { gql } from "urql";
 
 import { useSnapshotSectionQuery } from "../../codegen/snapshot";
 import { ButtonLink } from "../Button";
+import { Container } from "../Container";
 import { useIsMounted } from "../useIsMounted";
 
 // TODO: convince snapshot to give us better field types (too many nullables)
@@ -55,7 +55,7 @@ export const SnapshotSection = () => {
     currentProposal.end * 1000 > Date.now();
 
   return (
-    <div className="max-w-5xl mx-auto px-6">
+    <Container>
       <div className="flex flex-col sm:flex-row bg-black/20 rounded-3xl divide-x divide-zinc-800 py-4 md:py-8 -my-8">
         <div className="sm:w-6/12 px-8 md:px-12 py-4 flex flex-col items-center justify-center text-center gap-4">
           <h2 className="text-3xl font-dmserif text-white">
@@ -117,6 +117,6 @@ export const SnapshotSection = () => {
           </ButtonLink>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };

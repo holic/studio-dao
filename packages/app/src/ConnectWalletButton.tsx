@@ -1,5 +1,4 @@
 import { ConnectKitButton } from "connectkit";
-import { useAccount, useConnect, useDisconnect } from "wagmi";
 
 import { Button } from "./Button";
 import { useIsMounted } from "./useIsMounted";
@@ -24,7 +23,7 @@ export const ConnectWalletButton = ({ label = "Connect" }: Props) => {
           onClick={show}
           pending={isConnecting}
         >
-          <span className="flex-grow min-w-0 ">
+          <span className="flex-grow min-w-0">
             {isConnected ? (
               <span className="max-w-[10rem] overflow-hidden text-ellipsis block">
                 {ensName || address}

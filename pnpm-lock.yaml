@@ -51,6 +51,7 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2
       react-toastify: ^9.0.4
+      tailwind-merge: ^1.7.0
       tailwindcss: ^3.1.8
       typescript: ^4.8.4
       urql: ^3.0.3
@@ -69,6 +70,7 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-toastify: 9.0.4_sfoxds7t5ydpegc3knd667wn6m
+      tailwind-merge: 1.7.0
       urql: 3.0.3_grwzyu2sekdmgxxknj4oi2chlm
       wagmi: 0.6.8_nh5cb3stmy2powi2ww5c5uwpra
       zustand: 3.7.2_react@17.0.2
@@ -6873,6 +6875,10 @@ packages:
     dependencies:
       tslib: 2.4.0
     dev: true
+
+  /tailwind-merge/1.7.0:
+    resolution: {integrity: sha512-A7oBapTWhV9M4bwLtxLQS9ZpPrvcikp21l+Xhwbet5SbaxUVogbHGLy+VDZcHe4LHWE99RpRbSpCBKaVqBs5Og==}
+    dev: false
 
   /tailwindcss/3.1.8:
     resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}
