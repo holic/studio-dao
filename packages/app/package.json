@@ -18,6 +18,7 @@
     "@ethersproject/contracts": "5.7.0",
     "@ethersproject/providers": "5.7.0",
     "classnames": "^2.3.1",
+    "connectkit": "^0.0.2",
     "ethers": "5.7.0",
     "graphql": "^16.6.0",
     "luxon": "^3.0.4",
