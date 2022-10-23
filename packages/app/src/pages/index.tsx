@@ -63,53 +63,57 @@ const HomePage: NextPage = () => {
       </Container>
 
       <div className="space-y-32 sm:space-y-48">
-        <div
-          className="md:min-h-[480px] lg:min-h-[640px] bg-center bg-cover bg-no-repeat flex flex-col"
-          style={{ backgroundImage: "url('/hero.png')" }}
-        >
-          <div className="bg-zinc-800/90">
-            <Container>
-              <div className="flex justify-between py-4">
-                <div>Current treasury cycle</div>
-                <div className="hidden sm:block">Earn Green-light Power</div>
-              </div>
-            </Container>
-          </div>
-          <div className="flex-grow flex flex-col justify-end items-center relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/70 to-zinc-900 md:from-transparent md:to-zinc-900" />
-            <Container>
-              <div className="relative flex flex-col md:flex-row md:justify-center md:items-end gap-12 md:gap-24 py-12 -mb-16">
-                <div className="space-y-4">
-                  <h1 className="text-6xl font-dmserif text-white">
-                    Owned by{" "}
-                    <span className="text-emerald-500">filmmakers</span>.
-                  </h1>
-                  <p>
-                    Welcome to StudioDAO – a movie studio owned by filmmakers
-                    and fans. Your Green-light power is your voting power. Use
-                    it to choose which films get made. Grow it by supporting
-                    more films & staying active in our community:
-                  </p>
+        <div className="relative">
+          <img
+            className="absolute w-full h-full object-cover"
+            src="/hero.png"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/70 to-zinc-900 md:from-transparent md:to-zinc-900" />
+
+          <div className="relative md:min-h-[480px] lg:min-h-[640px] flex flex-col">
+            <div className="bg-zinc-800/90">
+              <Container>
+                <div className="flex justify-between py-4">
+                  <div>Current treasury cycle</div>
+                  <div className="hidden sm:block">Earn Green-light Power</div>
                 </div>
-                <div className="space-y-6">
-                  <ul>
-                    <li className="flex gap-2">
-                      <span>❇️</span> Green-light films
-                    </li>
-                    <li className="flex gap-2">
-                      <span>🎥</span> Make movies
-                    </li>
-                    <li className="flex gap-2">
-                      <span>🍿</span> Watch movies
-                    </li>
-                  </ul>
-                  <div className="flex gap-2 w-max">
-                    <Button>Join StudioDAO</Button>
-                    <Button variant="secondary">Learn more</Button>
+              </Container>
+            </div>
+            <div className="flex-grow flex flex-col justify-end items-center">
+              <Container>
+                <div className="flex flex-col md:flex-row md:justify-center md:items-end gap-12 md:gap-24 py-12 -mb-16">
+                  <div className="space-y-4">
+                    <h1 className="text-6xl font-dmserif text-white">
+                      Owned by{" "}
+                      <span className="text-emerald-500">filmmakers</span>.
+                    </h1>
+                    <p>
+                      Welcome to StudioDAO – a movie studio owned by filmmakers
+                      and fans. Your Green-light power is your voting power. Use
+                      it to choose which films get made. Grow it by supporting
+                      more films & staying active in our community:
+                    </p>
+                  </div>
+                  <div className="space-y-6">
+                    <ul>
+                      <li className="flex gap-2">
+                        <span>❇️</span> Green-light films
+                      </li>
+                      <li className="flex gap-2">
+                        <span>🎥</span> Make movies
+                      </li>
+                      <li className="flex gap-2">
+                        <span>🍿</span> Watch movies
+                      </li>
+                    </ul>
+                    <div className="flex gap-2 w-max">
+                      <Button>Join StudioDAO</Button>
+                      <Button variant="secondary">Learn more</Button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Container>
+              </Container>
+            </div>
           </div>
         </div>
 
