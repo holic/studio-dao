@@ -1,8 +1,8 @@
+import { ConnectKitButton } from "connectkit";
 import type { NextPage } from "next";
 import Link from "next/link";
 
 import { Button } from "../Button";
-import { ConnectWalletButton } from "../ConnectWalletButton";
 import { Container } from "../Container";
 import { DiscordIcon } from "../icons/DiscordIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
@@ -58,7 +58,7 @@ const HomePage: NextPage = () => {
             </nav>
           </div>
 
-          <ConnectWalletButton />
+          <ConnectKitButton />
         </div>
       </Container>
 
