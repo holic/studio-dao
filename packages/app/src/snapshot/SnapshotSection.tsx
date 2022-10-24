@@ -105,7 +105,10 @@ export const SnapshotSection = () => {
                     className="absolute inset-y-0 left-0 bg-emerald-900/20 group-hover:bg-emerald-700/20 transition rounded"
                     style={{ right: `${100 - percentage}%` }}
                   ></span>
-                  <span className="relative">{choice}</span>
+                  <span className="relative flex items-center gap-2">
+                    <span className="inline-flex w-3 h-3 rounded-full border-2 border-zinc-600 group-hover:bg-zinc-600 transition"></span>{" "}
+                    {choice}
+                  </span>
                 </a>
               );
             })}
