@@ -145,52 +145,71 @@ const HomePage: NextPage = () => {
           />
           <div className="space-y-8 sm:space-y-12">
             <ProjectCard
-              title="Unlikely Love Stories: Tender Vittles"
-              byline="By Rosa Tran & Derek Smith"
+              title="Hyperspace Banny"
+              subtitle="Bananas on a mission to make the juice flow…"
               description={
                 <p>
-                  From the artists and minds behind Robot Chicken, Anomalisa and
-                  Final Space comes a slightly fucked-up, adorably twisted take
-                  on love. Unlikely Love Stories is a darkly-comedic animated
-                  anthology that explores the highest highs – and very low lows
-                  – of unexpected love in the most unexpected places.
+                  Where did Banny come from? Why are they here? This important
+                  documentary examines the competing origin stories of Banny and
+                  reconciles them into a universal theory of Bannyness.
                 </p>
               }
-              imageUrl="/hero.png"
-              contributeUrl="#"
-              learnMoreUrl="#"
+              imageUrl="/projects/hyperspace-banny.png"
+              contributeUrl="https://goerli.juicebox.money/v2/p/38"
+              learnMoreUrl="https://www.studiodao.xyz/hyperspace-banny"
             />
             <ProjectCard
-              title="Unlikely Love Stories: Tender Vittles"
-              byline="By Rosa Tran & Derek Smith"
+              title="Stag Party"
+              subtitle="When the Billionaires are away, the Deer will play…"
               description={
                 <p>
-                  From the artists and minds behind Robot Chicken, Anomalisa and
-                  Final Space comes a slightly fucked-up, adorably twisted take
-                  on love. Unlikely Love Stories is a darkly-comedic animated
-                  anthology that explores the highest highs – and very low lows
-                  – of unexpected love in the most unexpected places.
+                  When Buck, a young stag, gets engaged to Jane Doe, his deer
+                  friends throw him a wild party on the lawn of a mansion on
+                  Further Lane in East Hampton. But when Buck&apos;s Stag party
+                  gets out of control, he and his friends stampede through the
+                  Hamptons in a bacchanalian frenzy, and get totally lost on
+                  Long Island. As they try to find their way back home, they
+                  must outsmart hunters and cover their tracks, or risk the
+                  herd’s winter way of life being discovered by humans. A
+                  comedic horror film take down of the Hamptons…
                 </p>
               }
-              imageUrl="/hero.png"
-              contributeUrl="#"
-              learnMoreUrl="#"
+              imageUrl="/projects/stag-party.jpg"
+              contributeUrl="https://goerli.juicebox.money/v2/p/47"
+              learnMoreUrl="https://www.studiodao.xyz/stag-party"
             />
             <ProjectCard
-              title="Unlikely Love Stories: Tender Vittles"
-              byline="By Rosa Tran & Derek Smith"
+              title="Beam-Eyed Colossi"
+              subtitle="Fking the city up with gratitude!"
               description={
-                <p>
-                  From the artists and minds behind Robot Chicken, Anomalisa and
-                  Final Space comes a slightly fucked-up, adorably twisted take
-                  on love. Unlikely Love Stories is a darkly-comedic animated
-                  anthology that explores the highest highs – and very low lows
-                  – of unexpected love in the most unexpected places.
-                </p>
+                <>
+                  <p>
+                    In Summer of 2022, official reasons given by the City of Los
+                    Angeles for on-and-off closures of the 6th Street Bridge in
+                    downtown LA cited “vandalism, reckless driving and other
+                    criminal activity.” It is commonly understood that the real
+                    reason for the intermittent closures was the unprecedented
+                    double-appearance of the Beam-Eyed Colossus of Excellent
+                    Connectivity. This was the first and only recorded case of a
+                    Colossus appearing twice at the same location, which
+                    prompted officials to close the structure and install a
+                    collection of cameras and sensors to gather data in the
+                    event of a third appearance, which never occurred.
+                  </p>
+                  <p>
+                    Compelling anecdotal reports by local residents described a
+                    marked increase in upload and download speeds during both
+                    appearances. Skeptics have repeatedly suggested that these
+                    could have simply been random jumps in connection speeds,
+                    but area residents dismissed this notion as extremely
+                    unlikely, since the internet provider in the area is
+                    Spectrum.
+                  </p>
+                </>
               }
-              imageUrl="/hero.png"
-              contributeUrl="#"
-              learnMoreUrl="#"
+              imageUrl="/projects/beam-eyed-colossi.gif"
+              contributeUrl="https://goerli.juicebox.money/v2/p/59"
+              learnMoreUrl="https://www.studiodao.xyz/beam-eyed-colossi"
             />
           </div>
         </Container>

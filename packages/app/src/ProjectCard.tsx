@@ -4,7 +4,7 @@ import { ButtonLink } from "./Button";
 
 type Props = {
   title: ReactNode;
-  byline: ReactNode;
+  subtitle?: ReactNode;
   description: ReactNode;
   imageUrl: string;
   contributeUrl: string;
@@ -13,7 +13,7 @@ type Props = {
 
 export const ProjectCard = ({
   title,
-  byline,
+  subtitle,
   description,
   imageUrl,
   contributeUrl,
@@ -27,7 +27,7 @@ export const ProjectCard = ({
     <div className="flex-grow flex flex-col justify-between p-8 md:p-12 gap-8">
       <div className="space-y-4">
         <h5 className="font-dmserif text-3xl text-white">{title}</h5>
-        <p className="text-zinc-500">{byline}</p>
+        {subtitle ? <p className="text-zinc-500">{subtitle}</p> : null}
         {description}
       </div>
       <div className="flex justify-between">
