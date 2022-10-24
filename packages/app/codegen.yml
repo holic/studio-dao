@@ -1,6 +1,6 @@
 generates:
   ./codegen/juicebox.ts:
-    schema: https://api.studio.thegraph.com/query/31944/nft-rewards-goerli/0.0.24
+    schema: https://api.studio.thegraph.com/query/31944/jb-v3-goerli/0.0.80
     documents: "src/juicebox/**/*.{ts,tsx,graphql}"
     plugins:
       - "@graphql-codegen/typescript"

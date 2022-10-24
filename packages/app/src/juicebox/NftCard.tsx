@@ -8,6 +8,8 @@ import { useFetchJson } from "./useFetchJson";
 export const NftCardFragment = gql`
   fragment NftCard on JB721DelegateToken {
     id
+    address
+    tokenId
     name
     tokenUri
     project {

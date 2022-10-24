@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { gql } from "urql";
 import { useAccount } from "wagmi";
 

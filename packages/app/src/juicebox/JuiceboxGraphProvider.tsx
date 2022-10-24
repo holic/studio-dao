@@ -5,7 +5,7 @@ import {
 } from "urql";
 
 const graphClient = createGraphClient({
-  url: "https://api.studio.thegraph.com/query/31944/jb-v3-goerli/0.0.79",
+  url: "https://api.studio.thegraph.com/query/31944/jb-v3-goerli/0.0.80",
 });
 
 type Props = {

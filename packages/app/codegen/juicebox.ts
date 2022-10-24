@@ -27,8 +27,8 @@ export type AddToBalanceEvent = {
   readonly project: Project;
   readonly projectId: Scalars['Int'];
   readonly pv: Scalars['String'];
+  readonly terminal: Scalars['Bytes'];
   readonly timestamp: Scalars['Int'];
-  readonly tv: Scalars['String'];
   readonly txHash: Scalars['Bytes'];
 };
 
@@ -126,6 +126,12 @@ export type AddToBalanceEvent_Filter = {
   readonly pv_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
   readonly pv_starts_with?: InputMaybe<Scalars['String']>;
   readonly pv_starts_with_nocase?: InputMaybe<Scalars['String']>;
+  readonly terminal?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_contains?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
+  readonly terminal_not?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_not_contains?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_not_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
   readonly timestamp?: InputMaybe<Scalars['Int']>;
   readonly timestamp_gt?: InputMaybe<Scalars['Int']>;
   readonly timestamp_gte?: InputMaybe<Scalars['Int']>;
@@ -134,26 +140,6 @@ export type AddToBalanceEvent_Filter = {
   readonly timestamp_lte?: InputMaybe<Scalars['Int']>;
   readonly timestamp_not?: InputMaybe<Scalars['Int']>;
   readonly timestamp_not_in?: InputMaybe<ReadonlyArray<Scalars['Int']>>;
-  readonly tv?: InputMaybe<Scalars['String']>;
-  readonly tv_contains?: InputMaybe<Scalars['String']>;
-  readonly tv_contains_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_ends_with?: InputMaybe<Scalars['String']>;
-  readonly tv_ends_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_gt?: InputMaybe<Scalars['String']>;
-  readonly tv_gte?: InputMaybe<Scalars['String']>;
-  readonly tv_in?: InputMaybe<ReadonlyArray<Scalars['String']>>;
-  readonly tv_lt?: InputMaybe<Scalars['String']>;
-  readonly tv_lte?: InputMaybe<Scalars['String']>;
-  readonly tv_not?: InputMaybe<Scalars['String']>;
-  readonly tv_not_contains?: InputMaybe<Scalars['String']>;
-  readonly tv_not_contains_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_not_ends_with?: InputMaybe<Scalars['String']>;
-  readonly tv_not_ends_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_not_in?: InputMaybe<ReadonlyArray<Scalars['String']>>;
-  readonly tv_not_starts_with?: InputMaybe<Scalars['String']>;
-  readonly tv_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_starts_with?: InputMaybe<Scalars['String']>;
-  readonly tv_starts_with_nocase?: InputMaybe<Scalars['String']>;
   readonly txHash?: InputMaybe<Scalars['Bytes']>;
   readonly txHash_contains?: InputMaybe<Scalars['Bytes']>;
   readonly txHash_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
@@ -170,8 +156,8 @@ export enum AddToBalanceEvent_OrderBy {
   Project = 'project',
   ProjectId = 'projectId',
   Pv = 'pv',
+  Terminal = 'terminal',
   Timestamp = 'timestamp',
-  Tv = 'tv',
   TxHash = 'txHash'
 }
 
@@ -1719,6 +1705,7 @@ export type Jb721DelegateToken = {
   readonly project: Project;
   readonly projectId: Scalars['Int'];
   readonly symbol: Scalars['String'];
+  readonly tokenId: Scalars['BigInt'];
   readonly tokenUri: Scalars['String'];
 };
 
@@ -1829,6 +1816,14 @@ export type Jb721DelegateToken_Filter = {
   readonly symbol_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
   readonly symbol_starts_with?: InputMaybe<Scalars['String']>;
   readonly symbol_starts_with_nocase?: InputMaybe<Scalars['String']>;
+  readonly tokenId?: InputMaybe<Scalars['BigInt']>;
+  readonly tokenId_gt?: InputMaybe<Scalars['BigInt']>;
+  readonly tokenId_gte?: InputMaybe<Scalars['BigInt']>;
+  readonly tokenId_in?: InputMaybe<ReadonlyArray<Scalars['BigInt']>>;
+  readonly tokenId_lt?: InputMaybe<Scalars['BigInt']>;
+  readonly tokenId_lte?: InputMaybe<Scalars['BigInt']>;
+  readonly tokenId_not?: InputMaybe<Scalars['BigInt']>;
+  readonly tokenId_not_in?: InputMaybe<ReadonlyArray<Scalars['BigInt']>>;
   readonly tokenUri?: InputMaybe<Scalars['String']>;
   readonly tokenUri_contains?: InputMaybe<Scalars['String']>;
   readonly tokenUri_contains_nocase?: InputMaybe<Scalars['String']>;
@@ -1859,6 +1854,7 @@ export enum Jb721DelegateToken_OrderBy {
   Project = 'project',
   ProjectId = 'projectId',
   Symbol = 'symbol',
+  TokenId = 'tokenId',
   TokenUri = 'tokenUri'
 }
 
@@ -2169,8 +2165,8 @@ export type PayEvent = {
   readonly project: Project;
   readonly projectId: Scalars['Int'];
   readonly pv: Scalars['String'];
+  readonly terminal: Scalars['Bytes'];
   readonly timestamp: Scalars['Int'];
-  readonly tv: Scalars['String'];
   readonly txHash: Scalars['Bytes'];
 };
 
@@ -2282,6 +2278,12 @@ export type PayEvent_Filter = {
   readonly pv_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
   readonly pv_starts_with?: InputMaybe<Scalars['String']>;
   readonly pv_starts_with_nocase?: InputMaybe<Scalars['String']>;
+  readonly terminal?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_contains?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
+  readonly terminal_not?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_not_contains?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_not_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
   readonly timestamp?: InputMaybe<Scalars['Int']>;
   readonly timestamp_gt?: InputMaybe<Scalars['Int']>;
   readonly timestamp_gte?: InputMaybe<Scalars['Int']>;
@@ -2290,26 +2292,6 @@ export type PayEvent_Filter = {
   readonly timestamp_lte?: InputMaybe<Scalars['Int']>;
   readonly timestamp_not?: InputMaybe<Scalars['Int']>;
   readonly timestamp_not_in?: InputMaybe<ReadonlyArray<Scalars['Int']>>;
-  readonly tv?: InputMaybe<Scalars['String']>;
-  readonly tv_contains?: InputMaybe<Scalars['String']>;
-  readonly tv_contains_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_ends_with?: InputMaybe<Scalars['String']>;
-  readonly tv_ends_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_gt?: InputMaybe<Scalars['String']>;
-  readonly tv_gte?: InputMaybe<Scalars['String']>;
-  readonly tv_in?: InputMaybe<ReadonlyArray<Scalars['String']>>;
-  readonly tv_lt?: InputMaybe<Scalars['String']>;
-  readonly tv_lte?: InputMaybe<Scalars['String']>;
-  readonly tv_not?: InputMaybe<Scalars['String']>;
-  readonly tv_not_contains?: InputMaybe<Scalars['String']>;
-  readonly tv_not_contains_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_not_ends_with?: InputMaybe<Scalars['String']>;
-  readonly tv_not_ends_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_not_in?: InputMaybe<ReadonlyArray<Scalars['String']>>;
-  readonly tv_not_starts_with?: InputMaybe<Scalars['String']>;
-  readonly tv_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_starts_with?: InputMaybe<Scalars['String']>;
-  readonly tv_starts_with_nocase?: InputMaybe<Scalars['String']>;
   readonly txHash?: InputMaybe<Scalars['Bytes']>;
   readonly txHash_contains?: InputMaybe<Scalars['Bytes']>;
   readonly txHash_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
@@ -2328,8 +2310,8 @@ export enum PayEvent_OrderBy {
   Project = 'project',
   ProjectId = 'projectId',
   Pv = 'pv',
+  Terminal = 'terminal',
   Timestamp = 'timestamp',
-  Tv = 'tv',
   TxHash = 'txHash'
 }
 
@@ -2810,8 +2792,8 @@ export type ProjectEvent = {
   readonly pv: Scalars['String'];
   readonly redeemEvent?: Maybe<RedeemEvent>;
   readonly tapEvent?: Maybe<TapEvent>;
+  readonly terminal?: Maybe<Scalars['Bytes']>;
   readonly timestamp: Scalars['Int'];
-  readonly tv?: Maybe<Scalars['String']>;
   readonly useAllowanceEvent?: Maybe<UseAllowanceEvent>;
 };
 
@@ -3211,6 +3193,12 @@ export type ProjectEvent_Filter = {
   readonly tapEvent_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
   readonly tapEvent_starts_with?: InputMaybe<Scalars['String']>;
   readonly tapEvent_starts_with_nocase?: InputMaybe<Scalars['String']>;
+  readonly terminal?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_contains?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
+  readonly terminal_not?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_not_contains?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_not_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
   readonly timestamp?: InputMaybe<Scalars['Int']>;
   readonly timestamp_gt?: InputMaybe<Scalars['Int']>;
   readonly timestamp_gte?: InputMaybe<Scalars['Int']>;
@@ -3219,26 +3207,6 @@ export type ProjectEvent_Filter = {
   readonly timestamp_lte?: InputMaybe<Scalars['Int']>;
   readonly timestamp_not?: InputMaybe<Scalars['Int']>;
   readonly timestamp_not_in?: InputMaybe<ReadonlyArray<Scalars['Int']>>;
-  readonly tv?: InputMaybe<Scalars['String']>;
-  readonly tv_contains?: InputMaybe<Scalars['String']>;
-  readonly tv_contains_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_ends_with?: InputMaybe<Scalars['String']>;
-  readonly tv_ends_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_gt?: InputMaybe<Scalars['String']>;
-  readonly tv_gte?: InputMaybe<Scalars['String']>;
-  readonly tv_in?: InputMaybe<ReadonlyArray<Scalars['String']>>;
-  readonly tv_lt?: InputMaybe<Scalars['String']>;
-  readonly tv_lte?: InputMaybe<Scalars['String']>;
-  readonly tv_not?: InputMaybe<Scalars['String']>;
-  readonly tv_not_contains?: InputMaybe<Scalars['String']>;
-  readonly tv_not_contains_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_not_ends_with?: InputMaybe<Scalars['String']>;
-  readonly tv_not_ends_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_not_in?: InputMaybe<ReadonlyArray<Scalars['String']>>;
-  readonly tv_not_starts_with?: InputMaybe<Scalars['String']>;
-  readonly tv_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_starts_with?: InputMaybe<Scalars['String']>;
-  readonly tv_starts_with_nocase?: InputMaybe<Scalars['String']>;
   readonly useAllowanceEvent?: InputMaybe<Scalars['String']>;
   readonly useAllowanceEvent_?: InputMaybe<UseAllowanceEvent_Filter>;
   readonly useAllowanceEvent_contains?: InputMaybe<Scalars['String']>;
@@ -3283,8 +3251,8 @@ export enum ProjectEvent_OrderBy {
   Pv = 'pv',
   RedeemEvent = 'redeemEvent',
   TapEvent = 'tapEvent',
+  Terminal = 'terminal',
   Timestamp = 'timestamp',
-  Tv = 'tv',
   UseAllowanceEvent = 'useAllowanceEvent'
 }
 
@@ -4561,8 +4529,8 @@ export type RedeemEvent = {
   readonly projectId: Scalars['Int'];
   readonly pv: Scalars['String'];
   readonly returnAmount: Scalars['BigInt'];
+  readonly terminal: Scalars['Bytes'];
   readonly timestamp: Scalars['Int'];
-  readonly tv: Scalars['String'];
   readonly txHash: Scalars['Bytes'];
 };
 
@@ -4660,6 +4628,12 @@ export type RedeemEvent_Filter = {
   readonly returnAmount_lte?: InputMaybe<Scalars['BigInt']>;
   readonly returnAmount_not?: InputMaybe<Scalars['BigInt']>;
   readonly returnAmount_not_in?: InputMaybe<ReadonlyArray<Scalars['BigInt']>>;
+  readonly terminal?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_contains?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
+  readonly terminal_not?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_not_contains?: InputMaybe<Scalars['Bytes']>;
+  readonly terminal_not_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
   readonly timestamp?: InputMaybe<Scalars['Int']>;
   readonly timestamp_gt?: InputMaybe<Scalars['Int']>;
   readonly timestamp_gte?: InputMaybe<Scalars['Int']>;
@@ -4668,26 +4642,6 @@ export type RedeemEvent_Filter = {
   readonly timestamp_lte?: InputMaybe<Scalars['Int']>;
   readonly timestamp_not?: InputMaybe<Scalars['Int']>;
   readonly timestamp_not_in?: InputMaybe<ReadonlyArray<Scalars['Int']>>;
-  readonly tv?: InputMaybe<Scalars['String']>;
-  readonly tv_contains?: InputMaybe<Scalars['String']>;
-  readonly tv_contains_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_ends_with?: InputMaybe<Scalars['String']>;
-  readonly tv_ends_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_gt?: InputMaybe<Scalars['String']>;
-  readonly tv_gte?: InputMaybe<Scalars['String']>;
-  readonly tv_in?: InputMaybe<ReadonlyArray<Scalars['String']>>;
-  readonly tv_lt?: InputMaybe<Scalars['String']>;
-  readonly tv_lte?: InputMaybe<Scalars['String']>;
-  readonly tv_not?: InputMaybe<Scalars['String']>;
-  readonly tv_not_contains?: InputMaybe<Scalars['String']>;
-  readonly tv_not_contains_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_not_ends_with?: InputMaybe<Scalars['String']>;
-  readonly tv_not_ends_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_not_in?: InputMaybe<ReadonlyArray<Scalars['String']>>;
-  readonly tv_not_starts_with?: InputMaybe<Scalars['String']>;
-  readonly tv_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
-  readonly tv_starts_with?: InputMaybe<Scalars['String']>;
-  readonly tv_starts_with_nocase?: InputMaybe<Scalars['String']>;
   readonly txHash?: InputMaybe<Scalars['Bytes']>;
   readonly txHash_contains?: InputMaybe<Scalars['Bytes']>;
   readonly txHash_in?: InputMaybe<ReadonlyArray<Scalars['Bytes']>>;
@@ -4706,8 +4660,8 @@ export enum RedeemEvent_OrderBy {
   ProjectId = 'projectId',
   Pv = 'pv',
   ReturnAmount = 'returnAmount',
+  Terminal = 'terminal',
   Timestamp = 'timestamp',
-  Tv = 'tv',
   TxHash = 'txHash'
 }
 
@@ -5951,7 +5905,7 @@ export enum _SubgraphErrorPolicy_ {
   Deny = 'deny'
 }
 
-export type NftCardFragment = { readonly __typename?: 'JB721DelegateToken', readonly id: string, readonly name: string, readonly tokenUri: string, readonly project: { readonly __typename?: 'Project', readonly projectId: number, readonly metadataUri?: string | null } };
+export type NftCardFragment = { readonly __typename?: 'JB721DelegateToken', readonly id: string, readonly address: any, readonly tokenId: any, readonly name: string, readonly tokenUri: string, readonly project: { readonly __typename?: 'Project', readonly projectId: number, readonly metadataUri?: string | null } };
 
 export type NftRewardsSectionQueryVariables = Exact<{
   address: Scalars['Bytes'];
@@ -5959,11 +5913,13 @@ export type NftRewardsSectionQueryVariables = Exact<{
 }>;
 
 
-export type NftRewardsSectionQuery = { readonly __typename?: 'Query', readonly tokens: ReadonlyArray<{ readonly __typename?: 'JB721DelegateToken', readonly id: string, readonly name: string, readonly tokenUri: string, readonly project: { readonly __typename?: 'Project', readonly projectId: number, readonly metadataUri?: string | null } }> };
+export type NftRewardsSectionQuery = { readonly __typename?: 'Query', readonly tokens: ReadonlyArray<{ readonly __typename?: 'JB721DelegateToken', readonly id: string, readonly address: any, readonly tokenId: any, readonly name: string, readonly tokenUri: string, readonly project: { readonly __typename?: 'Project', readonly projectId: number, readonly metadataUri?: string | null } }> };
 
 export const NftCardFragmentDoc = gql`
     fragment NftCard on JB721DelegateToken {
   id
+  address
+  tokenId
   name
   tokenUri
   project {
