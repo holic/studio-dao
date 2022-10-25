@@ -137,8 +137,11 @@ const HomePage: NextPage = () => {
             title="StudioDAO Box Office"
             description={
               <p>
-                You buy a ticket for a movie that’s already been made. You buy a
-                Super Ticket to see a movie get made.{" "}
+                Super Tickets help fund films. Super Tickets grant access to
+                content and experiences customized for each film, including
+                exclusive NFT mints, film credit, events, exclusive merch and
+                StudioDAO Green-light Power.
+                <br />
                 <a
                   href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
                   className="text-emerald-500 hover:underline hover:underline-offset-2"
