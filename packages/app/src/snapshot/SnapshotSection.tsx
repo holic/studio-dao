@@ -60,11 +60,15 @@ export const SnapshotSection = () => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center bg-black/20 rounded-3xl divide-x divide-zinc-800 py-4 md:py-8 -my-8">
         <div className="sm:w-6/12 px-8 md:px-12 py-4">
           <SectionHeading
-            title="Today’s Green-light vote"
+            title="Today’s Green-light Vote"
             description={
               <p>
-                Current active proposals. Your Green-light power allows you to
-                vote daily to allocate funds to a film.{" "}
+                As long as there is money in the StudioDAO community treasury,
+                the grants will flow. StudioDAO members vote using Green-light
+                power to fund the films they want to see.
+                <br />
+                {"Today's Grant: $5000"}
+                <br />
                 <a
                   href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
                   className="text-emerald-500 hover:underline hover:underline-offset-2"
