@@ -86,14 +86,14 @@ const HomePage: NextPage = () => {
                 <div className="flex flex-col md:flex-row md:justify-center md:items-end gap-12 md:gap-24 py-12 -mb-16">
                   <div className="space-y-4">
                     <h1 className="text-6xl font-dmserif text-white">
-                      Owned by{" "}
-                      <span className="text-emerald-500">filmmakers</span>.
+                      Be the{" "}
+                      <span className="text-emerald-500">Green-light</span>!
                     </h1>
                     <p>
-                      Welcome to StudioDAO – a movie studio owned by filmmakers
-                      and fans. Your Green-light power is your voting power. Use
-                      it to choose which films get made. Grow it by supporting
-                      more films & staying active in our community:
+                      Welcome to StudioDAO, a movie studio owned by filmmakers
+                      and fans. Members purchase Super Tickets and vote on which
+                      movies receive weekly community grants. Grow your
+                      Green-light power by contributing to the community.
                     </p>
                   </div>
                   <div className="space-y-6">
