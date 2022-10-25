@@ -112,6 +112,7 @@ const HomePage: NextPage = () => {
                       <ButtonLink
                         href={"https://docs.studiodao.xyz/studiodao-explainer/"}
                         variant="secondary"
+                        target={"_blank"}
                       >
                         Learn more
                       </ButtonLink>

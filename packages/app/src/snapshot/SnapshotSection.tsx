@@ -66,8 +66,10 @@ export const SnapshotSection = () => {
                 Current active proposals. Your Green-light power allows you to
                 vote daily to allocate funds to a film.{" "}
                 <a
-                  href="#"
+                  href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
                   className="text-emerald-500 hover:underline hover:underline-offset-2"
+                  target={"_blank"}
+                  rel="noreferrer"
                 >
                   Learn more &rarr;
                 </a>
