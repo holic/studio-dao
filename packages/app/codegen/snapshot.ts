@@ -350,6 +350,7 @@ export type SpaceFilters = {
 
 export type SpaceVoting = {
   readonly __typename?: 'SpaceVoting';
+  readonly aliased?: Maybe<Scalars['Boolean']>;
   readonly blind?: Maybe<Scalars['Boolean']>;
   readonly delay?: Maybe<Scalars['Int']>;
   readonly hideAbstain?: Maybe<Scalars['Boolean']>;
