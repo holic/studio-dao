@@ -2,7 +2,7 @@ import { ConnectKitButton } from "connectkit";
 import type { NextPage } from "next";
 import Link from "next/link";
 
-import { Button } from "../Button";
+import { ButtonLink } from "../Button";
 import { Container } from "../Container";
 import { DiscordIcon } from "../icons/DiscordIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
@@ -109,8 +109,12 @@ const HomePage: NextPage = () => {
                       </li>
                     </ul>
                     <div className="flex gap-2 w-max">
-                      <Button>Join StudioDAO</Button>
-                      <Button variant="secondary">Learn more</Button>
+                      <ButtonLink
+                        href={"https://docs.studiodao.xyz/studiodao-explainer/"}
+                        variant="secondary"
+                      >
+                        Learn more
+                      </ButtonLink>
                     </div>
                   </div>
                 </div>
@@ -135,8 +139,10 @@ const HomePage: NextPage = () => {
                 You buy a ticket for a movie that’s already been made. You buy a
                 Super Ticket to see a movie get made.{" "}
                 <a
-                  href="#"
+                  href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
                   className="text-emerald-500 hover:underline hover:underline-offset-2"
+                  target={"_blank"}
+                  rel="noreferrer"
                 >
                   Learn more &rarr;
                 </a>
@@ -219,46 +225,59 @@ const HomePage: NextPage = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-2">
               <h4 className="text-xl font-medium text-white">
-                How do I green-light a film?
+                How do I join StudioDAO?
               </h4>
               <p>
-                Lorem ipsum dolor sit amet. Rem saepe animi et natus autem qui
-                tempora quia non animi laudantium eum autem vero. Et quisquam
-                laborum qui quasi quia quo enim libero ea voluptatibus nobis!
+                Simple, just buy a Super Ticket. All Super Ticket minters
+                receive StudioDAO Membership.
               </p>
             </div>
             <div className="space-y-2">
               <h4 className="text-xl font-medium text-white">
-                How to join StudioDAO?
+                What is a Super Ticket?
               </h4>
               <p>
-                Lorem ipsum dolor sit amet. Rem saepe animi et natus autem qui
-                tempora quia non animi laudantium eum autem vero. Et quisquam
-                laborum qui quasi quia quo enim libero ea voluptatibus nobis!
+                Super Tickets help fund films. Super Tickets grant access to
+                content and experiences during production. Check out the Super
+                Tickets currently on sale in the Box Office.
               </p>
             </div>
             <div className="space-y-2">
               <h4 className="text-xl font-medium text-white">
-                What’s a Hero NFT?
+                What is StudioDAO U.N.A?
               </h4>
               <p>
-                Lorem ipsum dolor sit amet. Rem saepe animi et natus autem qui
-                tempora quia non animi laudantium eum autem vero. Et quisquam
-                laborum qui quasi quia quo enim libero ea voluptatibus nobis!
+                StudioDAO U.N.A. is an Unincorporated Nonprofit Association.
+                When you buy a Super Ticket you receive a single
+                non-transferable membership in StudioDAO U.N.A. You can sell or
+                transfer your Super Ticket, but your membership in StudioDAO
+                U.N.A. is non-transferable.
               </p>
             </div>
             <div className="space-y-2">
               <h4 className="text-xl font-medium text-white">
-                How do I get Green-light Power?
+                Do Super Tickets have utility?
               </h4>
               <p>
-                Lorem ipsum dolor sit amet. Rem saepe animi et natus autem qui
-                tempora quia non animi laudantium eum autem vero. Et quisquam
-                laborum qui quasi quia quo enim libero ea voluptatibus nobis!
+                You betcha! Super Tickets grant access to content and
+                experiences customized for each film. Examples include StudioDAO
+                Green-light Power, exclusive NFT mints, film credit, premiere
+                invites, behind-the-scenes events, and our favorite, custom
+                designed movie specific ice cream flavors with Studio super pal,
+                Nicholas Morgenstern.
               </p>
             </div>
           </div>
-          <Button className="mx-auto">Learn more</Button>
+          <div className="flex justify-center">
+            <ButtonLink
+              size="sm"
+              href={"https://docs.studiodao.xyz/faq"}
+              target={"_blank"}
+              className="mx-auto"
+            >
+              Learn more
+            </ButtonLink>
+          </div>
         </Container>
 
         <div className="flex flex-col gap-6 items-center justify-center divide-y divide-zinc-700">

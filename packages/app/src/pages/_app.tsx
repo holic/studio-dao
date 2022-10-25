@@ -12,6 +12,11 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <title>StudioDAO</title>
+        <meta
+          name="description"
+          content="a movie studio owned by filmmakers and fans"
+        />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <EthereumProviders>
         <Component {...pageProps} />
