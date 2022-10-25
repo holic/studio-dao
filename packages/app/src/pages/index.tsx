@@ -110,9 +110,9 @@ const HomePage: NextPage = () => {
                     </ul>
                     <div className="flex gap-2 w-max">
                       <ButtonLink
-                        href={"https://docs.studiodao.xyz/studiodao-explainer/"}
+                        href="https://docs.studiodao.xyz/studiodao-explainer/"
                         variant="secondary"
-                        target={"_blank"}
+                        target="_blank"
                       >
                         Learn more
                       </ButtonLink>
@@ -136,21 +136,24 @@ const HomePage: NextPage = () => {
           <SectionHeading
             title="StudioDAO Box Office"
             description={
-              <p>
-                Super Tickets help fund films. Super Tickets grant access to
-                content and experiences customized for each film, including
-                exclusive NFT mints, film credit, events, exclusive merch and
-                StudioDAO Green-light Power.
-                <br />
-                <a
-                  href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
-                  className="text-emerald-500 hover:underline hover:underline-offset-2"
-                  target={"_blank"}
-                  rel="noreferrer"
-                >
-                  Learn more &rarr;
-                </a>
-              </p>
+              <>
+                <p>
+                  Super Tickets help fund films. Super Tickets grant access to
+                  content and experiences customized for each film, including
+                  exclusive NFT mints, film credit, events, exclusive merch and
+                  StudioDAO Green-light Power.
+                </p>
+                <p>
+                  <a
+                    href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
+                    className="text-emerald-500 hover:underline hover:underline-offset-2"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Learn more &rarr;
+                  </a>
+                </p>
+              </>
             }
           />
           <div className="space-y-8 sm:space-y-12">
@@ -175,8 +178,8 @@ const HomePage: NextPage = () => {
                 <p>
                   When Buck, a young stag, gets engaged to Jane Doe, his deer
                   friends throw him a wild party on the lawn of a mansion on
-                  Further Lane in East Hampton. But when Buck&apos;s Stag party
-                  gets out of control, he and his friends stampede through the
+                  Further Lane in East Hampton. But when Buck’s Stag party gets
+                  out of control, he and his friends stampede through the
                   Hamptons in a bacchanalian frenzy, and get totally lost on
                   Long Island. As they try to find their way back home, they
                   must outsmart hunters and cover their tracks, or risk the
@@ -275,8 +278,8 @@ const HomePage: NextPage = () => {
           <div className="flex justify-center">
             <ButtonLink
               size="sm"
-              href={"https://docs.studiodao.xyz/faq"}
-              target={"_blank"}
+              href="https://docs.studiodao.xyz/faq"
+              target="_blank"
               className="mx-auto"
             >
               Learn more

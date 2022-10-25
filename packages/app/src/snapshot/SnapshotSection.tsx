@@ -62,22 +62,24 @@ export const SnapshotSection = () => {
           <SectionHeading
             title="Today’s Green-light Vote"
             description={
-              <p>
-                As long as there is money in the StudioDAO community treasury,
-                the grants will flow. StudioDAO members vote using Green-light
-                power to fund the films they want to see.
-                <br />
-                {"Today's Grant: $5000"}
-                <br />
-                <a
-                  href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
-                  className="text-emerald-500 hover:underline hover:underline-offset-2"
-                  target={"_blank"}
-                  rel="noreferrer"
-                >
-                  Learn more &rarr;
-                </a>
-              </p>
+              <>
+                <p>
+                  As long as there is money in the StudioDAO community treasury,
+                  the grants will flow. StudioDAO members vote using Green-light
+                  power to fund the films they want to see.
+                </p>
+                <p>Today’s Grant: $5000</p>
+                <p>
+                  <a
+                    href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
+                    className="text-emerald-500 hover:underline hover:underline-offset-2"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Learn more &rarr;
+                  </a>
+                </p>
+              </>
             }
           />
         </div>
