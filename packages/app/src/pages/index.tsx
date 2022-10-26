@@ -198,8 +198,7 @@ const HomePage: NextPage = () => {
                   Hamptons in a bacchanalian frenzy, and get totally lost on
                   Long Island. As they try to find their way back home, they
                   must outsmart hunters and cover their tracks, or risk the
-                  herd’s winter way of life being discovered by humans. A
-                  comedic horror film take down of the Hamptons…
+                  herd’s winter way of life being discovered by humans…
                 </p>
               }
               imageUrl="/projects/stag-party.jpg"
@@ -210,30 +209,15 @@ const HomePage: NextPage = () => {
               title="Beam-Eyed Colossi"
               subtitle="Fking the city up with gratitude!"
               description={
-                <>
-                  <p>
-                    In Summer of 2022, official reasons given by the City of Los
-                    Angeles for on-and-off closures of the 6th Street Bridge in
-                    downtown LA cited “vandalism, reckless driving and other
-                    criminal activity.” It is commonly understood that the real
-                    reason for the intermittent closures was the unprecedented
-                    double-appearance of the Beam-Eyed Colossus of Excellent
-                    Connectivity. This was the first and only recorded case of a
-                    Colossus appearing twice at the same location, which
-                    prompted officials to close the structure and install a
-                    collection of cameras and sensors to gather data in the
-                    event of a third appearance, which never occurred.
-                  </p>
-                  <p>
-                    Compelling anecdotal reports by local residents described a
-                    marked increase in upload and download speeds during both
-                    appearances. Skeptics have repeatedly suggested that these
-                    could have simply been random jumps in connection speeds,
-                    but area residents dismissed this notion as extremely
-                    unlikely, since the internet provider in the area is
-                    Spectrum.
-                  </p>
-                </>
+                <p>
+                  In Summer of 2022, official reasons given by the City of Los
+                  Angeles for on-and-off closures of the 6th Street Bridge in
+                  downtown LA cited “vandalism, reckless driving and other
+                  criminal activity.” It is commonly understood that the real
+                  reason for the intermittent closures was the unprecedented
+                  double-appearance of the Beam-Eyed Colossus of Excellent
+                  Connectivity…
+                </p>
               }
               imageUrl="/projects/beam-eyed-colossi.gif"
               contributeUrl="https://goerli.juicebox.money/v2/p/59"
