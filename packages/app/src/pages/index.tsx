@@ -289,6 +289,7 @@ const HomePage: NextPage = () => {
           <div className="flex justify-center">
             <ButtonLink
               size="sm"
+              variant="secondary"
               href="https://docs.studiodao.xyz/faq"
               target="_blank"
               className="mx-auto"
