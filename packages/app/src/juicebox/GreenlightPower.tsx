@@ -1,11 +1,9 @@
+import { ethers } from "ethers";
 import { gql } from "urql";
 import { useAccount } from "wagmi";
 
 import { useGreenlightPowerQuery } from "../../codegen/juicebox";
 import { juiceboxProjectIds } from "../constants";
-import { Container } from "../Container";
-import { SectionHeading } from "../SectionHeading";
-import { NftCard } from "./NftCard";
 
 gql`
   query GreenlightPower($address: Bytes!, $projectIds: [Int!]!) {
@@ -40,14 +38,14 @@ export const GreenlightPower = () => {
 
   const balance =
     queryResult.data?.participants
-      ?.map((p) => p.balance / 1e18)
-      .reduce((a, b) => a + b, 0) ?? 0;
+      ?.map((p) => ethers.BigNumber.from(p.balance))
+      .reduce((a, b) => a.add(b), ethers.BigNumber.from(0)) ?? 0;
 
   return (
     <>
       ✦ Your Green-light power:{" "}
-      <span className="bg-emerald-900/50 px-2 py-1 rounded">
-        {balance.toLocaleString()}
+      <span className="bg-emerald-900/50 px-1.5 py-0.5 rounded">
+        {parseFloat(ethers.utils.formatEther(balance)).toLocaleString()}
       </span>
     </>
   );

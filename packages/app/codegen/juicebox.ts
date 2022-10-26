@@ -5923,6 +5923,13 @@ export type NftRewardsSectionQueryVariables = Exact<{
 
 export type NftRewardsSectionQuery = { readonly __typename?: 'Query', readonly tokens: ReadonlyArray<{ readonly __typename?: 'JB721DelegateToken', readonly id: string, readonly address: any, readonly tokenId: any, readonly name: string, readonly tokenUri: string, readonly project: { readonly __typename?: 'Project', readonly projectId: number, readonly metadataUri?: string | null } }> };
 
+export type TreasuryBalanceQueryVariables = Exact<{
+  projectIds: ReadonlyArray<Scalars['Int']> | Scalars['Int'];
+}>;
+
+
+export type TreasuryBalanceQuery = { readonly __typename?: 'Query', readonly projects: ReadonlyArray<{ readonly __typename?: 'Project', readonly id: string, readonly currentBalance: any }> };
+
 export const NftCardFragmentDoc = gql`
     fragment NftCard on JB721DelegateToken {
   id
@@ -5959,4 +5966,16 @@ export const NftRewardsSectionDocument = gql`
 
 export function useNftRewardsSectionQuery(options: Omit<Urql.UseQueryArgs<NftRewardsSectionQueryVariables>, 'query'>) {
   return Urql.useQuery<NftRewardsSectionQuery, NftRewardsSectionQueryVariables>({ query: NftRewardsSectionDocument, ...options });
+};
+export const TreasuryBalanceDocument = gql`
+    query TreasuryBalance($projectIds: [Int!]!) {
+  projects(where: {projectId_in: $projectIds}) {
+    id
+    currentBalance
+  }
+}
+    `;
+
+export function useTreasuryBalanceQuery(options: Omit<Urql.UseQueryArgs<TreasuryBalanceQueryVariables>, 'query'>) {
+  return Urql.useQuery<TreasuryBalanceQuery, TreasuryBalanceQueryVariables>({ query: TreasuryBalanceDocument, ...options });
 };

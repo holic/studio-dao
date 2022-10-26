@@ -9,6 +9,7 @@ import { TwitterIcon } from "../icons/TwitterIcon";
 import { GreenlightPower } from "../juicebox/GreenlightPower";
 import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
 import { NftRewardsSection } from "../juicebox/NftRewardsSection";
+import { TreasuryBalance } from "../juicebox/TreasuryBalance";
 import { ProjectCard } from "../ProjectCard";
 import { SectionHeading } from "../SectionHeading";
 import { SnapshotGraphProvider } from "../snapshot/SnapshotGraphProvider";
@@ -77,9 +78,15 @@ const HomePage: NextPage = () => {
             <div className="bg-zinc-800/90">
               <Container>
                 <div className="flex justify-between py-4">
-                  <div>Current treasury cycle</div>
+                  <div>
+                    <JuiceboxGraphProvider>
+                      <TreasuryBalance />
+                    </JuiceboxGraphProvider>
+                  </div>
                   <div className="hidden sm:block">
-                    <GreenlightPower />
+                    <JuiceboxGraphProvider>
+                      <GreenlightPower />
+                    </JuiceboxGraphProvider>
                   </div>
                 </div>
               </Container>
