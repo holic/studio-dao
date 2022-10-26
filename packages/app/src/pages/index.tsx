@@ -300,9 +300,11 @@ const HomePage: NextPage = () => {
         </Container>
 
         <div className="flex flex-col gap-6 items-center justify-center divide-y divide-zinc-700">
-          <a href="#">
-            <img src="/logo.svg" className="w-36" alt="StudioDAO logo" />
-          </a>
+          <Link href="/">
+            <a>
+              <img src="/logo.svg" className="w-36" alt="StudioDAO logo" />
+            </a>
+          </Link>
           <nav className="flex">
             <a
               className="inline-flex px-4 sm:px-6 py-4 hover:underline"
