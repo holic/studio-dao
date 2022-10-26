@@ -184,7 +184,7 @@ const HomePage: NextPage = () => {
               }
               imageUrl="/projects/hyperspace-banny.png"
               contributeUrl="https://goerli.juicebox.money/v2/p/38"
-              learnMoreUrl="https://www.studiodao.xyz/hyperspace-banny"
+              learnMoreUrl="https://studio-dao.webflow.io/hyperspace-banny"
             />
             <ProjectCard
               title="Stag Party"
@@ -203,7 +203,7 @@ const HomePage: NextPage = () => {
               }
               imageUrl="/projects/stag-party.jpg"
               contributeUrl="https://goerli.juicebox.money/v2/p/47"
-              learnMoreUrl="https://www.studiodao.xyz/stag-party"
+              learnMoreUrl="https://studio-dao.webflow.io/stag-party"
             />
             <ProjectCard
               title="Beam-Eyed Colossi"
@@ -221,7 +221,7 @@ const HomePage: NextPage = () => {
               }
               imageUrl="/projects/beam-eyed-colossi.gif"
               contributeUrl="https://goerli.juicebox.money/v2/p/59"
-              learnMoreUrl="https://www.studiodao.xyz/beam-eyed-colossi"
+              learnMoreUrl="https://studio-dao.webflow.io/beam-eyed-colossi"
             />
           </div>
         </Container>
@@ -337,13 +337,13 @@ const HomePage: NextPage = () => {
         <div className="flex flex-col md:flex-row gap-x-6">
           <span>© 2022 StudioDAO Backlot, LLC.</span>
           <a
-            href="https://www.studiodao.xyz/privacy-policy"
+            href="https://studio-dao.webflow.io/privacy-policy"
             className="hover:underline"
           >
             Privacy Policy
           </a>
           <a
-            href="https://www.studiodao.xyz/terms-of-use"
+            href="https://studio-dao.webflow.io/terms-of-use"
             className="hover:underline"
           >
             Terms of Use
