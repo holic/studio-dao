@@ -83,8 +83,8 @@ const HomePage: NextPage = () => {
             </div>
             <div className="flex-grow flex flex-col justify-end items-center">
               <Container>
-                <div className="flex flex-col md:flex-row md:justify-center md:items-end gap-12 md:gap-24 py-12 -mb-16">
-                  <div className="space-y-4">
+                <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-24 py-12 -mb-16">
+                  <div className="space-y-4 w-7/12">
                     <h1 className="text-6xl font-dmserif text-white">
                       Be the{" "}
                       <span className="text-emerald-500">Green-light</span>!
@@ -109,6 +109,7 @@ const HomePage: NextPage = () => {
                       </li>
                     </ul>
                     <div className="flex gap-2 w-max">
+                      <ButtonLink href="#box-office">Join StudioDAO</ButtonLink>
                       <ButtonLink
                         href="https://docs.studiodao.xyz/studiodao-explainer/"
                         variant="secondary"

@@ -2,6 +2,7 @@ import { gql } from "urql";
 import { useAccount } from "wagmi";
 
 import { useNftRewardsSectionQuery } from "../../codegen/juicebox";
+import { juiceboxNftProjectIds } from "../constants";
 import { Container } from "../Container";
 import { SectionHeading } from "../SectionHeading";
 import { NftCard, NftCardFragment } from "./NftCard";
@@ -22,9 +23,8 @@ export const NftRewardsSection = () => {
   const [queryResult] = useNftRewardsSectionQuery({
     pause: !address,
     variables: {
-      // address,
-      address: "0x0028c35095d34c9c8a3bc84cb8542cb182fcfa8e",
-      projectIds: [38, 47],
+      address,
+      projectIds: juiceboxNftProjectIds,
     },
   });
   const tokens = queryResult.data?.tokens;

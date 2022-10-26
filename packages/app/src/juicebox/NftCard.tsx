@@ -39,10 +39,6 @@ export const NftCard = ({ nft }: Props) => {
     );
   }
 
-  console.log("got nft", nft);
-  console.log("got tokenMetadata", tokenMetadata.data);
-  console.log("got projectMetadata", projectMetadata.data);
-
   return (
     <a
       className="group flex flex-col bg-black/20 rounded-lg overflow-hidden transition hover:scale-105"
