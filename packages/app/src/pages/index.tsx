@@ -70,7 +70,7 @@ const HomePage: NextPage = () => {
         <div className="relative">
           <img
             className="absolute w-full h-full object-cover"
-            src="/hero.png"
+            src="/hero.jpg"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/70 to-zinc-900 md:from-transparent md:to-zinc-900" />
 
