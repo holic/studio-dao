@@ -6,6 +6,7 @@ import { ButtonLink } from "../Button";
 import { Container } from "../Container";
 import { DiscordIcon } from "../icons/DiscordIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
+import { GreenlightPower } from "../juicebox/GreenlightPower";
 import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
 import { NftRewardsSection } from "../juicebox/NftRewardsSection";
 import { ProjectCard } from "../ProjectCard";
@@ -26,19 +27,19 @@ const HomePage: NextPage = () => {
             </Link>
             <nav className="flex-grow hidden md:flex items-center justify-center -m-4">
               <a
-                className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+                className="inline-flex px-4 py-2 hover:text-white hover:underline"
                 href="#box-office"
               >
                 Box Office
               </a>
               <a
-                className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+                className="inline-flex px-4 py-2 hover:text-white hover:underline"
                 href="#faq"
               >
                 FAQ
               </a>
               <a
-                className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+                className="inline-flex px-4 py-2 hover:text-white hover:underline"
                 href="https://twitter.com/studiodao"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -48,7 +49,7 @@ const HomePage: NextPage = () => {
                 <TwitterIcon />
               </a>
               <a
-                className="inline-flex px-4 py-2 hover:text-white hover:underline hover:underline-offset-2"
+                className="inline-flex px-4 py-2 hover:text-white hover:underline"
                 href="https://discord.com/invite/YxPGn9pcdr"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -77,7 +78,9 @@ const HomePage: NextPage = () => {
               <Container>
                 <div className="flex justify-between py-4">
                   <div>Current treasury cycle</div>
-                  <div className="hidden sm:block">Earn Green-light Power</div>
+                  <div className="hidden sm:block">
+                    <GreenlightPower />
+                  </div>
                 </div>
               </Container>
             </div>
@@ -147,7 +150,7 @@ const HomePage: NextPage = () => {
                 <p>
                   <a
                     href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
-                    className="text-emerald-500 hover:underline hover:underline-offset-2"
+                    className="text-emerald-500 hover:underline"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
@@ -294,19 +297,19 @@ const HomePage: NextPage = () => {
           </a>
           <nav className="flex">
             <a
-              className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+              className="inline-flex px-4 sm:px-6 py-4 hover:underline"
               href="#box-office"
             >
               Box Office
             </a>
             <a
-              className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+              className="inline-flex px-4 sm:px-6 py-4 hover:underline"
               href="#faq"
             >
               FAQ
             </a>
             <a
-              className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+              className="inline-flex px-4 sm:px-6 py-4 hover:underline"
               href="https://twitter.com/studiodao"
               target="_blank"
               rel="noreferrer noopener"
@@ -314,7 +317,7 @@ const HomePage: NextPage = () => {
               Twitter
             </a>
             <a
-              className="inline-flex px-4 sm:px-6 py-4 hover:underline hover:underline-offset-2"
+              className="inline-flex px-4 sm:px-6 py-4 hover:underline"
               href="https://discord.com/invite/YxPGn9pcdr"
               target="_blank"
               rel="noreferrer noopener"
@@ -327,7 +330,7 @@ const HomePage: NextPage = () => {
       <div className="px-6 py-4 mt-16 flex flex-col lg:flex-row gap-x-6 gap-y-8 justify-between text-zinc-600">
         <a
           href="https://juicebox.money/"
-          className="hover:underline hover:underline-offset-2"
+          className="hover:underline"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -337,13 +340,13 @@ const HomePage: NextPage = () => {
           <span>© 2022 StudioDAO Backlot, LLC.</span>
           <a
             href="https://www.studiodao.xyz/privacy-policy"
-            className="hover:underline hover:underline-offset-2"
+            className="hover:underline"
           >
             Privacy Policy
           </a>
           <a
             href="https://www.studiodao.xyz/terms-of-use"
-            className="hover:underline hover:underline-offset-2"
+            className="hover:underline"
           >
             Terms of Use
           </a>

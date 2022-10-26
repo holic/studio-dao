@@ -72,7 +72,7 @@ export const SnapshotSection = () => {
                 <p>
                   <a
                     href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
-                    className="text-emerald-500 hover:underline hover:underline-offset-2"
+                    className="text-emerald-500 hover:underline"
                     target={"_blank"}
                     rel="noreferrer"
                   >
@@ -127,7 +127,7 @@ export const SnapshotSection = () => {
             size="sm"
             className="self-center"
           >
-            {canVote ? "Vote" : "View"} on Snapshot.org &rarr;
+            {canVote ? "Vote" : "View"} on Snapshot.org
           </ButtonLink>
         </div>
       </div>

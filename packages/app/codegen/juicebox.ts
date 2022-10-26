@@ -5905,6 +5905,14 @@ export enum _SubgraphErrorPolicy_ {
   Deny = 'deny'
 }
 
+export type GreenlightPowerQueryVariables = Exact<{
+  address: Scalars['Bytes'];
+  projectIds: ReadonlyArray<Scalars['Int']> | Scalars['Int'];
+}>;
+
+
+export type GreenlightPowerQuery = { readonly __typename?: 'Query', readonly participants: ReadonlyArray<{ readonly __typename?: 'Participant', readonly id: string, readonly balance: any }> };
+
 export type NftCardFragment = { readonly __typename?: 'JB721DelegateToken', readonly id: string, readonly address: any, readonly tokenId: any, readonly name: string, readonly tokenUri: string, readonly project: { readonly __typename?: 'Project', readonly projectId: number, readonly metadataUri?: string | null } };
 
 export type NftRewardsSectionQueryVariables = Exact<{
@@ -5928,6 +5936,18 @@ export const NftCardFragmentDoc = gql`
   }
 }
     `;
+export const GreenlightPowerDocument = gql`
+    query GreenlightPower($address: Bytes!, $projectIds: [Int!]!) {
+  participants(where: {wallet: $address, projectId_in: $projectIds}) {
+    id
+    balance
+  }
+}
+    `;
+
+export function useGreenlightPowerQuery(options: Omit<Urql.UseQueryArgs<GreenlightPowerQueryVariables>, 'query'>) {
+  return Urql.useQuery<GreenlightPowerQuery, GreenlightPowerQueryVariables>({ query: GreenlightPowerDocument, ...options });
+};
 export const NftRewardsSectionDocument = gql`
     query NftRewardsSection($address: Bytes!, $projectIds: [Int!]!) {
   tokens: jb721DelegateTokens(where: {owner_: {wallet: $address}}) {

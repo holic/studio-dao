@@ -2,7 +2,7 @@ import { gql } from "urql";
 import { useAccount } from "wagmi";
 
 import { useNftRewardsSectionQuery } from "../../codegen/juicebox";
-import { juiceboxNftProjectIds } from "../constants";
+import { juiceboxProjectIds } from "../constants";
 import { Container } from "../Container";
 import { SectionHeading } from "../SectionHeading";
 import { NftCard, NftCardFragment } from "./NftCard";
@@ -24,7 +24,7 @@ export const NftRewardsSection = () => {
     pause: !address,
     variables: {
       address,
-      projectIds: juiceboxNftProjectIds,
+      projectIds: juiceboxProjectIds,
     },
   });
   const tokens = queryResult.data?.tokens;
@@ -38,10 +38,7 @@ export const NftRewardsSection = () => {
           <p>
             Your super ticket collection. Support all our movies to multiply
             your green-light power.{" "}
-            <a
-              href="#"
-              className="text-emerald-500 hover:underline hover:underline-offset-2"
-            >
+            <a href="#" className="text-emerald-500 hover:underline">
               Learn more &rarr;
             </a>
           </p>
