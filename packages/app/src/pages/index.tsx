@@ -149,6 +149,10 @@ const HomePage: NextPage = () => {
             description={
               <>
                 <p>
+                  When you buy your first Super Ticket you become a member of
+                  StudioDAO.
+                </p>
+                <p>
                   Super Tickets help fund films. Super Tickets grant access to
                   content and experiences customized for each film, including
                   exclusive NFT mints, film credit, events, exclusive merch and
@@ -290,7 +294,7 @@ const HomePage: NextPage = () => {
             <ButtonLink
               size="sm"
               variant="secondary"
-              href="https://docs.studiodao.xyz/faq"
+              href="https://docs.studiodao.xyz/studiodao-explainer/season-1/faq"
               target="_blank"
               className="mx-auto"
             >
