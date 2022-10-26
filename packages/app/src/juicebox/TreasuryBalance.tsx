@@ -3,6 +3,7 @@ import { gql } from "urql";
 
 import { useTreasuryBalanceQuery } from "../../codegen/juicebox";
 import { juiceboxTreasuryIds } from "../constants";
+import { PendingIcon } from "../icons/PendingIcon";
 
 gql`
   query TreasuryBalance($projectIds: [Int!]!) {
@@ -20,10 +21,18 @@ export const TreasuryBalance = () => {
     },
   });
 
-  const balance =
-    queryResult.data?.projects
-      ?.map((p) => ethers.BigNumber.from(p.currentBalance))
-      .reduce((a, b) => a.add(b), ethers.BigNumber.from(0)) ?? 0;
+  const balance = queryResult.data?.projects
+    ?.map((p) => ethers.BigNumber.from(p.currentBalance))
+    .reduce((a, b) => a.add(b), ethers.BigNumber.from(0));
 
-  return <>Current treasury: Ξ{ethers.utils.formatEther(balance)}</>;
+  return (
+    <>
+      Current treasury:{" "}
+      {balance ? (
+        <>Ξ{ethers.utils.formatEther(balance)}</>
+      ) : (
+        <PendingIcon className="inline-flex" />
+      )}
+    </>
+  );
 };

@@ -4,6 +4,7 @@ import { useAccount } from "wagmi";
 
 import { useGreenlightPowerQuery } from "../../codegen/juicebox";
 import { juiceboxProjectIds } from "../constants";
+import { PendingIcon } from "../icons/PendingIcon";
 
 gql`
   query GreenlightPower($address: Bytes!, $projectIds: [Int!]!) {
@@ -36,16 +37,19 @@ export const GreenlightPower = () => {
     );
   }
 
-  const balance =
-    queryResult.data?.participants
-      ?.map((p) => ethers.BigNumber.from(p.balance))
-      .reduce((a, b) => a.add(b), ethers.BigNumber.from(0)) ?? 0;
+  const balance = queryResult.data?.participants
+    ?.map((p) => ethers.BigNumber.from(p.balance))
+    .reduce((a, b) => a.add(b), ethers.BigNumber.from(0));
 
   return (
     <>
       ✦ Your Green-light power:{" "}
       <span className="bg-emerald-900/50 px-1.5 py-0.5 rounded">
-        {parseFloat(ethers.utils.formatEther(balance)).toLocaleString()}
+        {balance ? (
+          parseFloat(ethers.utils.formatEther(balance)).toLocaleString()
+        ) : (
+          <PendingIcon className="inline-flex" />
+        )}
       </span>
     </>
   );
