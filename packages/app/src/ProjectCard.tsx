@@ -19,7 +19,7 @@ export const ProjectCard = ({
   contributeUrl,
   learnMoreUrl,
 }: Props) => (
-  <div className="flex flex-col md:flex-row bg-black/20 rounded-lg overflow-hidden">
+  <div className="flex flex-col md:flex-row bg-black/30 rounded-lg overflow-hidden">
     <img
       src={imageUrl}
       className="flex-shrink-0 md:w-72 lg:w-96 h-56 md:h-auto aspect-square object-cover"

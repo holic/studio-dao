@@ -57,7 +57,7 @@ export const SnapshotSection = () => {
 
   return (
     <Container>
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center bg-black/20 rounded-3xl divide-x divide-zinc-800 py-4 md:py-8 -my-8">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center bg-black/30 rounded-3xl divide-x divide-zinc-800 py-4 md:py-8 -my-8">
         <div className="sm:w-6/12 px-8 md:px-12 py-4">
           <SectionHeading
             title="Today’s Green-light Vote"

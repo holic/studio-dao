@@ -33,7 +33,7 @@ export const NftCard = ({ nft }: Props) => {
 
   if (!tokenMetadata.data || !projectMetadata.data) {
     return (
-      <div className="flex flex-col items-center justify-center bg-black/20 rounded-lg text-xl p-6 h-80">
+      <div className="flex flex-col items-center justify-center bg-black/30 rounded-lg text-xl p-6 h-80">
         <PendingIcon />
       </div>
     );
@@ -41,7 +41,7 @@ export const NftCard = ({ nft }: Props) => {
 
   return (
     <a
-      className="group flex flex-col bg-black/20 rounded-lg overflow-hidden transition hover:scale-105"
+      className="group flex flex-col bg-black/30 rounded-lg overflow-hidden transition hover:scale-105"
       href={`https://goerli.juicebox.money/v2/p/${nft.project.projectId}`}
       target="_blank"
       rel="noopener noreferrer"
