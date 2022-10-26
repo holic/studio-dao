@@ -29,7 +29,9 @@ export const TreasuryBalance = () => {
     <>
       Current treasury:{" "}
       {balance ? (
-        <>Ξ{ethers.utils.formatEther(balance)}</>
+        <span className=" font-medium">
+          Ξ{ethers.utils.formatEther(balance)}
+        </span>
       ) : (
         <PendingIcon className="inline-flex" />
       )}

@@ -44,7 +44,7 @@ export const GreenlightPower = () => {
   return (
     <>
       ✦ Your Green-light power:{" "}
-      <span className="bg-emerald-900/50 px-1.5 py-0.5 rounded">
+      <span className="bg-emerald-700/20 px-1.5 py-0.5 rounded font-medium">
         {balance ? (
           parseFloat(ethers.utils.formatEther(balance)).toLocaleString()
         ) : (
