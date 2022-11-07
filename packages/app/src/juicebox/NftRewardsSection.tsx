@@ -36,8 +36,8 @@ export const NftRewardsSection = () => {
         title="Your Slate"
         description={
           <p>
-            Your super ticket collection. Support all our movies to multiply
-            your green-light power.{" "}
+            Your Super Ticket collection. Support all our movies to multiply
+            your Greenlight Power.{" "}
             <a href="#" className="text-emerald-500 hover:underline">
               Learn more &rarr;
             </a>

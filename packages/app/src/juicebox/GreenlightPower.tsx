@@ -31,7 +31,7 @@ export const GreenlightPower = () => {
       <>
         ✦{" "}
         <a href="#box-office" className="text-emerald-500 hover:underline">
-          Earn Green-light power
+          Earn Greenlight Power
         </a>
       </>
     );
@@ -43,7 +43,7 @@ export const GreenlightPower = () => {
 
   return (
     <>
-      ✦ Your Green-light power:{" "}
+      ✦ Your Greenlight Power:{" "}
       <span className="bg-emerald-700/20 px-1.5 py-0.5 rounded font-medium">
         {balance ? (
           parseFloat(ethers.utils.formatEther(balance)).toLocaleString()

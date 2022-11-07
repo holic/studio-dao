@@ -2,7 +2,7 @@
 
 export const Head: React.FC = () => {
   const siteDescription =
-    "StudioDAO is  a movie studio owned by filmmakers and fans. Members purchase Super Tickets and vote on which movies receive weekly community grants. Grow your Green-light power by contributing to the community.";
+    "StudioDAO is  a movie studio owned by filmmakers and fans. Members purchase Super Tickets and vote on which movies receive weekly community grants. Grow your Greenlight Power by contributing to the community.";
 
   return (
     <>

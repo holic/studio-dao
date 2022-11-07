@@ -60,13 +60,13 @@ export const SnapshotSection = () => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center bg-black/30 rounded-3xl divide-x divide-zinc-800 py-4 md:py-8 -my-8">
         <div className="sm:w-6/12 px-8 md:px-12 py-4">
           <SectionHeading
-            title="Today’s Green-light Vote"
+            title="Today’s Greenlight Vote"
             description={
               <>
                 <p>
                   As long as there is money in the StudioDAO community treasury,
-                  the grants will flow. StudioDAO members vote using Green-light
-                  power to fund the films they want to see.
+                  the grants will flow. StudioDAO members vote using Greenlight
+                  Power to fund the films they want to see.
                 </p>
                 <p>Today’s Grant: $5000</p>
                 <p>

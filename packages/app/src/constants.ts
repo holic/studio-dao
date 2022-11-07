@@ -4,14 +4,14 @@ import { targetChainId } from "./EthereumProviders";
 
 export const juiceboxTreasuryIds =
   targetChainId === chain.goerli.id
-    ? [61]
+    ? [124]
     : [
         // TODO: mainnet
       ];
 
 export const juiceboxProjectIds =
   targetChainId === chain.goerli.id
-    ? [38, 47, 59, 61]
+    ? [124, 128, 129, 130]
     : [
         // TODO: mainnet
       ];

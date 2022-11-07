@@ -97,19 +97,19 @@ const HomePage: NextPage = () => {
                   <div className="space-y-4 w-7/12">
                     <h1 className="text-6xl font-dmserif text-white">
                       Be the{" "}
-                      <span className="text-emerald-500">Green-light</span>!
+                      <span className="text-emerald-500">Greenlight</span>!
                     </h1>
                     <p>
                       Welcome to StudioDAO, a movie studio owned by filmmakers
                       and fans. Members purchase Super Tickets and vote on which
                       movies receive weekly community grants. Grow your
-                      Green-light power by contributing to the community.
+                      Greenlight Power by contributing to the community.
                     </p>
                   </div>
                   <div className="space-y-6">
                     <ul>
                       <li className="flex gap-2">
-                        <span>❇️</span> Green-light films
+                        <span>❇️</span> Greenlight films
                       </li>
                       <li className="flex gap-2">
                         <span>🎥</span> Make movies
@@ -156,7 +156,7 @@ const HomePage: NextPage = () => {
                   Super Tickets help fund films. Super Tickets grant access to
                   content and experiences customized for each film, including
                   exclusive NFT mints, film credit, events, exclusive merch and
-                  StudioDAO Green-light Power.
+                  StudioDAO Greenlight Power.
                 </p>
                 <p>
                   <a
@@ -183,7 +183,7 @@ const HomePage: NextPage = () => {
                 </p>
               }
               imageUrl="/projects/hyperspace-banny.png"
-              contributeUrl="https://goerli.juicebox.money/v2/p/38"
+              contributeUrl="https://goerli.juicebox.money/v2/p/128"
               learnMoreUrl="https://studio-dao.webflow.io/hyperspace-banny"
             />
             <ProjectCard
@@ -202,7 +202,7 @@ const HomePage: NextPage = () => {
                 </p>
               }
               imageUrl="/projects/stag-party.jpg"
-              contributeUrl="https://goerli.juicebox.money/v2/p/47"
+              contributeUrl="https://goerli.juicebox.money/v2/p/129"
               learnMoreUrl="https://studio-dao.webflow.io/stag-party"
             />
             <ProjectCard
@@ -220,7 +220,7 @@ const HomePage: NextPage = () => {
                 </p>
               }
               imageUrl="/projects/beam-eyed-colossi.gif"
-              contributeUrl="https://goerli.juicebox.money/v2/p/59"
+              contributeUrl="https://goerli.juicebox.money/v2/p/130"
               learnMoreUrl="https://studio-dao.webflow.io/beam-eyed-colossi"
             />
           </div>
@@ -267,7 +267,7 @@ const HomePage: NextPage = () => {
               <p>
                 You betcha! Super Tickets grant access to content and
                 experiences customized for each film. Examples include StudioDAO
-                Green-light Power, exclusive NFT mints, film credit, premiere
+                Greenlight Power, exclusive NFT mints, film credit, premiere
                 invites, behind-the-scenes events, and our favorite, custom
                 designed movie specific ice cream flavors with Studio super pal,
                 Nicholas Morgenstern.
