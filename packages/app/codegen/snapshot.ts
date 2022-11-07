@@ -141,6 +141,7 @@ export type Proposal = {
   readonly symbol: Scalars['String'];
   readonly title: Scalars['String'];
   readonly type?: Maybe<Scalars['String']>;
+  readonly validation?: Maybe<Validation>;
   readonly votes?: Maybe<Scalars['Int']>;
 };
 
@@ -337,7 +338,8 @@ export type Space = {
   readonly terms?: Maybe<Scalars['String']>;
   readonly treasuries?: Maybe<ReadonlyArray<Maybe<Treasury>>>;
   readonly twitter?: Maybe<Scalars['String']>;
-  readonly validation?: Maybe<Strategy>;
+  readonly validation?: Maybe<Validation>;
+  readonly voteValidation?: Maybe<Validation>;
   readonly voting?: Maybe<SpaceVoting>;
   readonly website?: Maybe<Scalars['String']>;
 };
@@ -437,6 +439,12 @@ export type UsersWhere = {
   readonly id_in?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
   readonly ipfs?: InputMaybe<Scalars['String']>;
   readonly ipfs_in?: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
+};
+
+export type Validation = {
+  readonly __typename?: 'Validation';
+  readonly name: Scalars['String'];
+  readonly params?: Maybe<Scalars['Any']>;
 };
 
 export type Vote = {
