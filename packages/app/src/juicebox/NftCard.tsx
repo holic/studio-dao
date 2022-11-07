@@ -24,7 +24,11 @@ type Props = {
 };
 
 export const NftCard = ({ nft }: Props) => {
-  const tokenMetadata = useFetchJson(nft.tokenUri);
+  const tokenMetadata = useFetchJson(
+    nft.tokenUri
+      ? `https://jbx.mypinata.cloud/ipfs/${nft.tokenUri.substring(7)}`
+      : null
+  );
   const projectMetadata = useFetchJson(
     nft.project.metadataUri
       ? `https://jbx.mypinata.cloud/ipfs/${nft.project.metadataUri}`
