@@ -4,4 +4,13 @@ module.exports = {
   images: {
     domains: ["jbx.mypinata.cloud"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/terms-of-use",
+        destination: "https://studio-dao.webflow.io/terms-of-use",
+        permanent: false,
+      },
+    ];
+  },
 };
