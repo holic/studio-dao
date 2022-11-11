@@ -139,23 +139,6 @@ const HomePage: NextPage = () => {
             </div>
           </div>
         </div>
-        <Container>
-          <div className="space-y-8 sm:space-y-12">
-            <ProjectCard
-              title="StudioDAO Greenlight Treasury"
-              subtitle=""
-              description={
-                <p>
-                  Contribute to the Greenlight Treasury and become a part of the
-                  team building the StudioDAO.
-                </p>
-              }
-              imageUrl="/projects/studio-dao-greenlight-treasury.jpg"
-              contributeUrl="https://goerli.juicebox.money/v2/p/124"
-              learnMoreUrl="https://docs.studiodao.xyz/studiodao-explainer/season-1/faq"
-            />
-          </div>
-        </Container>
 
         {/* <SnapshotGraphProvider>
           <SnapshotSection />
