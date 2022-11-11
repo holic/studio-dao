@@ -119,7 +119,12 @@ const HomePage: NextPage = () => {
                       </li>
                     </ul>
                     <div className="flex gap-2 w-max">
-                      <ButtonLink href="#box-office">Join StudioDAO</ButtonLink>
+                      <ButtonLink
+                        href="https://goerli.juicebox.money/v2/p/124"
+                        target="_blank"
+                      >
+                        Join StudioDAO
+                      </ButtonLink>
                       <ButtonLink
                         href="https://docs.studiodao.xyz/studiodao-explainer/"
                         variant="secondary"
@@ -134,16 +139,33 @@ const HomePage: NextPage = () => {
             </div>
           </div>
         </div>
+        <Container>
+          <div className="space-y-8 sm:space-y-12">
+            <ProjectCard
+              title="StudioDAO Greenlight Treasury"
+              subtitle=""
+              description={
+                <p>
+                  Contribute to the Greenlight Treasury and become a part of the
+                  team building the StudioDAO.
+                </p>
+              }
+              imageUrl="/projects/studio-dao-greenlight-treasury.jpg"
+              contributeUrl="https://goerli.juicebox.money/v2/p/124"
+              learnMoreUrl="https://docs.studiodao.xyz/studiodao-explainer/season-1/faq"
+            />
+          </div>
+        </Container>
 
-        <SnapshotGraphProvider>
+        {/* <SnapshotGraphProvider>
           <SnapshotSection />
         </SnapshotGraphProvider>
 
         <JuiceboxGraphProvider>
           <NftRewardsSection />
-        </JuiceboxGraphProvider>
+        </JuiceboxGraphProvider> */}
 
-        <Container id="box-office" className="space-y-16">
+        {/* <Container id="box-office" className="space-y-16">
           <SectionHeading
             title="StudioDAO Box Office"
             description={
@@ -224,7 +246,7 @@ const HomePage: NextPage = () => {
               learnMoreUrl="https://studio-dao.webflow.io/beam-eyed-colossi"
             />
           </div>
-        </Container>
+        </Container> */}
 
         <Container id="faq" className="space-y-12">
           <SectionHeading title="Frequently Asked Questions" />
@@ -271,6 +293,30 @@ const HomePage: NextPage = () => {
                 invites, behind-the-scenes events, and our favorite, custom
                 designed movie specific ice cream flavors with Studio super pal,
                 Nicholas Morgenstern.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="text-xl font-medium text-white">
+                What does Greenlighting a film mean?
+              </h4>
+              <p>
+                Greenlighting is funding a movie. There are two ways to
+                Greenlight a film on StudioDAO. You can support films directly
+                by purchasing Super Tickets at the Box Office. Then you can vote
+                on which film will receive a grant from the weekly Greenlight
+                Vote.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="text-xl font-medium text-white">
+                How do I get Greenlight Power?
+              </h4>
+              <p>
+                When you support a film, in addition to your Super Ticket, you
+                also receive Greenlight Power. If you want to maximize your
+                Greenlight Power you can buy Greenlight Power directly from the
+                StudioDAO U.N.A. Juicebox. The issuance rate of Greenlight Power
+                is adjustable to incentivize community formation.
               </p>
             </div>
           </div>
