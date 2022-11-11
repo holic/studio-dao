@@ -27,12 +27,12 @@ const HomePage: NextPage = () => {
               </a>
             </Link>
             <nav className="flex-grow hidden md:flex items-center justify-center -m-4">
-              <a
+              {/* <a
                 className="inline-flex px-4 py-2 hover:text-white hover:underline"
                 href="#box-office"
               >
                 Box Office
-              </a>
+              </a> */}
               <a
                 className="inline-flex px-4 py-2 hover:text-white hover:underline"
                 href="#faq"
@@ -340,12 +340,12 @@ const HomePage: NextPage = () => {
             </a>
           </Link>
           <nav className="flex">
-            <a
+            {/* <a
               className="inline-flex px-4 sm:px-6 py-4 hover:underline"
               href="#box-office"
             >
               Box Office
-            </a>
+            </a> */}
             <a
               className="inline-flex px-4 sm:px-6 py-4 hover:underline"
               href="#faq"
