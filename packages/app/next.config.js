@@ -11,6 +11,11 @@ module.exports = {
         destination: "https://studio-dao.webflow.io/terms-of-use",
         permanent: false,
       },
+      {
+        source: "/terms-of-service",
+        destination: "https://studio-dao.webflow.io/terms-of-service",
+        permanent: false,
+      },
     ];
   },
 };
