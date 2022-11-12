@@ -6,8 +6,4 @@ export const juiceboxTreasuryIds =
   targetChainId === chain.goerli.id ? [124] : [311];
 
 export const juiceboxProjectIds =
-  targetChainId === chain.goerli.id
-    ? []
-    : [
-        // TODO: mainnet
-      ];
+  targetChainId === chain.goerli.id ? [] : [331];
