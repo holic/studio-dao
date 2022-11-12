@@ -120,7 +120,7 @@ const HomePage: NextPage = () => {
                     </ul>
                     <div className="flex gap-2 w-max">
                       <ButtonLink
-                        href="https://goerli.juicebox.money/v2/p/124"
+                        href="https://goerli.juicebox.money/v2/p/311"
                         target="_blank"
                       >
                         Join StudioDAO
