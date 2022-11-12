@@ -142,11 +142,11 @@ const HomePage: NextPage = () => {
 
         {/* <SnapshotGraphProvider>
           <SnapshotSection />
-        </SnapshotGraphProvider>
+        </SnapshotGraphProvider> */}
 
         <JuiceboxGraphProvider>
           <NftRewardsSection />
-        </JuiceboxGraphProvider> */}
+        </JuiceboxGraphProvider>
 
         {/* <Container id="box-office" className="space-y-16">
           <SectionHeading
