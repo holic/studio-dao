@@ -140,9 +140,9 @@ const HomePage: NextPage = () => {
           </div>
         </div>
 
-        {/* <SnapshotGraphProvider>
+        <SnapshotGraphProvider>
           <SnapshotSection />
-        </SnapshotGraphProvider> */}
+        </SnapshotGraphProvider>
 
         <JuiceboxGraphProvider>
           <NftRewardsSection />

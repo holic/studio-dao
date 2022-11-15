@@ -30,7 +30,12 @@ export const GreenlightPower = () => {
     return (
       <>
         ✦{" "}
-        <a href="#box-office" className="text-emerald-500 hover:underline">
+        <a
+          href="https://juicebox.money/v2/p/311"
+          className="text-emerald-500 hover:underline"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           Earn Greenlight Power
         </a>
       </>

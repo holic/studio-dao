@@ -507,7 +507,7 @@ export type SnapshotSectionQuery = { readonly __typename?: 'Query', readonly pro
 export const SnapshotSectionDocument = gql`
     query SnapshotSection {
   proposals(
-    where: {space_in: ["studiodao.eth"]}
+    where: {space_in: ["studiodao.eth"], state: "active"}
     orderBy: "created"
     orderDirection: desc
     first: 1

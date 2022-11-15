@@ -11,7 +11,7 @@ import { useIsMounted } from "../useIsMounted";
 gql`
   query SnapshotSection {
     proposals(
-      where: { space_in: ["studiodao.eth"] }
+      where: { space_in: ["studiodao.eth"], state: "active" }
       orderBy: "created"
       orderDirection: desc
       first: 1
@@ -57,21 +57,16 @@ export const SnapshotSection = () => {
 
   return (
     <Container>
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center bg-black/30 rounded-3xl divide-x divide-zinc-800 py-4 md:py-8 -my-8">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-left bg-black/30 rounded-3xl divide-x divide-zinc-800 py-4 md:py-8 -my-8">
         <div className="sm:w-6/12 px-8 md:px-12 py-4">
           <SectionHeading
-            title="Today’s Greenlight Vote"
+            title={currentProposal.title}
             description={
               <>
-                <p>
-                  As long as there is money in the StudioDAO community treasury,
-                  the grants will flow. StudioDAO members vote using Greenlight
-                  Power to fund the films they want to see.
-                </p>
-                <p>Today’s Grant: $5000</p>
+                <p>{currentProposal.body}</p>
                 <p>
                   <a
-                    href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
+                    href="https://docs.studiodao.xyz/studiodao-explainer/studio-or-dao-governance/studio-governance"
                     className="text-emerald-500 hover:underline"
                     target={"_blank"}
                     rel="noreferrer"
