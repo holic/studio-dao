@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 
 import { ButtonLink } from "../Button";
+import { juiceboxTreasuryIds, juiceboxUrl } from "../constants";
 import { Container } from "../Container";
 import { DiscordIcon } from "../icons/DiscordIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
@@ -10,7 +11,6 @@ import { GreenlightPower } from "../juicebox/GreenlightPower";
 import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
 import { NftRewardsSection } from "../juicebox/NftRewardsSection";
 import { TreasuryBalance } from "../juicebox/TreasuryBalance";
-import { ProjectCard } from "../ProjectCard";
 import { SectionHeading } from "../SectionHeading";
 import { SnapshotGraphProvider } from "../snapshot/SnapshotGraphProvider";
 import { SnapshotSection } from "../snapshot/SnapshotSection";
@@ -120,7 +120,7 @@ const HomePage: NextPage = () => {
                     </ul>
                     <div className="flex gap-2 w-max">
                       <ButtonLink
-                        href="https://juicebox.money/v2/p/311"
+                        href={`${juiceboxUrl}/v2/p/${juiceboxTreasuryIds[0]}`}
                         target="_blank"
                       >
                         Join StudioDAO
