@@ -239,8 +239,15 @@ const HomePage: NextPage = () => {
                 How do I join StudioDAO?
               </h4>
               <p>
-                Simple, just buy a Super Ticket. All Super Ticket minters
-                receive StudioDAO Membership.
+                Simple, just buy a{" "}
+                <a
+                  href={`${juiceboxUrl}/v2/p/${juiceboxTreasuryIds[0]}`}
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  Super Ticket.
+                </a>{" "}
+                All Super Ticket minters receive StudioDAO Membership.
               </p>
             </div>
             <div className="space-y-2">
@@ -258,11 +265,17 @@ const HomePage: NextPage = () => {
                 What is StudioDAO U.N.A?
               </h4>
               <p>
-                StudioDAO U.N.A. is an Unincorporated Nonprofit Association.
-                When you buy a Super Ticket you receive a single
-                non-transferable membership in StudioDAO U.N.A. You can sell or
-                transfer your Super Ticket, but your membership in StudioDAO
-                U.N.A. is non-transferable.
+                <a
+                  href="https://docs.studiodao.xyz/studiodao-explainer/studio-or-dao-governance/studio-governance"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  StudioDAO U.N.A.
+                </a>{" "}
+                is an Unincorporated Nonprofit Association. When you buy a Super
+                Ticket you receive a single non-transferable membership in
+                StudioDAO U.N.A. You can sell or transfer your Super Ticket, but
+                your membership in StudioDAO U.N.A. is non-transferable.
               </p>
             </div>
             <div className="space-y-2">
