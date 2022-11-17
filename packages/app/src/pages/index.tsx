@@ -109,7 +109,7 @@ const HomePage: NextPage = () => {
                   <div className="space-y-6">
                     <ul>
                       <li className="flex gap-2">
-                        <span>❇️</span> Greenlight films
+                        <span>❇️</span> Greenlight movies
                       </li>
                       <li className="flex gap-2">
                         <span>🎥</span> Make movies
