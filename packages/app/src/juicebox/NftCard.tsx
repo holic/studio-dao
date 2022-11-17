@@ -2,6 +2,7 @@ import Image from "next/image";
 import { gql } from "urql";
 
 import { NftCardFragment as NFT } from "../../codegen/juicebox";
+import { juiceboxUrl } from "../constants";
 import { PendingIcon } from "../icons/PendingIcon";
 import { useFetchJson } from "./useFetchJson";
 
@@ -46,7 +47,7 @@ export const NftCard = ({ nft }: Props) => {
   return (
     <a
       className="group flex flex-col bg-black/30 rounded-lg overflow-hidden transition hover:scale-105"
-      href={`https://juicebox.money/v2/p/${nft.project.projectId}`}
+      href={`${juiceboxUrl}/v2/p/${nft.project.projectId}`}
       target="_blank"
       rel="noopener noreferrer"
     >

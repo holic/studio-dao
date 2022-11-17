@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 
 import { ButtonLink } from "../Button";
+import { juiceboxTreasuryIds, juiceboxUrl } from "../constants";
 import { Container } from "../Container";
 import { DiscordIcon } from "../icons/DiscordIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
@@ -10,7 +11,6 @@ import { GreenlightPower } from "../juicebox/GreenlightPower";
 import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
 import { NftRewardsSection } from "../juicebox/NftRewardsSection";
 import { TreasuryBalance } from "../juicebox/TreasuryBalance";
-import { ProjectCard } from "../ProjectCard";
 import { SectionHeading } from "../SectionHeading";
 import { SnapshotGraphProvider } from "../snapshot/SnapshotGraphProvider";
 import { SnapshotSection } from "../snapshot/SnapshotSection";
@@ -120,7 +120,7 @@ const HomePage: NextPage = () => {
                     </ul>
                     <div className="flex gap-2 w-max">
                       <ButtonLink
-                        href="https://juicebox.money/v2/p/311"
+                        href={`${juiceboxUrl}/v2/p/${juiceboxTreasuryIds[0]}`}
                         target="_blank"
                       >
                         Join StudioDAO
@@ -239,8 +239,15 @@ const HomePage: NextPage = () => {
                 How do I join StudioDAO?
               </h4>
               <p>
-                Simple, just buy a Super Ticket. All Super Ticket minters
-                receive StudioDAO Membership.
+                Simple, just buy a{" "}
+                <a
+                  href={`${juiceboxUrl}/v2/p/${juiceboxTreasuryIds[0]}`}
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  Super Ticket.
+                </a>{" "}
+                All Super Ticket minters receive StudioDAO Membership.
               </p>
             </div>
             <div className="space-y-2">
@@ -258,11 +265,17 @@ const HomePage: NextPage = () => {
                 What is StudioDAO U.N.A?
               </h4>
               <p>
-                StudioDAO U.N.A. is an Unincorporated Nonprofit Association.
-                When you buy a Super Ticket you receive a single
-                non-transferable membership in StudioDAO U.N.A. You can sell or
-                transfer your Super Ticket, but your membership in StudioDAO
-                U.N.A. is non-transferable.
+                <a
+                  href="https://docs.studiodao.xyz/studiodao-explainer/studio-or-dao-governance/studio-governance"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  StudioDAO U.N.A.
+                </a>{" "}
+                is an Unincorporated Nonprofit Association. When you buy a Super
+                Ticket you receive a single non-transferable membership in
+                StudioDAO U.N.A. You can sell or transfer your Super Ticket, but
+                your membership in StudioDAO U.N.A. is non-transferable.
               </p>
             </div>
             <div className="space-y-2">

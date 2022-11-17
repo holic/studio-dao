@@ -3,7 +3,11 @@ import { gql } from "urql";
 import { useAccount } from "wagmi";
 
 import { useGreenlightPowerQuery } from "../../codegen/juicebox";
-import { juiceboxProjectIds } from "../constants";
+import {
+  juiceboxProjectIds,
+  juiceboxTreasuryIds,
+  juiceboxUrl,
+} from "../constants";
 import { PendingIcon } from "../icons/PendingIcon";
 
 gql`
@@ -31,7 +35,7 @@ export const GreenlightPower = () => {
       <>
         ✦{" "}
         <a
-          href="https://juicebox.money/v2/p/311"
+          href={`${juiceboxUrl}/v2/p/${juiceboxTreasuryIds[0]}`}
           className="text-emerald-500 hover:underline"
           target="_blank"
           rel="noreferrer noopener"

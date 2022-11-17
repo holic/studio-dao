@@ -7,3 +7,8 @@ export const juiceboxTreasuryIds =
 
 export const juiceboxProjectIds =
   targetChainId === chain.goerli.id ? [] : [311];
+
+export const juiceboxUrl =
+  targetChainId === chain.goerli.id
+    ? "https://goerli.juicebox.money"
+    : "https://juicebox.money";
