@@ -27,7 +27,9 @@ export const NftRewardsSection = () => {
       projectIds: juiceboxProjectIds,
     },
   });
-  const tokens = queryResult.data?.tokens;
+  const tokens = queryResult.data?.tokens.filter((token) => {
+    return juiceboxProjectIds.includes(token.project.projectId);
+  });
   if (!tokens?.length) return null;
 
   return (
