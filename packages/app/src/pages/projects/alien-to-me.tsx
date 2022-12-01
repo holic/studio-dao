@@ -84,11 +84,18 @@ const AlienToMePage: NextPage = () => {
         <Container>
           <div className="relative">
             <div className="p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
-              <div className="flex flex-col sm:flex-row gap-4 justify-between">
+              <div className="flex flex-col md:flex-row gap-4 justify-between">
                 <div className="">
                   ✦ Support the development of Alien to Me.
-                  <br />
-                  $10,000 out of $25,000 funding goal
+                  <div className="flex flex-row text-zinc-500">
+                    <span className="text-emerald-600 pr-1">$10,000 </span>{" "}
+                    raised{" "}
+                    <div className="w-32 bg-gray-200 h-2 rounded-xl m-2">
+                      <div className="bg-emerald-600 h-2 rounded-xl w-12"></div>
+                    </div>
+                    out of <span className="text-white px-1">$25,000</span>{" "}
+                    funding goal
+                  </div>
                 </div>
                 <div className="w-max">
                   <div className="flex">
