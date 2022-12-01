@@ -84,12 +84,13 @@ const AlienToMePage: NextPage = () => {
         <Container>
           <div className="relative">
             <div className="p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
-              <div className="flex flex-row gap-4">
-                <div className="basis-3/4 w-max">
-                  <p>Support the development of Alien to Me</p>
-                  <p>$10,000 raised out of 25,000 funding goal</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-between">
+                <div className="">
+                  ✦ Support the development of Alien to Me.
+                  <br />
+                  $10,000 out of $25,000 funding goal
                 </div>
-                <div className="flex basis-1/4 w-max justify-end">
+                <div className="w-max">
                   <div className="flex">
                     <ButtonLink
                       href={`${juiceboxUrl}/v2/p/${juiceboxTreasuryIds[0]}`}
@@ -245,8 +246,8 @@ const AlienToMePage: NextPage = () => {
           </div>
           <div className="relative">
             <div className="p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
-              <ul className="list-disc px-40 sm:px-8">
-                <li>
+              <ul className="list-disc ">
+                <li className="text-yellow-500">
                   Funding Cycle #1 $25,000 - Episode 2 + community development
                 </li>
                 <li>Funding Cycle #2 $100,000 - Episodes 3 - 6</li>
