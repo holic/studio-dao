@@ -253,7 +253,7 @@ const AlienToMePage: NextPage = () => {
           </div>
           <div className="relative">
             <div className="p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
-              <ul className="list-disc ">
+              <ul className="list-disc list-outside pl-4">
                 <li className="text-yellow-500">
                   Funding Cycle #1 $25,000 - Episode 2 + community development
                 </li>
