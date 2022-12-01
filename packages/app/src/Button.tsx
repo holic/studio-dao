@@ -9,7 +9,7 @@ import { twMerge } from "tailwind-merge";
 import { PendingIcon } from "./icons/PendingIcon";
 
 type ButtonSize = "sm" | "md";
-type ButtonVariant = "primary" | "secondary";
+type ButtonVariant = "primary" | "secondary" | "primaryProject";
 
 const buttonClasses = (size: ButtonSize, variant: ButtonVariant) => {
   const sizeClassNames: Record<ButtonSize, string> = {
@@ -19,6 +19,8 @@ const buttonClasses = (size: ButtonSize, variant: ButtonVariant) => {
   const variantClassNames: Record<ButtonVariant, string> = {
     primary:
       "font-medium text-white bg-emerald-700 hover:bg-green-600 active:bg-green-700 border border-transparent disabled:opacity-50 disabled:pointer-events-none",
+    primaryProject:
+      "font-medium text-black bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-400 border border-transparent disabled:opacity-50 disabled:pointer-events-none",
     secondary:
       "text-zinc-300 hover:text-zinc-100 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800 border border-zinc-700 hover:border-zinc-500 disabled:opacity-50 disabled:pointer-events-none",
   };
