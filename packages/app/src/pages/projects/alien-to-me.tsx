@@ -5,6 +5,7 @@ import { BioCard } from "../../Bio";
 import { ButtonLink } from "../../Button";
 import { juiceboxUrl } from "../../constants";
 import { Container } from "../../Container";
+import { ContributeCard } from "../../ContributeCard";
 import { Header } from "../../Header";
 import { GreenlightPower } from "../../juicebox/GreenlightPower";
 import { JuiceboxGraphProvider } from "../../juicebox/JuiceboxGraphProvider";
@@ -21,7 +22,10 @@ const AlienToMePage: NextPage = () => {
 
       <div className="space-y-32 sm:space-y-48">
         <div className="relative">
-          <img className="absolute w-full h-full object-cover" src="" />
+          <img
+            className="absolute w-full h-full object-cover"
+            src="/images/alien-to-me/header.gif"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/70 to-zinc-900 md:from-transparent md:to-zinc-900" />
 
           <div className="relative md:min-h-[480px] lg:min-h-[640px] flex flex-col">
@@ -83,38 +87,13 @@ const AlienToMePage: NextPage = () => {
             </div>
           </div>
         </div>
-        <Container>
-          <div className="relative">
-            <div className="p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
-              <div className="flex flex-col md:flex-row gap-4 justify-between">
-                <div className="">
-                  ✦ Support the development of Alien to Me.
-                  <div className="sm:flex sm:flex-row  text-zinc-500">
-                    <span className="text-emerald-600 pr-1">$10,000 </span>{" "}
-                    <span className="mr-2">raised</span>
-                    <div className="w-32 bg-gray-200 h-2 rounded-xl ml-0 m-2 ">
-                      <div className="bg-emerald-600 h-2 rounded-xl w-12"></div>
-                    </div>
-                    out of <span className="text-white px-1">$25,000</span>{" "}
-                    funding goal
-                  </div>
-                </div>
-                <div className="w-max">
-                  <div className="flex">
-                    <ButtonLink
-                      href={`${juiceboxUrl}/v2/p/${juiceboxProjectId}`}
-                      target="_blank"
-                      variant="primary"
-                    >
-                      Buy Superticket
-                    </ButtonLink>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-
+        <JuiceboxGraphProvider>
+          <ContributeCard
+            name="Alien to Me"
+            projectId={124}
+            usdBudget={25000}
+          />
+        </JuiceboxGraphProvider>
         <Container id="box-office" className="space-y-16">
           <div className="space-y-8 sm:space-y-12">
             <ProjectCard
