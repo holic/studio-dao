@@ -14,10 +14,14 @@ gql`
   }
 `;
 
-export const TreasuryBalance = () => {
+type Props = {
+  projectId?: number;
+};
+
+export const TreasuryBalance = ({ projectId }: Props) => {
   const [queryResult] = useTreasuryBalanceQuery({
     variables: {
-      projectIds: juiceboxTreasuryIds,
+      projectIds: projectId ? [projectId] : juiceboxTreasuryIds,
     },
   });
 

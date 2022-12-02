@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { BioCard } from "../../Bio";
 import { ButtonLink } from "../../Button";
-import { juiceboxTreasuryIds, juiceboxUrl } from "../../constants";
+import { juiceboxUrl } from "../../constants";
 import { Container } from "../../Container";
 import { Header } from "../../Header";
 import { GreenlightPower } from "../../juicebox/GreenlightPower";
@@ -13,6 +13,8 @@ import { ProjectCard } from "../../ProjectCard";
 import { SectionHeading } from "../../SectionHeading";
 
 const AlienToMePage: NextPage = () => {
+  const juiceboxProjectId = 124; //TODO update to alien to me project id
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -28,7 +30,7 @@ const AlienToMePage: NextPage = () => {
                 <div className="flex justify-between py-4">
                   <div>
                     <JuiceboxGraphProvider>
-                      <TreasuryBalance />
+                      <TreasuryBalance projectId={juiceboxProjectId} />
                     </JuiceboxGraphProvider>
                   </div>
                   <div className="hidden sm:block">
@@ -52,14 +54,14 @@ const AlienToMePage: NextPage = () => {
                 <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-24 py-12 -mb-16">
                   <div className="flex gap-2 w-max">
                     <ButtonLink
-                      href={`${juiceboxUrl}/v2/p/${juiceboxTreasuryIds[0]}`}
+                      href={`${juiceboxUrl}/v2/p/${juiceboxProjectId}`}
                       target="_blank"
                       variant="primaryProject"
                     >
                       Buy Superticket
                     </ButtonLink>
                     <ButtonLink
-                      href="https://docs.studiodao.xyz/studiodao-explainer/"
+                      href="https://youtu.be/mm04Yos5_CQ"
                       variant="secondary"
                       target="_blank"
                     >
@@ -100,7 +102,7 @@ const AlienToMePage: NextPage = () => {
                 <div className="w-max">
                   <div className="flex">
                     <ButtonLink
-                      href={`${juiceboxUrl}/v2/p/${juiceboxTreasuryIds[0]}`}
+                      href={`${juiceboxUrl}/v2/p/${juiceboxProjectId}`}
                       target="_blank"
                       variant="primary"
                     >
@@ -117,7 +119,12 @@ const AlienToMePage: NextPage = () => {
           <div className="space-y-8 sm:space-y-12">
             <ProjectCard
               title="Get Your Own URKEL"
-              subtitle="1000 NFT available at 0.01 eth"
+              subtitle={
+                <p>
+                  1000 NFT available at{" "}
+                  <span className="text-emerald-700">0.01 eth</span>
+                </p>
+              }
               description={
                 <p>
                   Despite his grating voice, generally unlikable demeanor, and
@@ -128,9 +135,9 @@ const AlienToMePage: NextPage = () => {
                   anything for you… anything.
                 </p>
               }
-              imageUrl="/projects/hyperspace-banny.png"
-              contributeUrl="https://goerli.juicebox.money/v2/p/128"
-              learnMoreUrl="https://studio-dao.webflow.io/hyperspace-banny"
+              imageUrl="/images/alien-to-me/nfts/urkel.gif"
+              contributeUrl={`${juiceboxUrl}/v2/p/${juiceboxProjectId}`}
+              learnMoreUrl=""
               isProjectPage={true}
               perks={
                 <>
@@ -151,7 +158,12 @@ const AlienToMePage: NextPage = () => {
             />
             <ProjectCard
               title="We are Krill’s Free Will"
-              subtitle="300 NFT available at 0.10 eth"
+              subtitle={
+                <p>
+                  300 NFT available at{" "}
+                  <span className="text-emerald-700">0.10 eth</span>
+                </p>
+              }
               description={
                 <p>
                   Can’t seem to take control of your own life? Why not take
@@ -162,9 +174,9 @@ const AlienToMePage: NextPage = () => {
                   in on the fun too. C’mon you know you want to.
                 </p>
               }
-              imageUrl="/projects/stag-party.jpg"
-              contributeUrl="https://goerli.juicebox.money/v2/p/129"
-              learnMoreUrl="https://studio-dao.webflow.io/stag-party"
+              imageUrl="/images/alien-to-me/nfts/baseout.gif"
+              contributeUrl={`${juiceboxUrl}/v2/p/${juiceboxProjectId}`}
+              learnMoreUrl=""
               isProjectPage={true}
               perks={
                 <>
@@ -194,7 +206,12 @@ const AlienToMePage: NextPage = () => {
             />
             <ProjectCard
               title="One with Taalos"
-              subtitle="50 NFT available at 1 eth"
+              subtitle={
+                <p>
+                  50 NFT available at{" "}
+                  <span className="text-emerald-700">1.0 eth</span>
+                </p>
+              }
               description={
                 <p>
                   Put yourself into the Alien to Me universe, become one with
@@ -202,9 +219,9 @@ const AlienToMePage: NextPage = () => {
                   image.
                 </p>
               }
-              imageUrl="/projects/beam-eyed-colossi.gif"
-              contributeUrl="https://goerli.juicebox.money/v2/p/130"
-              learnMoreUrl="https://studio-dao.webflow.io/beam-eyed-colossi"
+              imageUrl="/images/alien-to-me/nfts/taalos.gif"
+              contributeUrl={`${juiceboxUrl}/v2/p/${juiceboxProjectId}`}
+              learnMoreUrl=""
               isProjectPage={true}
               perks={
                 <>
@@ -235,12 +252,12 @@ const AlienToMePage: NextPage = () => {
           <BioCard
             name="Connor Kerrigan"
             bio="Creator/Writer/Lead Artist - Connor Kerrigan is a Los Angeles based comedian, writer, and animator. Most recently he developed his own half-hour primetime animated adult comedy at Fox. Prior to his work with Fox, he wrote and executive produced a virtual reality comedy series pilot in partnership with Google and animation studio, ShadowMachine, starring Seth Morris, Mary Holland, and Chris Parnell. Connor is a formally trained animator and visual effects artist, who graduated from the USC School of Cinematic Arts. Having spent years doing improv, stand up, and sketch comedy, as well as working as a visual effects artist on multiple Netflix feature films, his work merges adult comedy with cinema quality 3D and 2D animation."
-            imageUrl="../images/alien-to-me/connor.jpg"
+            imageUrl="../images/alien-to-me/bios/connor.jpg"
           />
           <BioCard
             name="The Gotham Group"
             bio="Producers - The Gotham Group is a world-class management and production company representing top creators across film, television, book publishing, and now blockchain media. As producers, The Gotham Group has produced everything from The Mazerunner movies (a billion-dollar franchise for Fox) to prestigious dramas like Kodachrome for Netflix starring Ed Harris, Jason Sudekis, and Elizabeth Olsen to family favorites like Stargirl for Disney+. Gotham is currently in production on Stargirl 2 for Disney+, My Best Friend’s Exorcism for Amazon, and the stop motion animated movie Wendell & Wild for Netflix, and has four series beginning production in Q1 2022."
-            imageUrl="../images/alien-to-me/connor.jpg"
+            imageUrl="../images/alien-to-me/bios/gotham.jpg"
           />
         </Container>
 
@@ -266,7 +283,7 @@ const AlienToMePage: NextPage = () => {
           </div>
         </Container>
 
-        <Container id="budget" className="space-y-12">
+        <Container id="gallery" className="space-y-12">
           <SectionHeading title="Inspiration" />
           <div className="max-w-prose mx-auto space-y-3">
             Alien to Me came to me out of a desire to see a new type of science
@@ -291,11 +308,11 @@ const AlienToMePage: NextPage = () => {
             franchise that can expand for years to come.
           </div>
           <div className="relative">
-            <div className="grid grid-cols-3 gap-2">
-              {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+            <div className="grid lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-2">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
                 <img
                   key={`image${i}`}
-                  src="../images/alien-to-me/sample.png"
+                  src={`../images/alien-to-me/gallery/gallery_${i}.png`}
                   className="   aspect-video object-cover"
                 />
               ))}
