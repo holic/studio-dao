@@ -8,7 +8,7 @@ type Props = {
   description: ReactNode;
   imageUrl: string;
   contributeUrl: string;
-  learnMoreUrl: string;
+  learnMoreUrl?: string;
   isProjectPage?: boolean;
   perks?: ReactNode;
 };
@@ -20,7 +20,6 @@ export const ProjectCard = ({
   imageUrl,
   contributeUrl,
   learnMoreUrl,
-  isProjectPage,
   perks,
 }: Props) => (
   <>
@@ -40,20 +39,15 @@ export const ProjectCard = ({
             size="sm"
             href={contributeUrl}
             target="_blank"
-            variant={isProjectPage ? "primaryProject" : "primary"}
+            variant="primaryProject"
           >
-            {isProjectPage ? "Buy Superticket" : "Contribute"}
+            Buy Superticket
           </ButtonLink>
-          {isProjectPage ? null : (
-            <ButtonLink
-              size="sm"
-              variant="secondary"
-              href={learnMoreUrl}
-              target="_blank"
-            >
+          {learnMoreUrl ? (
+            <ButtonLink size="sm" variant="secondary" href={learnMoreUrl}>
               Learn more
             </ButtonLink>
-          )}
+          ) : null}
         </div>
       </div>
     </div>

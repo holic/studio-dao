@@ -133,8 +133,6 @@ const AlienToMePage: NextPage = () => {
                 }
                 imageUrl="/images/alien-to-me/nfts/urkel.gif"
                 contributeUrl={`${juiceboxUrl}/v2/p/${juiceboxProjectId}`}
-                learnMoreUrl=""
-                isProjectPage={true}
                 perks={
                   <>
                     <p>Perks included:</p>
@@ -173,8 +171,6 @@ const AlienToMePage: NextPage = () => {
                 }
                 imageUrl="/images/alien-to-me/nfts/baseout.gif"
                 contributeUrl={`${juiceboxUrl}/v2/p/${juiceboxProjectId}`}
-                learnMoreUrl=""
-                isProjectPage={true}
                 perks={
                   <>
                     <p>All Previous Perks Plus:</p>
@@ -218,8 +214,6 @@ const AlienToMePage: NextPage = () => {
                 }
                 imageUrl="/images/alien-to-me/nfts/taalos.gif"
                 contributeUrl={`${juiceboxUrl}/v2/p/${juiceboxProjectId}`}
-                learnMoreUrl=""
-                isProjectPage={true}
                 perks={
                   <>
                     <p>All Previous Perks Plus:</p>

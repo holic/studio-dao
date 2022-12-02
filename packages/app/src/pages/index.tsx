@@ -12,6 +12,7 @@ import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
 import { NftRewardsSection } from "../juicebox/NftRewardsSection";
 import { TreasuryBalance } from "../juicebox/TreasuryBalance";
 import { Meta } from "../Meta";
+import { ProjectCard } from "../ProjectCard";
 import { SectionHeading } from "../SectionHeading";
 import { SnapshotGraphProvider } from "../snapshot/SnapshotGraphProvider";
 import { SnapshotSection } from "../snapshot/SnapshotSection";
@@ -151,88 +152,55 @@ const HomePage: NextPage = () => {
             <NftRewardsSection />
           </JuiceboxGraphProvider>
 
-          {/* <Container id="box-office" className="space-y-16">
-          <SectionHeading
-            title="StudioDAO Box Office"
-            description={
-              <>
-                <p>
-                  When you buy your first Super Ticket you become a member of
-                  StudioDAO.
-                </p>
-                <p>
-                  Super Tickets help fund films. Super Tickets grant access to
-                  content and experiences customized for each film, including
-                  exclusive NFT mints, film credit, events, exclusive merch and
-                  StudioDAO Greenlight Power.
-                </p>
-                <p>
-                  <a
-                    href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
-                    className="text-emerald-500 hover:underline"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Learn more &rarr;
-                  </a>
-                </p>
-              </>
-            }
-          />
-          <div className="space-y-8 sm:space-y-12">
-            <ProjectCard
-              title="Hyperspace Banny"
-              subtitle="Bananas on a mission to make the juice flow…"
+          <Container id="box-office" className="space-y-16">
+            <SectionHeading
+              title="StudioDAO Box Office"
               description={
-                <p>
-                  Where did Banny come from? Why are they here? This important
-                  documentary examines the competing origin stories of Banny and
-                  reconciles them into a universal theory of Bannyness.
-                </p>
+                <>
+                  <p>
+                    When you buy your first Super Ticket you become a member of
+                    StudioDAO.
+                  </p>
+                  <p>
+                    Super Tickets help fund films. Super Tickets grant access to
+                    content and experiences customized for each film, including
+                    exclusive NFT mints, film credit, events, exclusive merch
+                    and StudioDAO Greenlight Power.
+                  </p>
+                  <p>
+                    <a
+                      href="https://docs.studiodao.xyz/studiodao-explainer/season-1/studio-or-dao"
+                      className="text-emerald-500 hover:underline"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Learn more &rarr;
+                    </a>
+                  </p>
+                </>
               }
-              imageUrl="/projects/hyperspace-banny.png"
-              contributeUrl="https://goerli.juicebox.money/v2/p/128"
-              learnMoreUrl="https://studio-dao.webflow.io/hyperspace-banny"
             />
-            <ProjectCard
-              title="Stag Party"
-              subtitle="When the Billionaires are away, the Deer will play…"
-              description={
-                <p>
-                  When Buck, a young stag, gets engaged to Jane Doe, his deer
-                  friends throw him a wild party on the lawn of a mansion on
-                  Further Lane in East Hampton. But when Buck’s Stag party gets
-                  out of control, he and his friends stampede through the
-                  Hamptons in a bacchanalian frenzy, and get totally lost on
-                  Long Island. As they try to find their way back home, they
-                  must outsmart hunters and cover their tracks, or risk the
-                  herd’s winter way of life being discovered by humans…
-                </p>
-              }
-              imageUrl="/projects/stag-party.jpg"
-              contributeUrl="https://goerli.juicebox.money/v2/p/129"
-              learnMoreUrl="https://studio-dao.webflow.io/stag-party"
-            />
-            <ProjectCard
-              title="Beam-Eyed Colossi"
-              subtitle="Fking the city up with gratitude!"
-              description={
-                <p>
-                  In Summer of 2022, official reasons given by the City of Los
-                  Angeles for on-and-off closures of the 6th Street Bridge in
-                  downtown LA cited “vandalism, reckless driving and other
-                  criminal activity.” It is commonly understood that the real
-                  reason for the intermittent closures was the unprecedented
-                  double-appearance of the Beam-Eyed Colossus of Excellent
-                  Connectivity…
-                </p>
-              }
-              imageUrl="/projects/beam-eyed-colossi.gif"
-              contributeUrl="https://goerli.juicebox.money/v2/p/130"
-              learnMoreUrl="https://studio-dao.webflow.io/beam-eyed-colossi"
-            />
-          </div>
-        </Container> */}
+            <div className="space-y-8 sm:space-y-12">
+              <ProjectCard
+                title="Alien too Me"
+                subtitle="an intergalactic odyssey of action,
+                adventure, and pyramid scheme cosmetics sales"
+                description={
+                  <p>
+                    Discover a new universe with ALIEN TO ME. An animated comedy
+                    series from comedian, Connor Kerrigan, and the producers of
+                    Netflix’s WENDELL & WILD. Join a struggling alien named
+                    Krill, on an intergalactic odyssey of action, adventure, and
+                    pyramid scheme cosmetics sales – all in the name of love...
+                    or at the very least getting pregnant.
+                  </p>
+                }
+                imageUrl="/images/alien-to-me/nfts/taalos.gif"
+                contributeUrl="https://goerli.juicebox.money/v2/p/124"
+                learnMoreUrl="/projects/alien-to-me"
+              />
+            </div>
+          </Container>
 
           <Container id="faq" className="space-y-12">
             <SectionHeading title="Frequently Asked Questions" />
