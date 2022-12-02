@@ -17,7 +17,7 @@ import { SectionHeading } from "../../SectionHeading";
 const AlienToMePage: NextPage = () => {
   const juiceboxProjectId = 124; //TODO update to alien to me project id
   const meta = {
-    title: "Alien to Me",
+    title: "StudioDAO - Alien to Me",
     description: `Discover a new universe with ALIEN TO ME. An animated
     comedy series from comedian, Connor Kerrigan, and the
     producers of Netflix’s WENDELL & WILD. Join a struggling
