@@ -34,7 +34,7 @@ const defaults: MetaArgs = {
 };
 
 type Props = {
-  meta: MetaArgs;
+  meta?: MetaArgs;
 };
 
 export const Meta = ({ meta }: Props) => (
