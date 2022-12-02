@@ -182,9 +182,9 @@ const HomePage: NextPage = () => {
             />
             <div className="space-y-8 sm:space-y-12">
               <ProjectCard
-                title="Alien too Me"
-                subtitle="an intergalactic odyssey of action,
-                adventure, and pyramid scheme cosmetics sales"
+                title="Alien To Me"
+                subtitle="An intergalactic odyssey of action,
+                adventure, and pyramid scheme cosmetics sales."
                 description={
                   <p>
                     Discover a new universe with ALIEN TO ME. An animated comedy

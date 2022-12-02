@@ -17,7 +17,7 @@ import { SectionHeading } from "../../SectionHeading";
 const AlienToMePage: NextPage = () => {
   const juiceboxProjectId = 124; //TODO update to alien to me project id
   const meta = {
-    title: "StudioDAO - Alien to Me",
+    title: "StudioDAO - Alien To Me",
     description: `Discover a new universe with ALIEN TO ME. An animated
     comedy series from comedian, Connor Kerrigan, and the
     producers of Netflix’s WENDELL & WILD. Join a struggling
@@ -67,7 +67,7 @@ const AlienToMePage: NextPage = () => {
                   <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-24 py-12 -mb-16">
                     <div className="space-y-4">
                       <h1 className="text-6xl font-dmserif text-white">
-                        Alien to Me
+                        Alien To Me
                       </h1>
                       <p>By Connor Kerrigan</p>
                     </div>
@@ -106,7 +106,7 @@ const AlienToMePage: NextPage = () => {
           </div>
           <JuiceboxGraphProvider>
             <ContributeCard
-              name="Alien to Me"
+              name="Alien To Me"
               projectId={124}
               usdBudget={25000}
             />
@@ -176,7 +176,7 @@ const AlienToMePage: NextPage = () => {
                     <p>All Previous Perks Plus:</p>
                     <ul className="list-disc px-6">
                       <li>
-                        Access to the Alien to Me Writer’s Room, where Connor
+                        Access to the Alien To Me Writer’s Room, where Connor
                         will brainstorm and write new storylines for the next
                         episodes in the series, using input from the community
                         members as inspiration
@@ -207,7 +207,7 @@ const AlienToMePage: NextPage = () => {
                 }
                 description={
                   <p>
-                    Put yourself into the Alien to Me universe, become one with
+                    Put yourself into the Alien To Me universe, become one with
                     the almighty space titan, Taalos! Let him make you in his
                     image.
                   </p>
@@ -228,7 +228,7 @@ const AlienToMePage: NextPage = () => {
                         One on one consulting and advisory meeting with producer
                         from The Gotham Group
                       </li>
-                      <li>Invitation to in-person Alien to Me events</li>
+                      <li>Invitation to in-person Alien To Me events</li>
                       <li>Associate Producer Credit </li>
                       <li>Virtual Set Visit</li>
                     </ul>
@@ -253,7 +253,7 @@ const AlienToMePage: NextPage = () => {
           </Container>
 
           <Container id="budget" className="space-y-12">
-            <SectionHeading title="Alien to Me Budget" />
+            <SectionHeading title="Alien To Me Budget" />
             <div className="max-w-prose mx-auto space-y-3">
               The overall budget for creating and marketing 10 episodes of Alien
               to Me is $300,000. Episode 1 will premiere at the end of Funding
@@ -277,7 +277,7 @@ const AlienToMePage: NextPage = () => {
           <Container id="gallery" className="space-y-12">
             <SectionHeading title="Inspiration" />
             <div className="max-w-prose mx-auto space-y-3">
-              Alien to Me came to me out of a desire to see a new type of
+              Alien To Me came to me out of a desire to see a new type of
               science fiction alien universe, and new aliens within it. I want
               to see a deep, visually rich universe, not dissimilar to your Star
               Wars and Treks, but that was rooted in the comedy of the life of
@@ -289,7 +289,7 @@ const AlienToMePage: NextPage = () => {
               consider how the logistics and idiosyncrasies of the design or
               culture, would turn regular life into a constant battle for people
               that aren’t our protagonists. They simply gloss over the details.
-              Alien to Me lives in the details. Our main character, Krill, is a
+              Alien To Me lives in the details. Our main character, Krill, is a
               naive rube, who has never left the comfort of his home quadrant,
               where he lived off his rich parent’s money. But, when he leaves
               home to go in search of his ex-girlfriend’s ex-boyfriend to try to
