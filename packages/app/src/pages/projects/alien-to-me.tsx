@@ -89,10 +89,10 @@ const AlienToMePage: NextPage = () => {
               <div className="flex flex-col md:flex-row gap-4 justify-between">
                 <div className="">
                   ✦ Support the development of Alien to Me.
-                  <div className="flex flex-row text-zinc-500">
+                  <div className="sm:flex sm:flex-row  text-zinc-500">
                     <span className="text-emerald-600 pr-1">$10,000 </span>{" "}
-                    raised{" "}
-                    <div className="w-32 bg-gray-200 h-2 rounded-xl m-2">
+                    <span className="mr-2">raised</span>
+                    <div className="w-32 bg-gray-200 h-2 rounded-xl ml-0 m-2 ">
                       <div className="bg-emerald-600 h-2 rounded-xl w-12"></div>
                     </div>
                     out of <span className="text-white px-1">$25,000</span>{" "}
