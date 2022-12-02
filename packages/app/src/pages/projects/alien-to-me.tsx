@@ -33,7 +33,7 @@ const AlienToMePage: NextPage = () => {
 
   return (
     <>
-      <Meta meta={meta} />
+      <Meta metadata={meta} />
       <div className="min-h-screen">
         <Header />
 
