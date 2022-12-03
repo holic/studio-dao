@@ -29,7 +29,7 @@ export const TimelineCard = ({
                     className="border-l-2 border-yellow-500 border-dotted"
                   >
                     <div className="flex flex-start items-center h-16 sm:h-8">
-                      <div className="bg-yellow-500 w-3 sm:w-2 h-2 flex items-center justify-center rounded-full -ml-[.3rem] mr-3 -mt-16 sm:-mt-6"></div>
+                      <div className="bg-yellow-500 w-2 h-2 flex items-center justify-center rounded-full -ml-[.3rem] mr-3 -mt-16 sm:-mt-6"></div>
                       <span className="-mt-16 sm:-mt-6 text-yellow-500">
                         {event}
                       </span>

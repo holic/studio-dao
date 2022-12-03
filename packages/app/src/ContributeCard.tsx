@@ -57,11 +57,11 @@ export const ContributeCard = ({ name, usdBudget, projectId }: Props) => {
   return (
     <Container>
       <div className="relative">
-        <div className="p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
-          <div className="flex flex-col md:flex-row gap-4 justify-between">
+        <div className="text-xs sm:text-md p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
+          <div className="flex flex-col sm:flex-row gap-4 justify-between">
             <div className="">
               ✦ Support the development of {name}.
-              <div className="sm:flex sm:flex-row  text-zinc-500">
+              <div className="flex text-zinc-500">
                 <span className="text-emerald-600 pr-1">
                   ${numberWithCommas(ethRaised * ethPrice)}{" "}
                 </span>{" "}
