@@ -20,7 +20,7 @@ export const TimelineCard = ({
       <div className="max-w-prose mx-auto space-y-3">{description}</div>
       <div className="relative">
         <div className="p-16 w-xl mx-auto bg-zinc-800 rounded-xl border  border-zinc-400 min-w-sm">
-          <ul className=" border-white border-dashed pt-2">
+          <ul className=" border-white border-dashed pt-2 text-xs sm:text-md md:text-lg">
             {events.map((event, index) => {
               if (index === selectedIndex) {
                 return (
