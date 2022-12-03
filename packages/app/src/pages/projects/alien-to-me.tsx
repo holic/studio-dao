@@ -13,6 +13,7 @@ import { TreasuryBalance } from "../../juicebox/TreasuryBalance";
 import { Meta } from "../../Meta";
 import { ProjectCard } from "../../ProjectCard";
 import { SectionHeading } from "../../SectionHeading";
+import { TimelineCard } from "../../Timeline";
 
 const AlienToMePage: NextPage = () => {
   const juiceboxProjectId = 124; //TODO update to alien to me project id
@@ -30,6 +31,14 @@ const AlienToMePage: NextPage = () => {
       height: "338",
     },
   };
+
+  const events = [
+    "Funding Cycle #1 $25,000 - Episode 2 and Community Development",
+    "Funding Cycle #2 $100,000 - Episodes 3–6",
+    "Funding Cycle #3 $25,000 - Distribution and Marketing",
+    "Funding Cycle #4 $100,000 - Episodes 7–10",
+    "Funding Cycle #5 $25,000 - Distribuiton and Marketing",
+  ];
 
   return (
     <>
@@ -251,28 +260,14 @@ const AlienToMePage: NextPage = () => {
               imageUrl="../images/alien-to-me/bios/gotham.jpg"
             />
           </Container>
-
-          <Container id="budget" className="space-y-12">
-            <SectionHeading title="Alien To Me Budget" />
-            <div className="max-w-prose mx-auto space-y-3">
-              The overall budget for creating and marketing 10 episodes of Alien
+          <TimelineCard
+            title="Alien To Me Budget"
+            description="The overall budget for creating and marketing 10 episodes of Alien
               to Me is $300,000. Episode 1 will premiere at the end of Funding
-              Cycle #1.
-            </div>
-            <div className="relative">
-              <div className="p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
-                <ul className="list-disc list-outside pl-4">
-                  <li className="text-yellow-500">
-                    Funding Cycle #1 $25,000 - Episode 2 + community development
-                  </li>
-                  <li>Funding Cycle #2 $100,000 - Episodes 3 - 6</li>
-                  <li>Funding Cycle #3 $25,000 - Distribuiton and Marketing</li>
-                  <li>Funding Cycle #4 $100,000 - Episodes 7 - 10</li>
-                  <li>Funding Cycle #5 $25,000 - Distribuiton and Marketing</li>
-                </ul>
-              </div>
-            </div>
-          </Container>
+              Cycle #1."
+            events={events}
+            selectedIndex={0}
+          />
 
           <Container id="gallery" className="space-y-12">
             <SectionHeading title="Inspiration" />

@@ -73,7 +73,7 @@ export const ContributeCard = ({ name, usdBudget, projectId }: Props) => {
                         Math.round((ethRaised * ethPrice * 100) / usdBudget) +
                         "%",
                     }}
-                    className="bg-emerald-600 h-2 w-8 rounded-xl"
+                    className="bg-emerald-600 h-2 rounded-xl"
                   ></div>
                 </div>
                 out of{" "}
