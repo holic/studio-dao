@@ -13,7 +13,7 @@ import { TreasuryBalance } from "../../juicebox/TreasuryBalance";
 import { Meta } from "../../Meta";
 import { ProjectCard } from "../../ProjectCard";
 import { SectionHeading } from "../../SectionHeading";
-import { TimelineCard } from "../../Timeline";
+import { TimelineCard } from "../../TimelineCard";
 
 const AlienToMePage: NextPage = () => {
   const juiceboxProjectId = 124; //TODO update to alien to me project id
