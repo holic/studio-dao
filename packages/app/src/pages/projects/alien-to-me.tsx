@@ -5,7 +5,7 @@ import { BioCard } from "../../Bio";
 import { ButtonLink } from "../../Button";
 import { juiceboxUrl } from "../../constants";
 import { Container } from "../../Container";
-import { ContributeCard } from "../../ContributeCard";
+import { ContributeBanner } from "../../ContributeBanner";
 import { Header } from "../../Header";
 import { GreenlightPower } from "../../juicebox/GreenlightPower";
 import { JuiceboxGraphProvider } from "../../juicebox/JuiceboxGraphProvider";
@@ -114,7 +114,7 @@ const AlienToMePage: NextPage = () => {
             </div>
           </div>
           <JuiceboxGraphProvider>
-            <ContributeCard
+            <ContributeBanner
               name="Alien To Me"
               projectId={124}
               usdBudget={25000}
