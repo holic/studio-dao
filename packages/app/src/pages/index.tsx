@@ -2,18 +2,20 @@ import { ConnectKitButton } from "connectkit";
 import type { NextPage } from "next";
 import Link from "next/link";
 
-import { ButtonLink } from "../Button";
+import { ButtonLink } from "../components/Button";
+import { Container } from "../components/Container";
+import { Footer } from "../components/Footer";
+import { Meta } from "../components/Meta";
+import { ProjectCard } from "../components/ProjectCard";
+import { SectionHeading } from "../components/SectionHeading";
 import { juiceboxTreasuryIds, juiceboxUrl } from "../constants";
-import { Container } from "../Container";
 import { DiscordIcon } from "../icons/DiscordIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
 import { GreenlightPower } from "../juicebox/GreenlightPower";
 import { JuiceboxGraphProvider } from "../juicebox/JuiceboxGraphProvider";
 import { NftRewardsSection } from "../juicebox/NftRewardsSection";
 import { TreasuryBalance } from "../juicebox/TreasuryBalance";
-import { Meta } from "../Meta";
-import { ProjectCard } from "../ProjectCard";
-import { SectionHeading } from "../SectionHeading";
+import { projects, projectSlugs } from "../projects/data";
 import { SnapshotGraphProvider } from "../snapshot/SnapshotGraphProvider";
 import { SnapshotSection } from "../snapshot/SnapshotSection";
 
@@ -181,24 +183,17 @@ const HomePage: NextPage = () => {
               }
             />
             <div className="space-y-8 sm:space-y-12">
-              <ProjectCard
-                title="Alien To Me"
-                subtitle="An intergalactic odyssey of action,
-                adventure, and pyramid scheme cosmetics sales."
-                description={
-                  <p>
-                    Discover a new universe with ALIEN TO ME. An animated comedy
-                    series from comedian, Connor Kerrigan, and the producers of
-                    Netflix’s WENDELL & WILD. Join a struggling alien named
-                    Krill, on an intergalactic odyssey of action, adventure, and
-                    pyramid scheme cosmetics sales – all in the name of love...
-                    or at the very least getting pregnant.
-                  </p>
-                }
-                imageUrl="/images/alien-to-me/nfts/taalos.gif"
-                contributeUrl="https://goerli.juicebox.money/v2/p/124"
-                learnMoreUrl="/projects/alien-to-me"
-              />
+              {projectSlugs.map((slug, index) => (
+                <ProjectCard
+                  key={`nft-${index}`}
+                  title={projects[slug].name}
+                  subtitle={projects[slug].shortDescription}
+                  description={<p>{projects[slug].description}</p>}
+                  imageUrl={projects[slug].nfts[2].imageURL}
+                  contributeUrl={`${juiceboxUrl}/v2/p/${projects[slug].juiceboxProjectId}`}
+                  learnMoreUrl={`/projects/${slug}`}
+                />
+              ))}
             </div>
           </Container>
 
@@ -300,70 +295,8 @@ const HomePage: NextPage = () => {
               </ButtonLink>
             </div>
           </Container>
-
-          <div className="flex flex-col gap-6 items-center justify-center divide-y divide-zinc-700">
-            <Link href="/">
-              <a>
-                <img src="/logo.svg" className="w-36" alt="StudioDAO logo" />
-              </a>
-            </Link>
-            <nav className="flex">
-              {/* <a
-              className="inline-flex px-4 sm:px-6 py-4 hover:underline"
-              href="#box-office"
-            >
-              Box Office
-            </a> */}
-              <a
-                className="inline-flex px-4 sm:px-6 py-4 hover:underline"
-                href="#faq"
-              >
-                FAQ
-              </a>
-              <a
-                className="inline-flex px-4 sm:px-6 py-4 hover:underline"
-                href="https://twitter.com/studiodao"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Twitter
-              </a>
-              <a
-                className="inline-flex px-4 sm:px-6 py-4 hover:underline"
-                href="https://discord.com/invite/YxPGn9pcdr"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Discord
-              </a>
-            </nav>
-          </div>
         </div>
-        <div className="px-6 py-4 mt-16 flex flex-col lg:flex-row gap-x-6 gap-y-8 justify-between text-zinc-600">
-          <a
-            href="https://juicebox.money/"
-            className="hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Runs with Juicebox, secured by Ethereum
-          </a>
-          <div className="flex flex-col md:flex-row gap-x-6">
-            <span>© 2022 StudioDAO Backlot, LLC.</span>
-            <a
-              href="https://studio-dao.webflow.io/privacy-policy"
-              className="hover:underline"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="https://studio-dao.webflow.io/terms-of-use"
-              className="hover:underline"
-            >
-              Terms of Use
-            </a>
-          </div>
-        </div>
+        <Footer />
       </div>
     </>
   );

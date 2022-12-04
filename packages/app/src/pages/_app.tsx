@@ -4,8 +4,8 @@ import "react-toastify/dist/ReactToastify.css";
 import type { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
 
+import { Head } from "../components/Head";
 import { EthereumProviders } from "../EthereumProviders";
-import { Head } from "../Head";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

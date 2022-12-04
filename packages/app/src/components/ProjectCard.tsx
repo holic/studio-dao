@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
+import { NFTPerks } from "../projects/types";
 import { ButtonLink } from "./Button";
 
 type Props = {
@@ -10,7 +11,7 @@ type Props = {
   contributeUrl: string;
   learnMoreUrl?: string;
   isProjectPage?: boolean;
-  perks?: ReactNode;
+  perks?: NFTPerks;
 };
 
 export const ProjectCard = ({
@@ -54,7 +55,12 @@ export const ProjectCard = ({
     {perks ? (
       <div className="relative">
         <div className="p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
-          {perks}
+          <p>{perks.title}</p>
+          <ul className="list-disc px-6">
+            {perks.perks.map((perk, index) => (
+              <li key={`${title}-perk-${index}`}>{perk}</li>
+            ))}
+          </ul>
         </div>
       </div>
     ) : null}

@@ -2,9 +2,9 @@ import { gql } from "urql";
 import { useAccount } from "wagmi";
 
 import { useNftRewardsSectionQuery } from "../../codegen/juicebox";
+import { Container } from "../components/Container";
+import { SectionHeading } from "../components/SectionHeading";
 import { juiceboxProjectIds } from "../constants";
-import { Container } from "../Container";
-import { SectionHeading } from "../SectionHeading";
 import { NftCard, NftCardFragment } from "./NftCard";
 
 gql`
