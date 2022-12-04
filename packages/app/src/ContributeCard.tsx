@@ -57,16 +57,26 @@ export const ContributeCard = ({ name, usdBudget, projectId }: Props) => {
   return (
     <Container>
       <div className="relative">
-        <div className="text-xs sm:text-md p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
-          <div className="flex flex-col sm:flex-row gap-4 justify-between">
-            <div className="">
+        <div className=" p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
+          <div className="flex flex-col text-sm sm:text-lg sm:flex-row gap-4 justify-between">
+            <div>
               ✦ Support the development of {name}.
+              <div className="mt-2 mb-2 sm:m-0 w-[100%] sm:w-0 bg-gray-200 h-2 rounded-xl">
+                <div
+                  style={{
+                    width:
+                      Math.round((ethRaised * ethPrice * 100) / usdBudget) +
+                      "%",
+                  }}
+                  className="bg-emerald-600 h-2 rounded-xl"
+                ></div>
+              </div>
               <div className="flex text-zinc-500">
                 <span className="text-emerald-600 pr-1">
                   ${numberWithCommas(ethRaised * ethPrice)}{" "}
                 </span>{" "}
-                <span className="mr-2">raised</span>
-                <div className="w-32 bg-gray-200 h-2 rounded-xl ml-0 m-2 ">
+                <span className="mr-1">raised</span>
+                <div className="w-0 sm:w-32 md:w-56 bg-gray-200 h-2 rounded-xl ml-0 m-0 sm:m-2 md:mt-3">
                   <div
                     style={{
                       width:
@@ -83,7 +93,7 @@ export const ContributeCard = ({ name, usdBudget, projectId }: Props) => {
                 funding goal
               </div>
             </div>
-            <div className="w-max">
+            <div className="md:w-max hidden lg:block">
               <div className="flex">
                 <ButtonLink
                   href={`${juiceboxUrl}/v2/p/${projectId}`}
