@@ -6,7 +6,7 @@ import {
 } from "react";
 import { twMerge } from "tailwind-merge";
 
-import { PendingIcon } from "./icons/PendingIcon";
+import { PendingIcon } from "../icons/PendingIcon";
 
 type ButtonSize = "sm" | "md";
 type ButtonVariant = "primary" | "secondary" | "primaryProject";

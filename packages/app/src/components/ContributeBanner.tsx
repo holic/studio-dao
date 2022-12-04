@@ -2,9 +2,10 @@ import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import { gql } from "urql";
 
-import { useTreasuryBalanceQuery } from "../codegen/juicebox";
+import { useTreasuryBalanceQuery } from "../../codegen/juicebox";
+import { juiceboxUrl } from "../constants";
+import { Project } from "../projects/types";
 import { ButtonLink } from "./Button";
-import { juiceboxUrl } from "./constants";
 import { Container } from "./Container";
 
 gql`
@@ -17,9 +18,7 @@ gql`
 `;
 
 type Props = {
-  name: string;
-  usdBudget: number;
-  projectId: number;
+  project: Project;
 };
 
 const numberWithCommas = (x: number) => {
@@ -28,7 +27,7 @@ const numberWithCommas = (x: number) => {
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-export const ContributeBanner = ({ name, usdBudget, projectId }: Props) => {
+export const ContributeBanner = ({ project }: Props) => {
   const [ethPrice, setEthPrice] = useState(0);
 
   useEffect(() => {
@@ -44,7 +43,7 @@ export const ContributeBanner = ({ name, usdBudget, projectId }: Props) => {
 
   const [queryResult] = useTreasuryBalanceQuery({
     variables: {
-      projectIds: [projectId],
+      projectIds: [project.juiceboxProjectId],
     },
   });
 
@@ -60,13 +59,14 @@ export const ContributeBanner = ({ name, usdBudget, projectId }: Props) => {
         <div className=" p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
           <div className="flex flex-col text-sm sm:text-lg sm:flex-row gap-4 justify-between">
             <div>
-              ✦ Support the development of {name}.
+              ✦ Support the development of {project.name}.
               <div className="mt-2 mb-2 sm:m-0 w-[100%] sm:w-0 bg-gray-200 h-2 rounded-xl">
                 <div
                   style={{
                     width:
-                      Math.round((ethRaised * ethPrice * 100) / usdBudget) +
-                      "%",
+                      Math.round(
+                        (ethRaised * ethPrice * 100) / project.usdBudget
+                      ) + "%",
                   }}
                   className="bg-emerald-600 h-2 rounded-xl"
                 ></div>
@@ -80,15 +80,16 @@ export const ContributeBanner = ({ name, usdBudget, projectId }: Props) => {
                   <div
                     style={{
                       width:
-                        Math.round((ethRaised * ethPrice * 100) / usdBudget) +
-                        "%",
+                        Math.round(
+                          (ethRaised * ethPrice * 100) / project.usdBudget
+                        ) + "%",
                     }}
                     className="bg-emerald-600 h-2 rounded-xl"
                   ></div>
                 </div>
                 out of{" "}
                 <span className="text-white px-1">
-                  ${numberWithCommas(usdBudget)}
+                  ${numberWithCommas(project.usdBudget)}
                 </span>{" "}
                 funding goal
               </div>
@@ -96,7 +97,7 @@ export const ContributeBanner = ({ name, usdBudget, projectId }: Props) => {
             <div className="md:w-max hidden lg:block">
               <div className="flex">
                 <ButtonLink
-                  href={`${juiceboxUrl}/v2/p/${projectId}`}
+                  href={`${juiceboxUrl}/v2/p/${project.usdBudget}`}
                   target="_blank"
                   variant="primary"
                 >

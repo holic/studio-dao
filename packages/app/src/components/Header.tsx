@@ -1,9 +1,9 @@
 import { ConnectKitButton } from "connectkit";
 import Link from "next/link";
 
+import { DiscordIcon } from "../icons/DiscordIcon";
+import { TwitterIcon } from "../icons/TwitterIcon";
 import { Container } from "./Container";
-import { DiscordIcon } from "./icons/DiscordIcon";
-import { TwitterIcon } from "./icons/TwitterIcon";
 
 export const Header: React.FC = () => {
   return (

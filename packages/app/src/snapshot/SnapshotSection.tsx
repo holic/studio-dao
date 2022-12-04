@@ -2,9 +2,9 @@ import { DateTime } from "luxon";
 import { gql } from "urql";
 
 import { useSnapshotSectionQuery } from "../../codegen/snapshot";
-import { ButtonLink } from "../Button";
-import { Container } from "../Container";
-import { SectionHeading } from "../SectionHeading";
+import { ButtonLink } from "../components/Button";
+import { Container } from "../components/Container";
+import { SectionHeading } from "../components/SectionHeading";
 import { useIsMounted } from "../useIsMounted";
 
 // TODO: convince snapshot to give us better field types (too many nullables)
