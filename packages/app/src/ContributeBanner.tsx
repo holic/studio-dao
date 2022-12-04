@@ -28,7 +28,7 @@ const numberWithCommas = (x: number) => {
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-export const ContributeCard = ({ name, usdBudget, projectId }: Props) => {
+export const ContributeBanner = ({ name, usdBudget, projectId }: Props) => {
   const [ethPrice, setEthPrice] = useState(0);
 
   useEffect(() => {
