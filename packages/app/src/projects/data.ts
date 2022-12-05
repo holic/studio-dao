@@ -13,6 +13,7 @@ const alienToMe: Project = {
   name of love... or at the very least getting pregnant.`,
   shortDescription:
     "An intergalactic odyssey of action, adventure, and pyramid scheme cosmetics sales.",
+  cta: "ON SALE NOW: First Generation NFTs - Funding Episodes 2 and 3",
   imageURL: "/images/alien-to-me/gallery/gallery_5.png",
   trailerUrl: "https://youtu.be/mm04Yos5_CQ",
   usdBudget: 25000,
@@ -104,30 +105,51 @@ const alienToMe: Project = {
       imageURL: "/images/alien-to-me/bios/gotham.jpg",
     },
   ],
-  budget: {
-    description: `The overall budget for creating and marketing 10 episodes of Alien
-    to Me is $300,000. Episode 1 will premiere at the end of Funding
-    Cycle #1.`,
+  timeline: {
+    title: "Alien To Me Roadmap",
+    description: "New NFTs released each month",
     events: [
       {
-        title: "Funding Cycle #1 $25,000 - Episode 2 and Community Development",
+        title:
+          "December 15  -  NFT Drop #1  - Funding Episodes 2 and 3 + community development",
         selected: true,
       },
-      { title: "Funding Cycle #2 $100,000 - Episodes 3–6", selected: false },
+      { title: "January 10 - Episode 1 Premiere", selected: false },
       {
-        title: "Funding Cycle #3 $25,000 - Distribution and Marketing",
+        title: "NFT Drop #2 January 15th - Funding Episodes 4 and 5",
         selected: false,
       },
-      { title: "Funding Cycle #4 $100,000 - Episodes 7–10", selected: false },
+      { title: "Episode 2 Premiere", selected: false },
       {
-        title: "Funding Cycle #5 $25,000 - Distribuiton and Marketing",
+        title: "NFT Drop #3- Funding Episodes 6 and 7",
+        selected: false,
+      },
+      {
+        title: "Episode 3 Premiere",
+        selected: false,
+      },
+      {
+        title:
+          "NFT Drop #4  March 15th -  Funding Episodes 8 and 9 + Marketing",
+        selected: false,
+      },
+      {
+        title: "Episode 4 Premiere",
+        selected: false,
+      },
+      {
+        title: "NFT Drop #5  April 15th -  Funding Episodes 10 and 11",
+        selected: false,
+      },
+      {
+        title: "...More to Come",
         selected: false,
       },
     ],
   },
-  gallery: {
-    title: "inspiration",
-    description: `Alien To Me came to me out of a desire to see a new type of
+  backstory: {
+    title: "Project Inspiration",
+    text: `Alien To Me came to me out of a desire to see a new type of
     science fiction alien universe, and new aliens within it. I want
     to see a deep, visually rich universe, not dissimilar to your Star
     Wars and Treks, but that was rooted in the comedy of the life of
@@ -147,6 +169,10 @@ const alienToMe: Project = {
     out in the cosmos, isn’t all it’s cracked up to be. I hope you’ll
     come along on this journey, and together we can create a truly
     unique sci-fi comedy franchise that can expand for years to come.`,
+  },
+  gallery: {
+    title: "Alien To Me Gallery",
+    description: "",
     imageURLs: [
       "/images/alien-to-me/gallery/gallery_1.png",
       "/images/alien-to-me/gallery/gallery_2.png",

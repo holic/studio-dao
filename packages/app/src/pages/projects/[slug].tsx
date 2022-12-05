@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { BioCard } from "../../components/Bio";
 import { ButtonLink } from "../../components/Button";
 import { Container } from "../../components/Container";
-import { ContributeBanner } from "../../components/ContributeBanner";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Meta } from "../../components/Meta";
@@ -73,7 +72,7 @@ const ProjectPage: NextPage = () => {
       <Meta metadata={meta} />
       <div className="min-h-screen">
         <Header />
-        <div className="space-y-32 sm:space-y-48">
+        <div className="space-y-32 sm:space-y-36">
           <div className="relative">
             <img
               className="absolute w-full h-full object-cover"
@@ -117,7 +116,7 @@ const ProjectPage: NextPage = () => {
                         target="_blank"
                         variant="primaryProject"
                       >
-                        Buy Superticket
+                        Buy NFT
                       </ButtonLink>
                       <ButtonLink
                         href={project.trailerUrl}
@@ -135,9 +134,17 @@ const ProjectPage: NextPage = () => {
               </div>
             </div>
           </div>
-          <JuiceboxGraphProvider>
-            <ContributeBanner project={project} />
-          </JuiceboxGraphProvider>
+
+          <Container>
+            <div className="relative">
+              <div className=" p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
+                <p className="text-emerald-700 text-center text-2xl">
+                  {project.cta}
+                </p>
+              </div>
+            </div>
+          </Container>
+
           <Container id="box-office" className="space-y-16">
             <div className="space-y-8 sm:space-y-12">
               {project.nfts.map((nft, index) => (
@@ -171,11 +178,16 @@ const ProjectPage: NextPage = () => {
             ))}
           </Container>
           <TimelineCard
-            title={`${project.name} Budget`}
-            description={project.budget.description}
-            events={project.budget.events}
+            title={`${project.timeline.title}`}
+            description={project.timeline.description}
+            events={project.timeline.events}
           />
-
+          <Container id="backstory" className="space-y-12">
+            <SectionHeading title={project.backstory.title} />
+            <div className="max-w-prose mx-auto space-y-3">
+              {project.backstory.text}
+            </div>
+          </Container>
           <Gallery gallery={project.gallery} />
         </div>
         <Footer />

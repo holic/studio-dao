@@ -12,9 +12,9 @@ export const TimelineCard = ({ title, description, events }: Props) => {
   return (
     <Container id="budget" className="space-y-12">
       <SectionHeading title={title} />
-      <div className="max-w-prose mx-auto space-y-3">{description}</div>
+      <div className="max-w-prose mx-auto text-center">{description}</div>
       <div className="relative">
-        <div className="p-12 pb-0 w-xl mx-auto bg-zinc-800 rounded-xl border  border-zinc-400 min-w-sm">
+        <div className="p-12 pb-8 w-xl mx-auto bg-zinc-800 rounded-xl border  border-zinc-400 min-w-sm">
           <ul className=" border-white border-dashed pt-2 text-xs sm:text-md md:text-lg">
             {events.map((event, index) => {
               if (event.selected) {

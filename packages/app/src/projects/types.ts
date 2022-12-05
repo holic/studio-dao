@@ -23,7 +23,8 @@ export type Bio = {
   imageURL: string;
 };
 
-export type Budget = {
+export type Timeline = {
+  title: string;
   description: string;
   events: Event[];
 };
@@ -41,12 +42,17 @@ export type Project = {
   juiceboxProjectId: number;
   description: string;
   shortDescription: string;
+  cta: string;
   imageURL: string;
   trailerUrl: string;
   usdBudget: number;
   nfts: NFT[];
   team: Bio[];
-  budget: Budget;
+  timeline: Timeline;
+  backstory: {
+    title: string;
+    text: string;
+  };
   gallery: Gallery;
 };
 

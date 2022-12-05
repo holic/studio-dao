@@ -16,12 +16,9 @@ export const Footer: React.FC = () => {
       >
         Box Office
       </a> */}
-          <a
-            className="inline-flex px-4 sm:px-6 py-4 hover:underline"
-            href="#faq"
-          >
-            FAQ
-          </a>
+          <Link href="/#faq">
+            <a className="inline-flex px-4 sm:px-6 py-4 hover:underline">FAQ</a>
+          </Link>
           <a
             className="inline-flex px-4 sm:px-6 py-4 hover:underline"
             href="https://twitter.com/studiodao"

@@ -22,12 +22,11 @@ export const Header: React.FC = () => {
         >
           Box Office
         </a> */}
-            <a
-              className="inline-flex px-4 py-2 hover:text-white hover:underline"
-              href="#faq"
-            >
-              FAQ
-            </a>
+            <Link href="/#faq">
+              <a className="inline-flex px-4 py-2 hover:text-white hover:underline">
+                FAQ
+              </a>
+            </Link>
             <a
               className="inline-flex px-4 py-2 hover:text-white hover:underline"
               href="https://twitter.com/studiodao"
