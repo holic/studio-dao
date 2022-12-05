@@ -42,7 +42,7 @@ export const ProjectCard = ({
             target="_blank"
             variant="primaryProject"
           >
-            Buy Superticket
+            Buy NFT
           </ButtonLink>
           {learnMoreUrl ? (
             <ButtonLink size="sm" variant="secondary" href={learnMoreUrl}>

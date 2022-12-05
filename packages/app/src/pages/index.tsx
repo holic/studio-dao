@@ -72,7 +72,7 @@ const HomePage: NextPage = () => {
           </div>
         </Container>
 
-        <div className="space-y-32 sm:space-y-48">
+        <div className="space-y-32 sm:space-y-36">
           <div className="relative">
             <img
               className="absolute w-full h-full object-cover"
