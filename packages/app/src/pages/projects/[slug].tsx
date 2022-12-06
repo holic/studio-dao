@@ -74,10 +74,21 @@ const ProjectPage: NextPage = () => {
         <Header />
         <div className="space-y-32 sm:space-y-36">
           <div className="relative">
-            <img
+            {/* <img
               className="absolute w-full h-full object-cover"
               src="/images/alien-to-me/header.gif"
-            />
+            /> */}
+            <video
+              className="absolute w-full h-full object-cover"
+              muted
+              autoPlay
+              loop
+            >
+              <source
+                src="/images/alien-to-me/background_video.mp4"
+                type="video/mp4"
+              />
+            </video>
             <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/70 to-zinc-900 md:from-transparent md:to-zinc-900" />
 
             <div className="relative md:min-h-[480px] lg:min-h-[640px] flex flex-col">
