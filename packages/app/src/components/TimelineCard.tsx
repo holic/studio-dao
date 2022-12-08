@@ -14,7 +14,7 @@ export const TimelineCard = ({ title, description, events }: Props) => {
       <SectionHeading title={title} />
       <div className="max-w-prose mx-auto text-center">{description}</div>
       <div className="relative">
-        <div className="p-12 pb-8 w-xl mx-auto bg-zinc-800 rounded-xl border  border-zinc-400 min-w-sm">
+        <div className="px-12 pt-16 pb-0 sm:pb-4 w-xl mx-auto bg-zinc-800 rounded-xl border  border-zinc-400 min-w-sm">
           <ul className=" border-white border-dashed pt-2 text-sm sm:text-lg">
             {events.map((event, index) => {
               if (event.selected) {
