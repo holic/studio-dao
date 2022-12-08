@@ -176,7 +176,12 @@ const ProjectPage: NextPage = () => {
               ))}
             </div>
           </Container>
-
+          <Container id="backstory" className="space-y-12">
+            <SectionHeading title={project.backstory.title} />
+            <div className="max-w-prose mx-auto space-y-3">
+              {project.backstory.text}
+            </div>
+          </Container>
           <Container id="team" className="space-y-12">
             <SectionHeading title="About the Team" />
             {project.team.map((bio, index) => (
@@ -193,12 +198,6 @@ const ProjectPage: NextPage = () => {
             description={project.timeline.description}
             events={project.timeline.events}
           />
-          <Container id="backstory" className="space-y-12">
-            <SectionHeading title={project.backstory.title} />
-            <div className="max-w-prose mx-auto space-y-3">
-              {project.backstory.text}
-            </div>
-          </Container>
           <Gallery gallery={project.gallery} />
         </div>
         <Footer />
