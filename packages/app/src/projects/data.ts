@@ -76,6 +76,50 @@ const alienToMe: Project = {
         ],
       },
     },
+    {
+      title: "Get Your Own URKEL",
+      description: `Despite his grating voice, generally unlikable demeanor, and
+      incredibly short attention span, URKEL, or Universal Robotic
+      Kinesthetic Experience Liaison, has become the #1
+      artificially intelligent robotic assistant across the
+      cosmos. Why not welcome an URKEL into your house today?
+      He’ll literally do anything for you… anything.`,
+      price: 0.01,
+      edition: 1000,
+      imageURL: "/images/alien-to-me/nfts/urkel.gif",
+      perks: {
+        title: "Perks included:",
+        perks: [
+          "Unlock exclusive Alien To Me Discord channels",
+          "StudioDAO membership",
+          "10 StudioDAO Greenlight Power Tokens",
+          "The undying appreciation of the Alien to Me team for helping to bring this series to life",
+        ],
+      },
+    },
+
+    {
+      title: "We are Krill",
+      description: `Go with Krill on his epic journey across the universe, by filling his wallet with parcels (alien money). Whether it’s finding a place to stay, food to eat, or drugs to inject, it all costs something, and god only knows how long this moron will last out there if we don’t help. Don’t let Krill get stranded alone… scared… confused… horny… in a universe that he barely knows. Show your support today!`,
+      price: 0.1,
+      edition: 150,
+      imageURL: "/images/alien-to-me/nfts/baseout.gif",
+      perks: {
+        title: "All Previous Perks Plus:",
+        perks: [
+          "Early access to this month’s episode release",
+          `Access to the Alien To Me Writer’s Room, where Connor
+          will brainstorm and write new storylines for the next
+          episodes in the series, using input from the community
+          members as inspiration`,
+          `Entered into raffle for 25 custom alien character
+          portraits based of an image of your choosing (a picture
+          of yourself, or anything else you like), hand painted by
+          Connor, and that may be featured in the show`,
+          "100 StudioDAO Greenlight Power Tokens",
+        ],
+      },
+    },
   ],
   team: [
     {
