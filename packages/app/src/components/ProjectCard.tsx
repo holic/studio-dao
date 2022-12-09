@@ -29,7 +29,7 @@ export const ProjectCard = ({
         src={imageUrl}
         className="flex-shrink-0 md:w-72 lg:w-96 h-56 md:h-auto aspect-square object-cover"
       />
-      <div className="flex-grow flex flex-col justify-between p-8 md:p-12 gap-8">
+      <div className="flex-grow flex flex-col justify-between p-8 md:px-12 gap-8">
         <div className="space-y-4">
           <h5 className="font-dmserif text-3xl text-white">{title}</h5>
           {subtitle ? <p className="text-zinc-500">{subtitle}</p> : null}
