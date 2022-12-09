@@ -4,24 +4,11 @@ import { useTreasuryBalanceQuery } from "../../codegen/juicebox";
 import { juiceboxTreasuryIds } from "../constants";
 import { PendingIcon } from "../icons/PendingIcon";
 
-<<<<<<< HEAD
-export const TreasuryBalance = () => {
-=======
-gql`
-  query TreasuryBalance($projectIds: [Int!]!) {
-    projects(where: { projectId_in: $projectIds }) {
-      id
-      currentBalance
-    }
-  }
-`;
-
 type Props = {
   projectId?: number;
 };
 
 export const TreasuryBalance = ({ projectId }: Props) => {
->>>>>>> 6eda9d2 (alien assets)
   const [queryResult] = useTreasuryBalanceQuery({
     variables: {
       projectIds: projectId ? [projectId] : juiceboxTreasuryIds,
