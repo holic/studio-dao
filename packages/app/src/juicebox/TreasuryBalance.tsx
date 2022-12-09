@@ -17,7 +17,7 @@ export const TreasuryBalance = () => {
 
   return (
     <>
-      Current Treasury:{" "}
+      Total Raised:{" "}
       {balance ? (
         <span className=" font-medium">
           Ξ{ethers.utils.formatEther(balance)}
