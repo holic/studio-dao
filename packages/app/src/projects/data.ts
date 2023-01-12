@@ -10,6 +10,7 @@ const alienToMe: Project = {
     "An intergalactic odyssey of action, adventure, and pyramid scheme cosmetics sales.",
   cta: "ON SALE NOW: First Generation NFTs - Funding Episodes 2 and 3",
   imageURL: "/images/alien-to-me/gallery/gallery_5.png",
+  headerImageURL: "",
   trailerUrl: "https://youtu.be/J6ZV57TrhEE",
   usdBudget: 25000,
   nfts: [
