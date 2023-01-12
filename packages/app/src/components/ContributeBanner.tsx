@@ -101,7 +101,7 @@ export const ContributeBanner = ({ project }: Props) => {
                   target="_blank"
                   variant="primary"
                 >
-                  Buy Superticket
+                  Buy NFT
                 </ButtonLink>
               </div>
             </div>

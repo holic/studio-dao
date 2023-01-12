@@ -44,6 +44,7 @@ export type Project = {
   shortDescription: string;
   cta: string;
   imageURL: string;
+  headerImageURL: string;
   trailerUrl: string;
   usdBudget: number;
   nfts: NFT[];

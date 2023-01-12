@@ -158,8 +158,177 @@ const alienToMe: Project = {
   },
 };
 
-export const projects: Projects = {
-  "alien-to-me": alienToMe,
+const ticketToSpace: Project = {
+  name: "MoonDAO: Ticket to Space",
+  author: "Fernando Urdapilleta",
+  slug: "moon-dao-ticket-to-space",
+  juiceboxProjectId: 124,
+  description: `MoonDAO, a community of 12,000 blockchain organized members, has achieved one of their early phase goals: sending a fellow member to space. In mainland China, an ordinary man’s life is about to change dramatically. After buying the community’s tokens on speculation and YOLO, he was randomly selected to be the one to launch into lower orbit. Against the objections of his family, he will embark on a journey that will take him from the dense urbanity of Beijing to the vastness of Western Texas, and ultimately to the enormous solitude of space and the unknown.`,
+  shortDescription:
+    "MoonDAO, a community of 12,000 blockchain organized members, has achieved one of their early phase goals: sending a fellow member to space.",
+  cta: "Be a part of Ticket To Space",
+  headerImageURL: "/images/ticket-to-space/header.png",
+  imageURL: "/images/ticket-to-space/nfts/launchpad.png",
+  trailerUrl: "",
+  usdBudget: 25000,
+  nfts: [
+    {
+      title: "Launchpad",
+      description: `For the price of a movie ticket, take a vicarious journey of discovery with a lucky MoonDAO member as he travels to Space…`,
+      price: 0.01,
+      edition: 2000,
+      imageURL: "/images/ticket-to-space/nfts/launchpad.png",
+      perks: {
+        title: "Perks included:",
+        perks: [
+          "LaunchPad Special Thanks Onscreen Credit after film",
+          "Unlock Ticket To Space Discord channel",
+          "StudioDAO Membership",
+          "XXX StudioDAO Greenlight Power Tokens",
+        ],
+      },
+    },
+
+    {
+      title: "Lift Off",
+      description: `Another small step for mankind!  As our hero trains for a journey to Space, our filmmakers get ready to launch into action. Your support at this level helps the movie lift off into production!`,
+      price: 0.1,
+      edition: 500,
+      imageURL: "/images/ticket-to-space/nfts/liftoff.png",
+      perks: {
+        title: "All Previous Perks Plus:",
+        perks: [
+          "Lift Off Special Thanks Onscreen Credit after Film",
+          "Claim free Mission Sticker pack",
+          "XXX StudioDAO Greenlight Power Tokens",
+        ],
+      },
+    },
+    {
+      title: "Zero Gravity",
+      description: `Less than 600 people have crossed the Karman Line, the border between the Earth’s atmosphere and Space.  This film will document what happens when the first ever MoonDAO member takes this historic ride`,
+      price: 1.0,
+      edition: 100,
+      imageURL: "/images/ticket-to-space/nfts/zerogravity.png",
+      perks: {
+        title: "All Previous Perks Plus:",
+        perks: [
+          "Zero Gravity Special Thanks Onscreen Credit before film",
+          "Limited edition Mission Sticker carried to space by MoonDAO’s Astronaut - (max 1000)",
+          "XXX StudioDAO Greenlight Power Tokens",
+        ],
+      },
+    },
+    {
+      title: "Moonshot",
+      description: `Less than 600 people have crossed the Karman Line, the border between the Earth’s atmosphere and Space.  This film will document what happens when the first ever MoonDAO member takes this historic ride`,
+      price: 10.0,
+      edition: 10,
+      imageURL: "/images/ticket-to-space/nfts/moonshot.png",
+      perks: {
+        title: "All Previous Perks Plus:",
+        perks: [
+          "MoonShot Executive Producer Onscreen Credit before film",
+          "Limited edition Mission Patch carried to space by MoonDAO’s Astronaut - (max 50)",
+          "XXX StudioDAO Greenlight Power Tokens",
+        ],
+      },
+    },
+    {
+      title: "Moonbase",
+      description: `Super YOLO! Let’s fund the whole film in one go… soaring beyond lower orbit, all the way to the moon and back!`,
+      price: 10.0,
+      edition: 10,
+      imageURL: "/images/ticket-to-space/nfts/moonbase.png",
+      perks: {
+        title: "All Previous Perks Plus:",
+        perks: [
+          `“Produced In Association with [your name here]” on it’s own card in the opening credits.`,
+          "Custom Film Credit to be approved by Filmmakers",
+          `“Ticket To Space” Movie Ticket carried to space by MoonDAO’s Astronaut - (max 10)`,
+          "XXX StudioDAO Greenlight Power Tokens",
+        ],
+      },
+    },
+  ],
+  team: [
+    {
+      name: "Fernando Urdapilleta",
+      description: `Director - Fernando Urdapilleta is a filmmaker and social scientist with a passion for character and environmental driven narratives. His fascination with foreign cultures has brought him from the banks of the Ganges river to the deep Amazon rainforest. A strong believer in producing change through storytelling, his latest feature documentary “Hostil” (2022) made it into national headlines and assembled a collective effort to pressure Argentina’s congress into protecting over 250.000 hectares of wild peatlands. He has worked as a cinematographer and editor in over five feature social and environmental documentary films. Previous clients include Google, ESPN, Catena Zapata Vineyards, Mercedes-Benz, among others.`,
+      imageURL: "/images/ticket-to-space/bios/fernando.png",
+    },
+    {
+      name: "Susie Conley",
+      description: `Producer - Susie is a seasoned Executive Producer and Film Director in travel advertising and documentary branded content, while raising a family in San Francisco. She brings a servant leadership approach and is invigorated by impact stories from technology, regenerative food systems, global pop culture, and immigrants & refugees. Most recently, she spent 8 years building and overseeing Tripadvisor’s large-scale Creative & Content Studio servicing advertising clients and editorial video content for the media group’s suite of travel brands. She oversaw a team of 40 and directly led thousands of international productions, unscripted series development, strategic marketing and distribution, and complex multi-million dollar budgets. Past clients: Universal Studios, Japan Airlines, Microsoft, & bajillions of tourism boards.`,
+      imageURL: "/images/ticket-to-space/bios/susie.png",
+    },
+  ],
+  timeline: {
+    title: "Roadmap",
+    description:
+      "The overall budget for a minimum viable version of MoonDAO: Ticket To Space is $375,000. The budget with Stretch Goals is $500,000.",
+    events: [
+      {
+        title:
+          "Funding Cycle #1   $125,000 - Campaign Kickoff, Film Development, 1rst Film Shoot",
+        selected: true,
+      },
+      { title: "Funding Cycle #2   $125,000 - Production", selected: false },
+      {
+        title: "Funding Cycle #3   $125,000 - Production Stretch Goals",
+        selected: false,
+      },
+      { title: "February 10th - Episode 2 Premiere", selected: false },
+      {
+        title:
+          "Funding Cycle #4   $125,000 - Post Completion, Marketing, Sales, Distribution",
+        selected: false,
+      },
+      {
+        title: "",
+        selected: false,
+      },
+    ],
+  },
+  backstory: {
+    title: "Project Inspiration",
+    text: `Why this story?
+
+    Making human life multi-planetary is one of the most inspiring and important missions of humanity. We are living at the inflection point of a privatized space race, with economic implications that will define our future.
+    
+    Meanwhile there is a new era of the internet evolving beyond cat videos and Twitter. Blockchain technology enables users with not only the Web 2.0 capabilities of Reading and Writing the internet, but is now incorporating Ownership. This shift to a decentralized Web 3.0 version of the internet is a chance to evolve the internet’s “winner takes all” mindset into a “community above all” one.
+    
+    A web3 community-led organization, MoonDAO, has no central authority, and has cultivated a community with values that bridging Western and Eastern values alike. With over 25,000 members worldwide, MoonDAO harbors two main cultural paradigms within: westerners brought up with extreme individualism, and Chinese culture raised to put the group over the individual.
+    In a world of dramatic contrasts, where the rawness of Beijing’s city life seems a universe apart from that of the pristine nature of western Texas, the virtual world of Web3 emerges as the great equalizer.
+    
+    The big questions are: What is the significance of an ordinary person going to space? Can it inspire space research and exploration again after billionaires made rocketships their latest mid-life crisis Lamborghini?
+    
+    Are DAOs the beginning of a new era of human endeavor? Can an international, decentralized, inclusive, and transparent organization better align with the needs of the everyday person than private billionaires or nations?
+    
+    Or is MoonDAO ultimately just another crypto meme coin? Can web3 fulfill its promise to build a more equitable world? And achieve the monumental? Or is it just another passing fad?
+    `,
+  },
+  gallery: {
+    title: "Gallery",
+    description: "",
+    imageURLs: [
+      "/images/ticket-to-space/gallery/p1.png",
+      "/images/ticket-to-space/gallery/p2.png",
+      "/images/ticket-to-space/gallery/p3.png",
+      "/images/ticket-to-space/gallery/p4.png",
+      "/images/ticket-to-space/gallery/p5.png",
+      "/images/ticket-to-space/gallery/p6.png",
+      "/images/ticket-to-space/gallery/p7.png",
+      "/images/ticket-to-space/gallery/p8.png",
+      "/images/ticket-to-space/gallery/p9.png",
+      "/images/ticket-to-space/gallery/p10.png",
+    ],
+  },
 };
 
-export const projectSlugs = ["alien-to-me"];
+export const projects: Projects = {
+  // "alien-to-me": alienToMe,
+  "moon-dao-ticket-to-space": ticketToSpace,
+};
+
+export const projectSlugs = ["moon-dao-ticket-to-space"];

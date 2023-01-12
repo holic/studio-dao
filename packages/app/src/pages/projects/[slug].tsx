@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { BioCard } from "../../components/Bio";
 import { ButtonLink } from "../../components/Button";
 import { Container } from "../../components/Container";
+import { ContributeBanner } from "../../components/ContributeBanner";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Meta } from "../../components/Meta";
@@ -74,21 +75,18 @@ const ProjectPage: NextPage = () => {
         <Header />
         <div className="space-y-32 sm:space-y-36">
           <div className="relative">
-            {/* <img
+            <img
               className="absolute w-full h-full object-cover"
-              src="/images/alien-to-me/header.gif"
-            /> */}
-            <video
+              src={project.headerImageURL}
+            />
+            {/* <video
               className="absolute w-full h-full object-cover"
               muted
               autoPlay
               loop
             >
-              <source
-                src="/images/alien-to-me/background_video.mp4"
-                type="video/mp4"
-              />
-            </video>
+              <source src="" type="video/mp4" />
+            </video> */}
             <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/70 to-zinc-900 md:from-transparent md:to-zinc-900" />
 
             <div className="relative md:min-h-[480px] lg:min-h-[640px] flex flex-col">
@@ -147,13 +145,7 @@ const ProjectPage: NextPage = () => {
           </div>
 
           <Container>
-            <div className="relative">
-              <div className=" p-6 w-xl mx-auto bg-zinc-800 rounded-xl border border-zinc-400 min-w-sm">
-                <p className="text-emerald-700 text-center text-2xl">
-                  {project.cta}
-                </p>
-              </div>
-            </div>
+            <ContributeBanner project={project} />
           </Container>
 
           <Container id="box-office" className="space-y-16">
@@ -193,6 +185,10 @@ const ProjectPage: NextPage = () => {
             description={project.timeline.description}
             events={project.timeline.events}
           />
+          <Container id="backstory" className="space-y-12">
+            <SectionHeading title="Project Inspiration" />
+            <div>{project.backstory.text}</div>
+          </Container>
           <Gallery gallery={project.gallery} />
         </div>
         <Footer />
