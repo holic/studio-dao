@@ -37,6 +37,10 @@ export type Gallery = {
 
 export type Project = {
   name: string;
+  projectCard: {
+    intro: string;
+    description: string[];
+  };
   author: string;
   slug: string;
   juiceboxProjectId: number;

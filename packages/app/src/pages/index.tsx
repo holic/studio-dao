@@ -184,15 +184,7 @@ const HomePage: NextPage = () => {
             />
             <div className="space-y-8 sm:space-y-12">
               {projectSlugs.map((slug, index) => (
-                <ProjectCard
-                  key={`nft-${index}`}
-                  title={projects[slug].name}
-                  subtitle={projects[slug].shortDescription}
-                  description={<p>{projects[slug].description}</p>}
-                  imageUrl={projects[slug].nfts[2].imageURL}
-                  contributeUrl={`${juiceboxUrl}/v2/p/${projects[slug].juiceboxProjectId}`}
-                  learnMoreUrl={`/projects/${slug}`}
-                />
+                <ProjectCard key={`nft-${index}`} project={projects[slug]} />
               ))}
             </div>
           </Container>

@@ -2,6 +2,10 @@ import { Project, Projects } from "./types";
 
 const alienToMe: Project = {
   name: "Alien To Me",
+  projectCard: {
+    intro: "",
+    description: [],
+  },
   author: "Connor Kerrigan",
   slug: "alien-to-me",
   juiceboxProjectId: 124,
@@ -162,6 +166,15 @@ const alienToMe: Project = {
 
 const ticketToSpace: Project = {
   name: "MoonDAO: Ticket to Space",
+  projectCard: {
+    intro: "StudioDAO is proud to present our first film",
+    description: [
+      "Ticket To Space is the story of MoonDAO, a community of 11,000 blockchain organized members.",
+      "MoonDAO is on the cusp of achieving their first goal: sending a DAO member to space. In mainland China, an ordinary man’s life is about to change dramatically. He was randomly selected by MoonDAO to take a ride into lower orbit on Blue Origin. ",
+      "Against the objections of his family, he will embark on a journey that will take him from the dense urbanity of Beijing to the vastness of Western Texas, and ultimately to the enormous solitude of space and the unknown.",
+      "Support the production of MoonDAO: Ticket To Space!",
+    ],
+  },
   author: "Fernando Urdapilleta",
   slug: "moon-dao-ticket-to-space",
   juiceboxProjectId: 124,
