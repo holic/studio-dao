@@ -261,7 +261,7 @@ const ticketToSpace: Project = {
       edition: 1,
       imageURL: "/images/ticket-to-space/nfts/moonbase.png",
       perks: {
-        title: "All Previous Perks Plus:",
+        title: "Perks include:",
         perks: [
           `“Executive Producer” Single Card Onscreen Credit before Film`,
           `"Ticket To Space" Movie Ticket carried to space by MoonDAO’s Astronaut - (1 of 10)`,
