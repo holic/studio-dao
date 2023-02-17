@@ -2,7 +2,7 @@ import { Project, Projects } from "./types";
 
 const alienToMe: Project = {
   name: "Alien To Me",
-  projectCard: {
+  promote: {
     intro: "",
     description: [],
   },
@@ -166,7 +166,7 @@ const alienToMe: Project = {
 
 const ticketToSpace: Project = {
   name: "MoonDAO: Ticket to Space",
-  projectCard: {
+  promote: {
     intro: "StudioDAO is proud to present our first film",
     description: [
       "Ticket To Space is the story of MoonDAO, a community of 11,000 blockchain organized members.",

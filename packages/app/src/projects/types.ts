@@ -37,7 +37,7 @@ export type Gallery = {
 
 export type Project = {
   name: string;
-  projectCard: {
+  promote: {
     intro: string;
     description: string[];
   };

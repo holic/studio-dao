@@ -6,7 +6,7 @@ import { ButtonLink } from "../components/Button";
 import { Container } from "../components/Container";
 import { Footer } from "../components/Footer";
 import { Meta } from "../components/Meta";
-import { ProjectCard } from "../components/ProjectCard";
+import ProjectPromoteCard from "../components/ProjectPromoteCard";
 import { SectionHeading } from "../components/SectionHeading";
 import { juiceboxTreasuryIds, juiceboxUrl } from "../constants";
 import { DiscordIcon } from "../icons/DiscordIcon";
@@ -184,7 +184,10 @@ const HomePage: NextPage = () => {
             />
             <div className="space-y-8 sm:space-y-12">
               {projectSlugs.map((slug, index) => (
-                <ProjectCard key={`nft-${index}`} project={projects[slug]} />
+                <ProjectPromoteCard
+                  key={`nft-${index}`}
+                  project={projects[slug]}
+                />
               ))}
             </div>
           </Container>
