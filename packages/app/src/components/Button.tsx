@@ -20,7 +20,7 @@ const buttonClasses = (size: ButtonSize, variant: ButtonVariant) => {
     primary:
       "font-medium text-white bg-emerald-700 hover:bg-green-600 active:bg-green-700 border border-transparent disabled:opacity-50 disabled:pointer-events-none",
     primaryProject:
-      "font-medium text-black bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-400 border border-transparent disabled:opacity-50 disabled:pointer-events-none",
+      "font-medium text-black bg-emerald-700 hover:bg-green-600 active:bg-green-7000 border border-transparent disabled:opacity-50 disabled:pointer-events-none",
     secondary:
       "text-zinc-300 hover:text-zinc-100 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800 border border-zinc-700 hover:border-zinc-500 disabled:opacity-50 disabled:pointer-events-none",
   };

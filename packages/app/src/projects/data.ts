@@ -9,6 +9,7 @@ const alienToMe: Project = {
   shortDescription:
     "An intergalactic odyssey of action, adventure, and pyramid scheme cosmetics sales.",
   cta: "ON SALE NOW: First Generation NFTs - Funding Episodes 2 and 3",
+  ctaPostScript: "",
   imageURL: "/images/alien-to-me/gallery/gallery_5.png",
   headerImageURL: "",
   trailerUrl: "https://youtu.be/J6ZV57TrhEE",
@@ -168,6 +169,8 @@ const ticketToSpace: Project = {
   shortDescription:
     "MoonDAO, a community of 12,000 blockchain organized members, has achieved one of their early phase goals: sending a fellow member to space.",
   cta: "✦ Support the production of MoonDAO: Ticket To Space",
+  ctaPostScript:
+    "These NFTs provide access to the Ticket To Space Speaker Series and Film Screenings. They also grant membership in StudioDAO, a new entertainment platform that turns film fans into studio executives.",
   headerImageURL: "/images/ticket-to-space/header.png",
   imageURL: "/images/ticket-to-space/nfts/launchpad.png",
   trailerUrl: "",

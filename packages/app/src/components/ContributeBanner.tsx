@@ -108,6 +108,9 @@ export const ContributeBanner = ({ project }: Props) => {
           </div>
         </div>
       </div>
+      <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-24 py-12 -mb-16">
+        <p>{project.ctaPostScript}</p>
+      </div>
     </Container>
   );
 };

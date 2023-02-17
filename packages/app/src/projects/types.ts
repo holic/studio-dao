@@ -43,6 +43,7 @@ export type Project = {
   description: string;
   shortDescription: string;
   cta: string;
+  ctaPostScript: string;
   imageURL: string;
   headerImageURL: string;
   trailerUrl: string;

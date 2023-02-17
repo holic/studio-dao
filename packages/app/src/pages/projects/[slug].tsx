@@ -144,9 +144,7 @@ const ProjectPage: NextPage = () => {
             </div>
           </div>
 
-          <Container>
-            <ContributeBanner project={project} />
-          </Container>
+          <ContributeBanner project={project} />
 
           <Container id="box-office" className="space-y-16">
             <div className="space-y-8 sm:space-y-12">
