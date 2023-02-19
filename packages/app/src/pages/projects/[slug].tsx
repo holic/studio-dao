@@ -60,7 +60,7 @@ const ProjectPage: NextPage = () => {
 
   const meta = {
     title: `StudioDAO - ${project.name}`,
-    description: project.description,
+    description: project.description.join(" "),
     image: {
       url: project.imageURL,
       width: "600",
@@ -115,7 +115,7 @@ const ProjectPage: NextPage = () => {
                       <h1 className="text-6xl font-dmserif text-white">
                         {project.name}
                       </h1>
-                      <p>By {project.author}</p>
+                      <p>A Documentary Film By {project.author}</p>
                     </div>
                   </div>
                   <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-24 py-12 -mb-16">
@@ -137,14 +137,23 @@ const ProjectPage: NextPage = () => {
                     </div>
                   </div>
                   <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-24 py-12 -mb-16">
-                    <p>{project.description}</p>
+                    <div>
+                      {project.description.map((p, i) => (
+                        <>
+                          <p key={`desc-${i}`}>{p}</p>
+                          <br></br>
+                        </>
+                      ))}
+                    </div>
                   </div>
                 </Container>
               </div>
             </div>
           </div>
-
-          <ContributeBanner project={project} />
+          <Container id="cta" className="space-y-12">
+            <p className="text-4xl">{project.cta}</p>
+            <p>{project.ctaPostScript}</p>
+          </Container>
 
           <Container id="box-office" className="space-y-16">
             <div className="space-y-8 sm:space-y-12">

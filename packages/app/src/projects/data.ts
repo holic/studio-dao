@@ -9,7 +9,9 @@ const alienToMe: Project = {
   author: "Connor Kerrigan",
   slug: "alien-to-me",
   juiceboxProjectId: 124,
-  description: `Discover a new universe with ALIEN TO ME,  a new animated comedy series from comedian, Connor Kerrigan, and the producers of Netflix’s WENDELL & WILD.  Join a struggling alien named Krill on an intergalactic odyssey of action, adventure, and pyramid scheme cosmetics sales – all in the name of love... or at the very least getting pregnant.`,
+  description: [
+    `Discover a new universe with ALIEN TO ME,  a new animated comedy series from comedian, Connor Kerrigan, and the producers of Netflix’s WENDELL & WILD.  Join a struggling alien named Krill on an intergalactic odyssey of action, adventure, and pyramid scheme cosmetics sales – all in the name of love... or at the very least getting pregnant.`,
+  ],
   shortDescription:
     "An intergalactic odyssey of action, adventure, and pyramid scheme cosmetics sales.",
   cta: "ON SALE NOW: First Generation NFTs - Funding Episodes 2 and 3",
@@ -178,7 +180,10 @@ const ticketToSpace: Project = {
   author: "Fernando Urdapilleta",
   slug: "moon-dao-ticket-to-space",
   juiceboxProjectId: 124,
-  description: `MoonDAO, a community of 12,000 blockchain organized members, has achieved one of their early phase goals: sending a fellow member to space. In mainland China, an ordinary man’s life is about to change dramatically. After buying the community’s tokens on speculation and YOLO, he was randomly selected to be the one to launch into lower orbit. Against the objections of his family, he will embark on a journey that will take him from the dense urbanity of Beijing to the vastness of Western Texas, and ultimately to the enormous solitude of space and the unknown.`,
+  description: [
+    `MoonDAO, a community of 11,000 blockchain organized members, is on the cusp of achieving their first goal: sending a DAO member to space. In mainland China, an ordinary man’s life is about to change dramatically. He was randomly selected by MoonDAO to take a ride into lower orbit on Blue Origin.`,
+    `Against the objections of his family, he will embark on a journey that will take him from the dense urbanity of Beijing to the vastness of Western Texas, and ultimately to the enormous solitude of space and the unknown.`,
+  ],
   shortDescription:
     "MoonDAO, a community of 12,000 blockchain organized members, has achieved one of their early phase goals: sending a fellow member to space.",
   cta: "✦ Support the production of MoonDAO: Ticket To Space",

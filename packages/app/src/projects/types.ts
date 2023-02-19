@@ -44,7 +44,7 @@ export type Project = {
   author: string;
   slug: string;
   juiceboxProjectId: number;
-  description: string;
+  description: string[];
   shortDescription: string;
   cta: string;
   ctaPostScript: string;
