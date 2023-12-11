@@ -39,7 +39,7 @@ const HomePage: NextPage = () => {
             <div className="flex-grow flex flex-col justify-end items-center">
               <Container>
                 <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-24 py-12 -mb-16">
-                  <div className="space-y-4 w-4/5">
+                  <div className="space-y-4 w-7/12">
                     <h1 className="text-6xl font-dmserif text-white">
                       StudioDAO U.N.A. is now closed.
                     </h1>
