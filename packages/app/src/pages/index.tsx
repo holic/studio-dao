@@ -39,10 +39,10 @@ const HomePage: NextPage = () => {
             <div className="flex-grow flex flex-col justify-end items-center">
               <Container>
                 <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-24 py-12 -mb-16">
-                  <div className="space-y-4 w-7/12">
+                  <div className="space-y-4 w-4/5">
                     <h1 className="text-6xl font-dmserif text-white">
-                      This is the{" "}
-                      <span className="text-emerald-500">Message</span>!
+                      The Medium is{" "}
+                      <span className="text-emerald-500">the Message</span>!
                     </h1>
                     <p>
                       Farewell to StudioDAO, a movie studio owned by filmmakers
